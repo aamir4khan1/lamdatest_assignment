@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Pull Code') {
+            steps {
+               checkout scm
+            }
+        }
+        
+        stage('Build Image') {
+            steps {
+                dockerImage = docker.build
+            }
+        }
+        
+        stage('Push Image') {
+            steps {
+                dockerECRImage.push
+            }
+        }
+        
+         stage('Test') {
+            steps {
+                echo 'test stage'
+            }
+        }
+         
+        
+    }
+    
+    post
+    
+    {
+        always
+        {
+           slackSend channel: '#builds',
+                      color: COLOR_MAP[currentBuild.currentResult],
+                      message: "*${currentBuild.currentResult}:* Job `${env.JOB_NAME}` build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}"
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+}

@@ -1,0 +1,11 @@
+StepDefinition\BaseSteps.class
+Utility\DataBaseQueryExecution.class
+StepDefinition\CRMLogin.class
+Runner\TestRunner.class
+Utility\preMethods.class
+Utility\Wait.class
+StepDefinition\Login.class
+StepDefinition\utility.class
+Utility\ConfigReader.class
+StepDefinition\Hooks.class
+StepDefinition\SpinnyHomePage.class
