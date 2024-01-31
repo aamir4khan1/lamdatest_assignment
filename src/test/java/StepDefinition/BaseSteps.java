@@ -1,0 +1,40 @@
+
+package StepDefinition;
+//import cucumberIntegrationTests.screens.iOS.IOSLoginScreen;
+import org.openqa.selenium.WebDriver;
+
+import Utility.ConfigReader;
+import Utility.Wait;
+import Utility.preMethods;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+
+
+
+
+public class BaseSteps {
+	static ConfigReader cr = new ConfigReader();
+    WebDriver driver = StepDefinition.Hooks.driver;
+    Wait wait = new Wait();
+    static preMethods prm = new preMethods();
+
+    
+	@Given("user land on spinny website")
+	public void user_land_on_spinny_website() throws Exception {
+		
+	        driver.get(cr.valueOnTheKey("URL"));
+	    }
+	@When("^Wait for the application page to load completely$")
+    public void wait_for_the_page_to_load_completely() {
+        Wait.implicitWait(2, driver);
+    }
+	@And("user selects location")
+	public void select_location() throws InterruptedException {
+		prm.click(driver, cr.valueOnTheKey("homepage_detectMyLocation"),"xpath");
+		//driver.findElement(AndroidHomepageScreen.homepage_detectMyLocation).click(); // Detect my location click//
+		Thread.sleep(6000);
+
+	}
+	
+}
