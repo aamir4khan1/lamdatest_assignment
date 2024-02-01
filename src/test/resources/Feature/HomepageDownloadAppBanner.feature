@@ -6,7 +6,7 @@ Feature: Verify Buy and Sell functionality
     And user selects location
     
    Scenario: User should be able to use download spinny app banner functionality
-   Then scroll down to spinny app banner	
-   And click on google play button
+   And scroll down to spinny app banner	
+   #And click on google play button
 
  

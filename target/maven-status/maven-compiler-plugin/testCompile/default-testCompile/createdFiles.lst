@@ -1,11 +1,16 @@
+StepDefinition\HomepageInsightsThatDriveUs.class
 StepDefinition\BaseSteps.class
 Utility\DataBaseQueryExecution.class
-StepDefinition\CRMLogin.class
+StepDefinition\HomepageBuySellToggle_HubLocation.class
+StepDefinition\HomepageExplorePopularBrands_HowSpinnyWorks.class
 Runner\TestRunner.class
 Utility\preMethods.class
 Utility\Wait.class
+StepDefinition\HomepageDownloadAppBanner.class
 StepDefinition\Login.class
 StepDefinition\utility.class
 Utility\ConfigReader.class
+StepDefinition\Bottom_Navigation.class
 StepDefinition\Hooks.class
 StepDefinition\SpinnyHomePage.class
+StepDefinition\HomepageBuyButton_SellButton.class

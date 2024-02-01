@@ -6,14 +6,14 @@ Feature: Verify Buy Sell Toggle and Hub Location
     And user selects location
     
    Scenario: User should be able to use buy sell toggle functionality
-   And user click on buy toggle
+   Then user click on buy toggle
    And user click on learn more button
    And click on browse car
-   And click on sell toggle
+   Then click on sell toggle
    And click on get price
 
    
    Scenario: User should be able to use hub location functionality
-   And user scroll down to hub location
+   Then user scroll down to hub location
    And click on view cars
    And click view all cars in delhi ncr

@@ -21,76 +21,76 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Hooks {
-    static WebDriver driver;
-    static ConfigReader cr = new ConfigReader();
+	static WebDriver driver;
+	static ConfigReader cr = new ConfigReader();
 
-    @Before
-    public WebDriver beforeScenario() {
-    	if (cr.valueOnTheKey("Env").equals("PROD")) {
-        //WebDriverManager.chromedriver().setup();
-    		WebDriverManager.chromedriver ().clearDriverCache ().setup ();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        return driver;
-    	}
-    	else if (cr.valueOnTheKey("Mode").equals("Desktop")){
-    		//WebDriverManager.chromedriver ().clearDriverCache ().setup ();
-    		 //WebDriverManager.chromedriver().setup();
-    		
-    	        driver = new ChromeDriver();
-    	        driver.manage().window().maximize();
-    	        return driver;
-    	}
-    	
-    	else {
-    		WebDriverManager.chromedriver ().clearDriverCache ().setup ();
-    		 //WebDriverManager.chromedriver().setup();
-    		Map<String, String> mobileEmulation = new HashMap<>();
+	@Before
+	public WebDriver beforeScenario() {
+		if (cr.valueOnTheKey("Env").equals("PROD")) {
+			// WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().clearDriverCache().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			driver = new ChromeDriver(options);
+			driver.manage().window().maximize();
+			return driver;
+		} else if (cr.valueOnTheKey("Mode").equals("Desktop")) {
+			// WebDriverManager.chromedriver ().clearDriverCache ().setup ();
+			// WebDriverManager.chromedriver().setup();
 
-    		mobileEmulation.put("deviceName", cr.valueOnTheKey("DeviceName"));
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			return driver;
+		}
 
-    		ChromeOptions chromeOptions = new ChromeOptions();
+		else {
+			WebDriverManager.chromedriver().clearDriverCache().setup();
+			// WebDriverManager.chromedriver().setup();
+			Map<String, String> mobileEmulation = new HashMap<>();
 
-    		chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+			mobileEmulation.put("deviceName", cr.valueOnTheKey("DeviceName"));
 
-    		driver = new ChromeDriver(chromeOptions);
-    	        //driver = new ChromeDriver();
-    	        driver.manage().window().maximize();
-    	        return driver;
-    	}
-    }
+			ChromeOptions chromeOptions = new ChromeOptions();
 
+			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
-    @After
-    public void afterScenario(Scenario scenario) {
-        // Capture ScreenShot for the failed test cases.
-        if (scenario.isFailed()) {
-            File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            try {
-                FileUtils.copyFile(file, new File(System.getProperty("user.dir")+"/Screenshot/" +System.currentTimeMillis()+".png"));
-               scenario.embed(screenshot, "image/png");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+			driver = new ChromeDriver(chromeOptions);
+			// driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			return driver;
+		}
+	}
 
-        // Capture ScreenShot for non-failed test cases.
-        if (!scenario.isFailed()) {
-            File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            try {
-                FileUtils.copyFile(file, new File(System.getProperty("user.dir")+"/Screenshot/"+System.currentTimeMillis()+".png"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        driver.close();
-    }
+	@After
+	public void afterScenario(Scenario scenario) {
+		// Capture ScreenShot for the failed test cases.
+		if (scenario.isFailed()) {
+			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			try {
+				FileUtils.copyFile(file, new File(
+						System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis() + ".png"));
+				scenario.embed(screenshot, "image/png");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 
-    public static LocalDateTime getCurrentDateAndTime() {
-        LocalDateTime now = LocalDateTime.now();
-        return now;
-    }
+		// Capture ScreenShot for non-failed test cases.
+		if (!scenario.isFailed()) {
+			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(file, new File(
+						System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis() + ".png"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		driver.close();
+	}
+
+	public static LocalDateTime getCurrentDateAndTime() {
+		LocalDateTime now = LocalDateTime.now();
+		return now;
+	}
 }

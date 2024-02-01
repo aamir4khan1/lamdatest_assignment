@@ -6,7 +6,7 @@ Feature: Verify bottom navigation functionality
     And user selects location
     
   Scenario: User should be able to use bottom navigation functionality
-   And botnav is visible and home icon selected
+   Then botnav is visible and home icon selected
    And user click on bottom navigation buy car icon
    And user click on shortlists icon	
    And user click on sell car icon

@@ -1,0 +1,1311 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4605243800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7526900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6190259200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:36:30.288Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2726702600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User should be able to use bottom navigation functionality",
+        "description": "",
+        "id": "verify-bottom-navigation-functionality;user-should-be-able-to-use-bottom-navigation-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 465402800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5884227700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "botnav is visible and home icon selected",
+            "match": {
+              "location": "Bottom_Navigation.botnav_is_visible_and_home_icon_selected()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7016388700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user click on bottom navigation buy car icon",
+            "match": {
+              "location": "Bottom_Navigation.user_click_on_bottom_navigation_buy_car_icon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10945772900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user click on shortlists icon",
+            "match": {
+              "location": "Bottom_Navigation.user_click_on_shortlists_icon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6831580100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user click on sell car icon",
+            "match": {
+              "location": "Bottom_Navigation.user_click_on_sell_car_icon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2506246600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user click on account icon",
+            "match": {
+              "location": "Bottom_Navigation.user_click_on_account_icon()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify bottom navigation functionality",
+    "description": "",
+    "id": "verify-bottom-navigation-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/Bottom_Navigation.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2320151300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5003500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6153453400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:37:17.482Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1487808700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User should be able to use sell button functionality",
+        "description": "",
+        "id": "verify-buy-and-sell-functionality;user-should-be-able-to-use-sell-button-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 520636300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6234935900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user click on sell button",
+            "match": {
+              "location": "HomepageBuyButton_SellButton.user_click_on_sell_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2738706000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "land on sell page",
+            "match": {
+              "location": "HomepageBuyButton_SellButton.land_on_sell_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2168313200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1967700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6140906100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:37:36.933Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1468689100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "User should be able to use buy button functionality",
+        "description": "",
+        "id": "verify-buy-and-sell-functionality;user-should-be-able-to-use-buy-button-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 678875900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6177167900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user click on buy button",
+            "match": {
+              "location": "HomepageBuyButton_SellButton.user_click_on_buy_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2526685000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "land on product listing page",
+            "match": {
+              "location": "HomepageBuyButton_SellButton.land_on_product_listing_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify Buy and Sell functionality",
+    "description": "",
+    "id": "verify-buy-and-sell-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/HomepageBuyButton_SellButton.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2209033700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4002300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6188120200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:37:56.111Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1314744900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User should be able to use buy sell toggle functionality",
+        "description": "",
+        "id": "verify-buy-sell-toggle-and-hub-location;user-should-be-able-to-use-buy-sell-toggle-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 406028400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5867814800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user click on buy toggle",
+            "match": {
+              "location": "HomepageBuySellToggle_HubLocation.user_click_on_buy_toggle()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5540841600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user click on learn more button",
+            "match": {
+              "location": "HomepageBuySellToggle_HubLocation.user_click_on_learn_more_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9047882700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "click on browse car",
+            "match": {
+              "location": "HomepageBuySellToggle_HubLocation.click_on_browse_car()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8967541100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "click on sell toggle",
+            "match": {
+              "location": "HomepageBuySellToggle_HubLocation.click_on_sell_toggle()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4524342600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "click on get price",
+            "match": {
+              "location": "HomepageBuySellToggle_HubLocation.click_on_get_price()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2162865300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2890600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6159700100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:38:40.184Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1418378600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "User should be able to use hub location functionality",
+        "description": "",
+        "id": "verify-buy-sell-toggle-and-hub-location;user-should-be-able-to-use-hub-location-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 735799700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9001950400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user scroll down to hub location",
+            "match": {
+              "location": "HomepageBuySellToggle_HubLocation.user_scroll_down_to_hub_location()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6098106600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "click on view cars",
+            "match": {
+              "location": "HomepageBuySellToggle_HubLocation.click_on_view_cars()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2923636100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click view all cars in delhi ncr",
+            "match": {
+              "location": "HomepageBuySellToggle_HubLocation.click_view_all_cars_in_delhi_ncr()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify Buy Sell Toggle and Hub Location",
+    "description": "",
+    "id": "verify-buy-sell-toggle-and-hub-location",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/HomepageBuySellToggle_HubLocation.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3001338000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2358600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6182038900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:39:08.680Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1710589100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User should be able to use download spinny app banner functionality",
+        "description": "",
+        "id": "verify-buy-and-sell-functionality;user-should-be-able-to-use-download-spinny-app-banner-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 499182500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1576740700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "scroll down to spinny app banner",
+            "match": {
+              "location": "HomepageDownloadAppBanner.scroll_down_to_spinnt_app_banner()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify Buy and Sell functionality",
+    "description": "",
+    "id": "verify-buy-and-sell-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/HomepageDownloadAppBanner.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Create an instance of android or ios driver before each scenario",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2693414100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2649400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6169842800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:39:21.663Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1317554800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User should be able to use explore popular brands section",
+        "description": "",
+        "id": "verify-popular-brands-and-how-spinny-works-functionality-on-homepage;user-should-be-able-to-use-explore-popular-brands-section",
+        "after": [
+          {
+            "result": {
+              "duration": 1397954300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2700144200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user scroll to explore popular brands section",
+            "match": {
+              "location": "HomepageExplorePopularBrands_HowSpinnyWorks.user_scroll_to_explore_popular_brands_section()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4990028400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "click on maruti suzuki",
+            "match": {
+              "location": "HomepageExplorePopularBrands_HowSpinnyWorks.click_on_maruti_suzuki()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2147585100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "redirect back to explore popular brands section",
+            "match": {
+              "location": "HomepageExplorePopularBrands_HowSpinnyWorks.redirect_back_to_explore_popular_brands_section()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2211568400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "click on view all brands",
+            "match": {
+              "location": "HomepageExplorePopularBrands_HowSpinnyWorks.click_on_view_all_brands()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11106516800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "click on view all cars",
+            "match": {
+              "location": "HomepageExplorePopularBrands_HowSpinnyWorks.click_on_view_all_cars()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Create an instance of android or ios driver before each scenario",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2607624800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3344000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6196404600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:39:56.403Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1324972800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "User should be able to explore how spinny works section",
+        "description": "",
+        "id": "verify-popular-brands-and-how-spinny-works-functionality-on-homepage;user-should-be-able-to-explore-how-spinny-works-section",
+        "after": [
+          {
+            "result": {
+              "duration": 1908622300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2076489500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user scroll down to how spinny works section",
+            "match": {
+              "location": "HomepageExplorePopularBrands_HowSpinnyWorks.user_scroll_down_to_how_spinny_works_section()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9855063300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "click on watch how it works",
+            "match": {
+              "location": "HomepageExplorePopularBrands_HowSpinnyWorks.click_on_watch_how_it_works()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5276259700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "click on learn more",
+            "match": {
+              "location": "HomepageExplorePopularBrands_HowSpinnyWorks.click_on_learn_more()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify popular brands and how spinny works functionality on homepage",
+    "description": "",
+    "id": "verify-popular-brands-and-how-spinny-works-functionality-on-homepage",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/HomepageExplorePopularBrands_HowSpinnyWorks.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2721253500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2209300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6173965200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:40:25.649Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1864768900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User should be able to see insights that drive us functionality",
+        "description": "",
+        "id": "verify-insights-that-drive-us-functionality-on-homepage;user-should-be-able-to-see-insights-that-drive-us-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 1417599500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2023835200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "scroll down to insights that drive us",
+            "match": {
+              "location": "HomepageInsightsThatDriveUs.scroll_down_to_insights_that_drve_us()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2055332800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user is able to see insights that drive us section",
+            "match": {
+              "location": "HomepageInsightsThatDriveUs.user_is_able_to_see_insights_that_drive_us_section()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verify insights that drive us functionality on homepage",
+    "description": "",
+    "id": "verify-insights-that-drive-us-functionality-on-homepage",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/HomepageInsightsThatDriveUs.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2550915500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5613100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6182125500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-01T10:40:41.917Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1787635400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User selects login",
+        "description": "",
+        "id": "verify-login;user-selects-login",
+        "after": [
+          {
+            "result": {
+              "duration": 577357800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4219092900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "click on account tab",
+            "match": {
+              "location": "Login.click_on_account_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2192463600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user clicks on mobile number field",
+            "match": {
+              "location": "Login.user_clicks_on_mobile_number_field()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8952388000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "enters mobile number and otp code",
+            "match": {
+              "location": "Login.enters_mobile_number_and_otp_code()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 38538100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "logout button is visible",
+            "match": {
+              "location": "Login.logout_button_is_visible()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verify login",
+    "description": "",
+    "id": "verify-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/Login.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-02-01T10:41:08.415Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1429338900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Implementation of most commonly used steps",
+        "description": "",
+        "id": "most-commonly-used-steps;implementation-of-most-commonly-used-steps",
+        "after": [
+          {
+            "result": {
+              "duration": 333505400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 311182800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Take Screenshot",
+            "match": {
+              "location": "utility.takeScreenshot()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7006506400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for page to load",
+            "match": {
+              "location": "utility.tempwait()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Most commonly used steps",
+    "description": "",
+    "id": "most-commonly-used-steps",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/utility.feature",
+    "tags": []
+  }
+]
