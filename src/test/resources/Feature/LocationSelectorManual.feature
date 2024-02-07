@@ -1,0 +1,52 @@
+Feature: Verify location selector functionality on homepage
+   
+ Background: User land on spinny website and selects location
+   Given user land on spinny website
+   When Wait for the application page to load completely
+   And user selects location
+				
+   Scenario: User should be able to select the city and the PLP must get updated
+   
+  #And user selects {city} on Home page
+  #And validate the city on PLP
+  #And user performs actions for multiple cities
+  #
+  
+    And user selects Delhi NCR on Home page
+    And validate the city Delhi NCR on PLP
+    And user selects Bangalore
+    And validate the city Bangalore on PLP 
+    And user selects Hyderabad
+    And validate the city Hyderabad on PLP 
+    And user selects Mumbai
+    And validate the city Mumbai on PLP
+    And user selects Pune
+    And validate the city Pune on PLP
+    And user selects Delhi on Home page
+    And validate the city Delhi on PLP
+    And user selects Gurgaon
+    And validate the city Gurgaon on PLP
+    And user selects Noida
+    And validate the city Noida on PLP
+    And user selects Ahmedabad
+    And validate the city Ahmedabad on PLP
+    And user selects Chennai
+    And validate the city Chennai on PLP
+    And user selects Kolkata
+    And validate the city Kolkata on PLP
+    And user selects Lucknow
+    And validate the city Lucknow on PLP
+    And user selects Jaipur
+    And validate the city Jaipur on PLP
+    And user selects Chandigarh
+    And validate the city Chandigarh on PLP
+    And user selects Coimbatore
+    And validate the city Coimbatore on PLP
+    And user selects Ghaziabad
+    And validate the city Ghaziabad on PLP
+    And user selects Indore
+    And validate the city Indore on PLP
+    And user selects Kochi
+    And validate the city Kochi on PLP
+    And user selects Surat
+    And validate the city Surat on PLP
