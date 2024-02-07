@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4605243800,
+              "duration": 3712456400,
               "status": "passed"
             },
             "line": 4,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 7526900,
+              "duration": 9564700,
               "status": "passed"
             },
             "line": 5,
@@ -35,7 +35,7 @@
           },
           {
             "result": {
-              "duration": 6190259200,
+              "duration": 6245182500,
               "status": "passed"
             },
             "line": 6,
@@ -48,11 +48,11 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:36:30.288Z",
+        "start_timestamp": "2024-02-07T09:43:08.035Z",
         "before": [
           {
             "result": {
-              "duration": 2726702600,
+              "duration": 2696290900,
               "status": "passed"
             },
             "match": {
@@ -67,7 +67,7 @@
         "after": [
           {
             "result": {
-              "duration": 465402800,
+              "duration": 461736600,
               "status": "passed"
             },
             "match": {
@@ -80,7 +80,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5884227700,
+              "duration": 6294792400,
               "status": "passed"
             },
             "line": 9,
@@ -92,7 +92,7 @@
           },
           {
             "result": {
-              "duration": 7016388700,
+              "duration": 7262555200,
               "status": "passed"
             },
             "line": 10,
@@ -104,7 +104,7 @@
           },
           {
             "result": {
-              "duration": 10945772900,
+              "duration": 11254410500,
               "status": "passed"
             },
             "line": 11,
@@ -116,7 +116,7 @@
           },
           {
             "result": {
-              "duration": 6831580100,
+              "duration": 7055742100,
               "status": "passed"
             },
             "line": 12,
@@ -128,7 +128,7 @@
           },
           {
             "result": {
-              "duration": 2506246600,
+              "duration": 2637811700,
               "status": "passed"
             },
             "line": 13,
@@ -160,7 +160,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2320151300,
+              "duration": 1967903100,
               "status": "passed"
             },
             "line": 4,
@@ -172,7 +172,7 @@
           },
           {
             "result": {
-              "duration": 5003500,
+              "duration": 3249400,
               "status": "passed"
             },
             "line": 5,
@@ -184,7 +184,7 @@
           },
           {
             "result": {
-              "duration": 6153453400,
+              "duration": 6176771200,
               "status": "passed"
             },
             "line": 6,
@@ -197,11 +197,11 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:37:17.482Z",
+        "start_timestamp": "2024-02-07T09:43:55.676Z",
         "before": [
           {
             "result": {
-              "duration": 1487808700,
+              "duration": 1405675300,
               "status": "passed"
             },
             "match": {
@@ -216,7 +216,7 @@
         "after": [
           {
             "result": {
-              "duration": 520636300,
+              "duration": 489187100,
               "status": "passed"
             },
             "match": {
@@ -229,7 +229,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6234935900,
+              "duration": 6318942500,
               "status": "passed"
             },
             "line": 9,
@@ -241,7 +241,7 @@
           },
           {
             "result": {
-              "duration": 2738706000,
+              "duration": 2765817300,
               "status": "passed"
             },
             "line": 10,
@@ -262,7 +262,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2168313200,
+              "duration": 2467917000,
               "status": "passed"
             },
             "line": 4,
@@ -274,7 +274,7 @@
           },
           {
             "result": {
-              "duration": 1967700,
+              "duration": 6802200,
               "status": "passed"
             },
             "line": 5,
@@ -286,7 +286,7 @@
           },
           {
             "result": {
-              "duration": 6140906100,
+              "duration": 6242844800,
               "status": "passed"
             },
             "line": 6,
@@ -299,11 +299,11 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:37:36.933Z",
+        "start_timestamp": "2024-02-07T09:44:14.807Z",
         "before": [
           {
             "result": {
-              "duration": 1468689100,
+              "duration": 1594387000,
               "status": "passed"
             },
             "match": {
@@ -318,7 +318,7 @@
         "after": [
           {
             "result": {
-              "duration": 678875900,
+              "duration": 543088700,
               "status": "passed"
             },
             "match": {
@@ -331,7 +331,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6177167900,
+              "duration": 6235876900,
               "status": "passed"
             },
             "line": 13,
@@ -343,7 +343,7 @@
           },
           {
             "result": {
-              "duration": 2526685000,
+              "duration": 2452391600,
               "status": "passed"
             },
             "line": 14,
@@ -375,7 +375,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2209033700,
+              "duration": 2231521500,
               "status": "passed"
             },
             "line": 4,
@@ -387,7 +387,7 @@
           },
           {
             "result": {
-              "duration": 4002300,
+              "duration": 7272000,
               "status": "passed"
             },
             "line": 5,
@@ -399,7 +399,7 @@
           },
           {
             "result": {
-              "duration": 6188120200,
+              "duration": 6242105700,
               "status": "passed"
             },
             "line": 6,
@@ -412,11 +412,11 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:37:56.111Z",
+        "start_timestamp": "2024-02-07T09:44:34.347Z",
         "before": [
           {
             "result": {
-              "duration": 1314744900,
+              "duration": 1392961500,
               "status": "passed"
             },
             "match": {
@@ -431,7 +431,7 @@
         "after": [
           {
             "result": {
-              "duration": 406028400,
+              "duration": 339482600,
               "status": "passed"
             },
             "match": {
@@ -444,7 +444,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5867814800,
+              "duration": 5801980700,
               "status": "passed"
             },
             "line": 9,
@@ -456,7 +456,7 @@
           },
           {
             "result": {
-              "duration": 5540841600,
+              "duration": 5167895800,
               "status": "passed"
             },
             "line": 10,
@@ -468,7 +468,7 @@
           },
           {
             "result": {
-              "duration": 9047882700,
+              "duration": 8973566500,
               "status": "passed"
             },
             "line": 11,
@@ -480,7 +480,7 @@
           },
           {
             "result": {
-              "duration": 8967541100,
+              "duration": 8878212300,
               "status": "passed"
             },
             "line": 12,
@@ -492,7 +492,7 @@
           },
           {
             "result": {
-              "duration": 4524342600,
+              "duration": 4478503700,
               "status": "passed"
             },
             "line": 13,
@@ -513,7 +513,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2162865300,
+              "duration": 1924538800,
               "status": "passed"
             },
             "line": 4,
@@ -525,7 +525,7 @@
           },
           {
             "result": {
-              "duration": 2890600,
+              "duration": 3007300,
               "status": "passed"
             },
             "line": 5,
@@ -537,7 +537,7 @@
           },
           {
             "result": {
-              "duration": 6159700100,
+              "duration": 6165194600,
               "status": "passed"
             },
             "line": 6,
@@ -550,11 +550,11 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:38:40.184Z",
+        "start_timestamp": "2024-02-07T09:45:17.867Z",
         "before": [
           {
             "result": {
-              "duration": 1418378600,
+              "duration": 1303128900,
               "status": "passed"
             },
             "match": {
@@ -569,7 +569,7 @@
         "after": [
           {
             "result": {
-              "duration": 735799700,
+              "duration": 575458100,
               "status": "passed"
             },
             "match": {
@@ -582,7 +582,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9001950400,
+              "duration": 8866414900,
               "status": "passed"
             },
             "line": 17,
@@ -594,7 +594,7 @@
           },
           {
             "result": {
-              "duration": 6098106600,
+              "duration": 5981317500,
               "status": "passed"
             },
             "line": 18,
@@ -606,7 +606,7 @@
           },
           {
             "result": {
-              "duration": 2923636100,
+              "duration": 2889658100,
               "status": "passed"
             },
             "line": 19,
@@ -638,7 +638,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3001338000,
+              "duration": 2223170400,
               "status": "passed"
             },
             "line": 4,
@@ -650,7 +650,7 @@
           },
           {
             "result": {
-              "duration": 2358600,
+              "duration": 6206500,
               "status": "passed"
             },
             "line": 5,
@@ -662,7 +662,7 @@
           },
           {
             "result": {
-              "duration": 6182038900,
+              "duration": 6215256400,
               "status": "passed"
             },
             "line": 6,
@@ -675,11 +675,11 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:39:08.680Z",
+        "start_timestamp": "2024-02-07T09:45:45.575Z",
         "before": [
           {
             "result": {
-              "duration": 1710589100,
+              "duration": 1553014700,
               "status": "passed"
             },
             "match": {
@@ -694,7 +694,7 @@
         "after": [
           {
             "result": {
-              "duration": 499182500,
+              "duration": 392287200,
               "status": "passed"
             },
             "match": {
@@ -707,7 +707,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1576740700,
+              "duration": 1355434300,
               "status": "passed"
             },
             "line": 9,
@@ -739,7 +739,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2693414100,
+              "duration": 1756559800,
               "status": "passed"
             },
             "line": 4,
@@ -751,7 +751,7 @@
           },
           {
             "result": {
-              "duration": 2649400,
+              "duration": 2336900,
               "status": "passed"
             },
             "line": 5,
@@ -763,7 +763,7 @@
           },
           {
             "result": {
-              "duration": 6169842800,
+              "duration": 6184132500,
               "status": "passed"
             },
             "line": 6,
@@ -776,11 +776,11 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:39:21.663Z",
+        "start_timestamp": "2024-02-07T09:45:57.327Z",
         "before": [
           {
             "result": {
-              "duration": 1317554800,
+              "duration": 1291783000,
               "status": "passed"
             },
             "match": {
@@ -795,7 +795,7 @@
         "after": [
           {
             "result": {
-              "duration": 1397954300,
+              "duration": 1098213200,
               "status": "passed"
             },
             "match": {
@@ -808,7 +808,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2700144200,
+              "duration": 2425332400,
               "status": "passed"
             },
             "line": 9,
@@ -820,7 +820,7 @@
           },
           {
             "result": {
-              "duration": 4990028400,
+              "duration": 4741558900,
               "status": "passed"
             },
             "line": 10,
@@ -832,7 +832,7 @@
           },
           {
             "result": {
-              "duration": 2147585100,
+              "duration": 2175176200,
               "status": "passed"
             },
             "line": 11,
@@ -844,7 +844,7 @@
           },
           {
             "result": {
-              "duration": 2211568400,
+              "duration": 2177640100,
               "status": "passed"
             },
             "line": 12,
@@ -856,7 +856,7 @@
           },
           {
             "result": {
-              "duration": 11106516800,
+              "duration": 10970482700,
               "status": "passed"
             },
             "line": 13,
@@ -877,7 +877,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2607624800,
+              "duration": 1802436900,
               "status": "passed"
             },
             "line": 4,
@@ -889,7 +889,7 @@
           },
           {
             "result": {
-              "duration": 3344000,
+              "duration": 2115300,
               "status": "passed"
             },
             "line": 5,
@@ -901,7 +901,7 @@
           },
           {
             "result": {
-              "duration": 6196404600,
+              "duration": 6182787600,
               "status": "passed"
             },
             "line": 6,
@@ -914,11 +914,11 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:39:56.403Z",
+        "start_timestamp": "2024-02-07T09:46:30.138Z",
         "before": [
           {
             "result": {
-              "duration": 1324972800,
+              "duration": 1212711000,
               "status": "passed"
             },
             "match": {
@@ -933,7 +933,7 @@
         "after": [
           {
             "result": {
-              "duration": 1908622300,
+              "duration": 1121183100,
               "status": "passed"
             },
             "match": {
@@ -946,7 +946,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2076489500,
+              "duration": 2082165700,
               "status": "passed"
             },
             "line": 16,
@@ -958,7 +958,7 @@
           },
           {
             "result": {
-              "duration": 9855063300,
+              "duration": 10168784400,
               "status": "passed"
             },
             "line": 17,
@@ -970,7 +970,7 @@
           },
           {
             "result": {
-              "duration": 5276259700,
+              "duration": 4886611200,
               "status": "passed"
             },
             "line": 18,
@@ -1002,7 +1002,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2721253500,
+              "duration": 2390326900,
               "status": "passed"
             },
             "line": 4,
@@ -1014,7 +1014,7 @@
           },
           {
             "result": {
-              "duration": 2209300,
+              "duration": 2224900,
               "status": "passed"
             },
             "line": 5,
@@ -1026,7 +1026,7 @@
           },
           {
             "result": {
-              "duration": 6173965200,
+              "duration": 6186988700,
               "status": "passed"
             },
             "line": 6,
@@ -1039,11 +1039,172 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:40:25.649Z",
+        "start_timestamp": "2024-02-07T09:46:57.609Z",
         "before": [
           {
             "result": {
-              "duration": 1864768900,
+              "duration": 1844501500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User should be able to use featured spinny cars functionality",
+        "description": "",
+        "id": "verify-featured-spinny-cars-functionality-on-homepage;user-should-be-able-to-use-featured-spinny-cars-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 680630200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 81472000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "scroll down to featured spinny cars section",
+            "match": {
+              "location": "HomepageFeaturedSpinnyCars.scroll_down_to_featured_spinny_cars_section()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10316233100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "clicked on car card under best buy for you tab",
+            "match": {
+              "location": "HomepageFeaturedSpinnyCars.click_on_car_card_under_best_buy_for_you_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3359154300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "click on view all spinny cars under best buy for you tab",
+            "match": {
+              "location": "HomepageFeaturedSpinnyCars.click_on_view_all_spinny_cars_under_best_buy_for_you_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4196748700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "click on newly added tab",
+            "match": {
+              "location": "HomepageFeaturedSpinnyCars.click_on_newly_addded_tab()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4393562200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "clicks on car card under newly added tab",
+            "match": {
+              "location": "HomepageFeaturedSpinnyCars.click_on_car_card_under_newly_added_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4580073600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "click view all cars under newly added tab",
+            "match": {
+              "location": "HomepageFeaturedSpinnyCars.click_view_all_cars_under_newly_added_tab()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify featured spinny cars functionality on homepage",
+    "description": "",
+    "id": "verify-featured-spinny-cars-functionality-on-homepage",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/HomepageFeaturedSpinnyCars.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1945699100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4331200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6193342200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-07T09:47:35.649Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1434861000,
               "status": "passed"
             },
             "match": {
@@ -1058,7 +1219,7 @@
         "after": [
           {
             "result": {
-              "duration": 1417599500,
+              "duration": 821578800,
               "status": "passed"
             },
             "match": {
@@ -1071,7 +1232,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2023835200,
+              "duration": 2011021900,
               "status": "passed"
             },
             "line": 9,
@@ -1083,7 +1244,7 @@
           },
           {
             "result": {
-              "duration": 2055332800,
+              "duration": 2044774200,
               "status": "passed"
             },
             "line": 10,
@@ -1115,7 +1276,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2550915500,
+              "duration": 2055502800,
               "status": "passed"
             },
             "line": 4,
@@ -1127,7 +1288,7 @@
           },
           {
             "result": {
-              "duration": 5613100,
+              "duration": 3620100,
               "status": "passed"
             },
             "line": 5,
@@ -1139,7 +1300,7 @@
           },
           {
             "result": {
-              "duration": 6182125500,
+              "duration": 6214236800,
               "status": "passed"
             },
             "line": 6,
@@ -1152,11 +1313,753 @@
         ]
       },
       {
-        "start_timestamp": "2024-02-01T10:40:41.917Z",
+        "start_timestamp": "2024-02-07T09:47:50.105Z",
         "before": [
           {
             "result": {
-              "duration": 1787635400,
+              "duration": 1231287000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Filter applied when user clicks on View all \u003cBody Type\u003e under Explore by body type section",
+        "description": "",
+        "id": "verify-body-type-functionality-on-homepage;filter-applied-when-user-clicks-on-view-all-\u003cbody-type\u003e-under-explore-by-body-type-section",
+        "after": [
+          {
+            "result": {
+              "duration": 892236900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2102205400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "scroll body type section",
+            "match": {
+              "location": "Homepage_BodyType.scroll_body_type_section()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7251033000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Click on View all hatchbacks",
+            "match": {
+              "location": "Homepage_BodyType.click_on_View_all_hatchbacks()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3119629700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Go back to the home page",
+            "match": {
+              "location": "Homepage_BodyType.go_back_to_home_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10499605400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Click on Sedan and View All Sedan",
+            "match": {
+              "location": "Homepage_BodyType.Click_on_Sedan_and_View_All_Sedan()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3117848500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Go back to the home page",
+            "match": {
+              "location": "Homepage_BodyType.go_back_to_home_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12495163800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Click on SUV and View All SUVs",
+            "match": {
+              "location": "Homepage_BodyType.Click_on_SUV_and_View_All_SUVs()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3104862000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Go back to the home page",
+            "match": {
+              "location": "Homepage_BodyType.go_back_to_home_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13725866100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Click on MUV and View All MUVs",
+            "match": {
+              "location": "Homepage_BodyType.Click_on_MUV_and_View_All_MUVs()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3105524100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Go back to the home page",
+            "match": {
+              "location": "Homepage_BodyType.go_back_to_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify body type functionality on homepage",
+    "description": "",
+    "id": "verify-body-type-functionality-on-homepage",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/Homepage_BodyType.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1874822900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3902700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6166844400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-07T09:48:59.031Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1359503900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User should be able to select the city and the PLP must get updated",
+        "description": "",
+        "id": "verify-location-selector-functionality-on-homepage;user-should-be-able-to-select-the-city-and-the-plp-must-get-updated",
+        "after": [
+          {
+            "result": {
+              "duration": 1104772500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2453859800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user selects Delhi NCR on Home page",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Delhi_NCR_on_Home_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3443511900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "validate the city Delhi NCR on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Delhi_NCR_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2355550000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user selects Bangalore",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Bangalore()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3393522400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "validate the city Bangalore on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Bangalore_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2401496700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user selects Hyderabad",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Hyderabad()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3397539300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "validate the city Hyderabad on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Hyderabad_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2338122700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user selects Mumbai",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Mumbai()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3377499200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "validate the city Mumbai on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Mumbai_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2353248800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user selects Pune",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Pune()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3396096300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "validate the city Pune on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Pune_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2370952600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user selects Delhi on Home page",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Delhi_on_Home_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3411641300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "validate the city Delhi on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Delhi_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2352998700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user selects Gurgaon",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Gurgaon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3429021600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "validate the city Gurgaon on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Gurgaon_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2373430700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user selects Noida",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Noida()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3358700500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "validate the city Noida on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Noida_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2335801900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user selects Ahmedabad",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Ahmedabad()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3396920600,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "validate the city Ahmedabad on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Ahmedabad_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2353207000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user selects Chennai",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Chennai()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3361891000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "validate the city Chennai on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Chennai_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2438749000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user selects Kolkata",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Kolkata()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3394444400,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "validate the city Kolkata on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Kolkata_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2402001100,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user selects Lucknow",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Lucknow()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3380534200,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "validate the city Lucknow on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Lucknow_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2389115400,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "user selects Jaipur",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Jaipur()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3393369800,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "validate the city Jaipur on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Jaipur_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4372747500,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "user selects Chandigarh",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Chandigarh()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3375968500,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "validate the city Chandigarh on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Chandigarh_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3389705700,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "user selects Coimbatore",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Coimbatore()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3393103400,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "validate the city Coimbatore on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Coimbatore_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3401738900,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "user selects Ghaziabad",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Ghaziabad()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3379984300,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "validate the city Ghaziabad on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Ghaziabad_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3386417500,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user selects Indore",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Indore()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3365723000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "validate the city Indore on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Indore_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3419901100,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "user selects Kochi",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Kochi()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3358689800,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "validate the city Kochi on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Kochi_on_PLP()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3422385800,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user selects Surat",
+            "match": {
+              "location": "LocationSelectorManual.user_selects_Surat()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3378727300,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "validate the city Surat on PLP",
+            "match": {
+              "location": "LocationSelectorManual.validate_the_city_Surat_on_PLP()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verify location selector functionality on homepage",
+    "description": "",
+    "id": "verify-location-selector-functionality-on-homepage",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/LocationSelectorManual.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User land on spinny website and selects location",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1974643900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user land on spinny website",
+            "match": {
+              "location": "BaseSteps.user_land_on_spinny_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1815100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Wait for the application page to load completely",
+            "match": {
+              "location": "BaseSteps.wait_for_the_page_to_load_completely()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6162706600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user selects location",
+            "match": {
+              "location": "BaseSteps.select_location()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-02-07T09:51:06.244Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1297365500,
               "status": "passed"
             },
             "match": {
@@ -1171,7 +2074,7 @@
         "after": [
           {
             "result": {
-              "duration": 577357800,
+              "duration": 458389800,
               "status": "passed"
             },
             "match": {
@@ -1184,7 +2087,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4219092900,
+              "duration": 4219707300,
               "status": "passed"
             },
             "line": 9,
@@ -1196,7 +2099,7 @@
           },
           {
             "result": {
-              "duration": 2192463600,
+              "duration": 2166401500,
               "status": "passed"
             },
             "line": 10,
@@ -1208,7 +2111,7 @@
           },
           {
             "result": {
-              "duration": 8952388000,
+              "duration": 8802712600,
               "status": "passed"
             },
             "line": 11,
@@ -1220,7 +2123,7 @@
           },
           {
             "result": {
-              "duration": 38538100,
+              "duration": 26788900,
               "status": "passed"
             },
             "line": 12,
@@ -1244,11 +2147,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2024-02-01T10:41:08.415Z",
+        "start_timestamp": "2024-02-07T09:51:31.359Z",
         "before": [
           {
             "result": {
-              "duration": 1429338900,
+              "duration": 1296064000,
               "status": "passed"
             },
             "match": {
@@ -1263,7 +2166,7 @@
         "after": [
           {
             "result": {
-              "duration": 333505400,
+              "duration": 305032000,
               "status": "passed"
             },
             "match": {
@@ -1276,7 +2179,7 @@
         "steps": [
           {
             "result": {
-              "duration": 311182800,
+              "duration": 201085000,
               "status": "passed"
             },
             "line": 4,
@@ -1288,7 +2191,7 @@
           },
           {
             "result": {
-              "duration": 7006506400,
+              "duration": 7007927900,
               "status": "passed"
             },
             "line": 5,
