@@ -1,4 +1,4 @@
-/target/
+
 ScreenShot/
 target/
 
@@ -52,4 +52,5 @@ Thumbs.db
 *.mov
 *.wmv
 
->>>>>>> dbec9abd73542f426bb0858f03eb3ef8ed05fa49
+# Target Files
+*.target/

@@ -14,6 +14,7 @@ Utility\Wait.class
 StepDefinition\HomepageDownloadAppBanner.class
 StepDefinition\HomepageFeaturedSpinnyCars.class
 StepDefinition\utility.class
+StepDefinition\carfinderbanner.class
 StepDefinition\Homepage_BodyType.class
 StepDefinition\Bottom_Navigation.class
 StepDefinition\Hooks.class
