@@ -1,5 +1,6 @@
 StepDefinition\HomepageInsightsThatDriveUs.class
 StepDefinition\BaseSteps.class
+StepDefinition\HomepageSpinnyBuzz.class
 StepDefinition\HomepageBuySellToggle_HubLocation.class
 Runner\TestRunner.class
 Utility\preMethods.class
@@ -8,6 +9,8 @@ Utility\ConfigReader.class
 StepDefinition\SpinnyHomePage.class
 StepDefinition\LocationSelectorManual.class
 StepDefinition\HomepageBuyButton_SellButton.class
+StepDefinition\HomepageExploreMore.class
+StepDefinition\HomepageSpinnyMaxBanner.class
 Utility\DataBaseQueryExecution.class
 StepDefinition\HomepageExplorePopularBrands_HowSpinnyWorks.class
 Utility\Wait.class
