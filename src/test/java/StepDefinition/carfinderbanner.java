@@ -28,7 +28,7 @@ public class carfinderbanner {
 	@And("clicks on the car finder banner on homepage")
 	public void clicks_on_the_car_finder_banner_on_homepage() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1500)");
+		js.executeScript("window.scroll(0,1200)");
 		Thread.sleep(4000);
 		WebElement carFinderModal = driver.findElement(By.xpath(cr.valueOnTheKey("Carfinder_banner")));
 		Assert.assertEquals(true, carFinderModal.isDisplayed());

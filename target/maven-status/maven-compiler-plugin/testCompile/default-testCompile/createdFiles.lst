@@ -21,3 +21,4 @@ StepDefinition\carfinderbanner.class
 StepDefinition\Homepage_BodyType.class
 StepDefinition\Bottom_Navigation.class
 StepDefinition\Hooks.class
+StepDefinition\HomepageViewAllCars.class

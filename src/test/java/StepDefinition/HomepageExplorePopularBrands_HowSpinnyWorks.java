@@ -91,8 +91,7 @@ public class HomepageExplorePopularBrands_HowSpinnyWorks {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,1700)");
 		Thread.sleep(2000);
-		WebElement HowSpinnyWorksContainer = driver
-				.findElement(By.xpath(cr.valueOnTheKey("homepage_HowSpinnyWorksContainer")));
+		WebElement HowSpinnyWorksContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_HowSpinnyWorksContainer")));
 		Assert.assertEquals(true, HowSpinnyWorksContainer.isDisplayed());
 
 	}
@@ -101,12 +100,11 @@ public class HomepageExplorePopularBrands_HowSpinnyWorks {
 	public void click_on_watch_how_it_works() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("homepage_watchHowItWorks"), "xpath");
 		Thread.sleep(2000);
-		WebElement videoOverlayContainer = driver
-				.findElement(By.xpath(cr.valueOnTheKey("homepage_videoOverlayContainer")));
+		WebElement videoOverlayContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_videoOverlayContainer")));
 		Assert.assertEquals(true, videoOverlayContainer.isDisplayed());
 		Thread.sleep(3000);
 		prm.click(driver, cr.valueOnTheKey("homepage_videoOverlayCloseButton"), "xpath");
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 
 	}
 
@@ -114,12 +112,10 @@ public class HomepageExplorePopularBrands_HowSpinnyWorks {
 	public void click_on_learn_more() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("homepage_watchHowItWorksLearnMore"), "xpath");
 		Thread.sleep(2000);
-		WebElement howSpinnyWorksBottomSheet = driver
-				.findElement(By.xpath(cr.valueOnTheKey("homepage_watchHowItWorksBottomSheetOverlay")));
+		WebElement howSpinnyWorksBottomSheet = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_watchHowItWorksBottomSheetOverlay")));
 		Assert.assertEquals(true, howSpinnyWorksBottomSheet.isDisplayed());
 		Thread.sleep(2000);
-		WebElement howSpinnyWorksWatchTheFilmButton = driver
-				.findElement(By.xpath(cr.valueOnTheKey("homepage_HowSpinnyWorksLearnMoreWatchTheFilmButton")));
+		WebElement howSpinnyWorksWatchTheFilmButton = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_HowSpinnyWorksLearnMoreWatchTheFilmButton")));
 		Assert.assertEquals(true, howSpinnyWorksWatchTheFilmButton.isDisplayed());
 		prm.click(driver, cr.valueOnTheKey("homepage_watchHowItWorksCloseButton"), "xpath");
 	}
