@@ -21,7 +21,7 @@ public class Login {
 	Wait wait = new Wait();
 	static preMethods prm = new preMethods();
 
-	@And("click on account tab")
+	@Then("click on account tab")
 	public void click_on_account_tab() throws InterruptedException {
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("botnav_account"), "xpath");

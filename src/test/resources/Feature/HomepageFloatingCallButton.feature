@@ -1,0 +1,13 @@
+Feature: Verify floating call button functionality on plp 
+	
+ Background: User land on spinny website and selects location
+    Given user land on spinny website
+    When Wait for the application page to load completely
+    And user selects location
+    
+   Scenario: User should be able to use floating call button functionality on plp
+   Then user land on plp
+   And scroll down the page
+   And validate floating call button is visible
+
+ 

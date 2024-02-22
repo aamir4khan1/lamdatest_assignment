@@ -3,7 +3,7 @@ package StepDefinition;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import io.cucumber.core.api.Scenario;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -28,7 +28,7 @@ public class Hooks {
 	public WebDriver beforeScenario() {
 		if (cr.valueOnTheKey("Env").equals("PROD")) {
 			// WebDriverManager.chromedriver().setup();
-			WebDriverManager.chromedriver().clearDriverCache().setup();
+			//WebDriverManager.chromedriver().clearDriverCache().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
@@ -44,7 +44,7 @@ public class Hooks {
 		}
 
 		else {
-			WebDriverManager.chromedriver().clearDriverCache().setup();
+		//	WebDriverManager.chromedriver().clearDriverCache().setup();
 			// WebDriverManager.chromedriver().setup();
 			Map<String, String> mobileEmulation = new HashMap<>();
 

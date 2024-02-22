@@ -6,7 +6,7 @@ Feature: Verify login
     And user selects location
     
   Scenario: User selects login
-    And click on account tab
+    Then click on account tab
     And user clicks on mobile number field
     And enters mobile number and otp code
     Then logout button is visible
