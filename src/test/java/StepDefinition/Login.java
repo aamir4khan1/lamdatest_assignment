@@ -37,8 +37,7 @@ public class Login {
 	@And("enters mobile number and otp code")
 	public void enters_mobile_number_and_otp_code() {
 		try {
-			prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"), ("xpath"),
-					(cr.valueOnTheKey("MobileNumber")));
+			prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"), ("xpath"),(cr.valueOnTheKey("MobileNumber")));
 			Thread.sleep(2000);
 			prm.click(driver, cr.valueOnTheKey("login_proceed"), "xpath");
 			Thread.sleep(2000);
