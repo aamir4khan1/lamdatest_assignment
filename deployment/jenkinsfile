@@ -24,8 +24,8 @@ pipeline {
                         reportDir: 'automation-reports', 
                         reportFiles: 'overview-features.html', 
                         reportName: 'HTML Report', 
-                        reportTitles: '', 
-                        useWrapperFileDirectly: true
+                        reportTitles: ''
+                        
                     ])
                 }
             }
