@@ -4,9 +4,9 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh "docker build -t consumer-web-automation:v1 -f Dockerfile ."
+                    sh "docker build -t spinny-web-automation:v1 -f Dockerfile ."
                     // below the line to create container name
-                    sh "docker create --name auto-test-result consumer-web-automation:v1" 
+                    sh "docker create --name auto-test-result spinny-web-automation:v1" 
                     // create directory to paste result build from container 
                     sh "mkdir automation-reports"
                     // copy paste test result to dir in Jenkins
