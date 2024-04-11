@@ -44,4 +44,4 @@ ADD pom.xml $HOME
 ADD . $HOME
 
 #Build test
-RUN mvn clean test -Dheadless=true; exit 0
+RUN mvn clean test
