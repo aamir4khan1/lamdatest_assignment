@@ -10,7 +10,7 @@ pipeline {
                     // create directory to paste result build from container 
                     sh "mkdir automation-reports"
                     // copy paste test result to dir in Jenkins
-                    sh "docker cp auto-test-result:/usr/app/target/cucumber-html-reports/overview-features.html automation-reports/overview-features.html"
+                    sh "docker cp automation-test-result:/usr/app/target/cucumber-html-reports/overview-features.html automation-reports/overview-features.html"
                 }
             }
             post {
