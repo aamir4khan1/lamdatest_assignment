@@ -13,10 +13,10 @@ pipeline {
                    // sh "docker cp spinny2-test-result:target/cucumber-html-reports/overview-features.html auto-reports/overview-features.html"
                 }
             }
-         //   post {
+           post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and publish HTML file.
-              //  success {
+               success {
                     //publishHTML([
                        // allowMissing: false, 
                        // alwaysLinkToLastBuild: false, 
@@ -27,9 +27,9 @@ pipeline {
                        // reportTitles: ''
                         
    //                 ])
-   //             }
-    //        }
-    //    }
+                }
+           }
+       }
         stage('clean after build'){
             steps{
                 script{
@@ -39,5 +39,4 @@ pipeline {
             }
         }
     }
-}
 }
