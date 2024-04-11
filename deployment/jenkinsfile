@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps {
+                script {
+                    sh "docker build -t spinny-web-automation:v1 -f deployment/Dockerfile ."
+                    // below the line to create container name
+                    sh "docker create --name consumer-test-result spinny-web-automation:v1" 
+                    // create directory to paste result build from container 
+                    sh "mkdir automation-reports"
+                    // copy paste test result to dir in Jenkins
+                    sh "docker cp consumer-test-result:/usr/app/target/cucumber-html-reports/overview-features.html automation-reports/overview-features.html"
+                }
+            }
+            post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and publish HTML file.
+                success {
+                    publishHTML([
+                        allowMissing: false, 
+                        alwaysLinkToLastBuild: false, 
+                        keepAll: false, 
+                        reportDir: 'automation-reports', 
+                        reportFiles: 'overview-features.html', 
+                        reportName: 'HTML Report', 
+                        reportTitles: ''
+                        
+                    ])
+                }
+            }
+        }
+        stage('clean after build'){
+            steps{
+                script{
+                    println 'Done for test automation'
+                    cleanWs()
+                }
+            }
+        }
+    }
+}
