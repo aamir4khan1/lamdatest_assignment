@@ -6,11 +6,11 @@ pipeline {
                 script {
                     sh "docker build -t spinny-web-automation:v1 -f deployment/Dockerfile ."
                     // below the line to create container name
-                    sh "docker create --name spinny1-test-result spinny-web-automation:v1" 
+                    sh "docker create --name spinny2-test-result spinny-web-automation:v1" 
                     // create directory to paste result build from container 
                     sh "mkdir auto-reports"
                     // copy paste test result to dir in Jenkins
-                    sh "docker cp spinny1-test-result:target/cucumber-html-reports/overview-features.html auto-reports/overview-features.html"
+                    sh "docker cp spinny2-test-result:target/cucumber-html-reports/overview-features.html auto-reports/overview-features.html"
                 }
             }
             post {
