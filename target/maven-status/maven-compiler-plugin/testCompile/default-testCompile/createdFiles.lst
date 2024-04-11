@@ -1,6 +1,5 @@
 StepDefinition\BaseSteps.class
 Utility\DataBaseQueryExecution.class
-StepDefinition\CRMLogin.class
 Runner\TestRunner.class
 Utility\preMethods.class
 Utility\Wait.class
