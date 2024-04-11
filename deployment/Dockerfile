@@ -23,7 +23,7 @@ RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-ke
     && apt-get -y install google-chrome-stable 
 
 # Download and install ChromeDriver
-RUN wget -q https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/118.0.5993.70/linux64/chromedriver-linux64.zip \
+RUN wget -q https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/123.0.6312.122/linux64/chromedriver-linux64.zip \
     && unzip chromedriver-linux64.zip \
     && mv chromedriver-linux64/chromedriver /usr/bin/chromedriver \
     && chmod +x /usr/bin/chromedriver \
