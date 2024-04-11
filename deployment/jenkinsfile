@@ -4,7 +4,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh "docker build -t spinny-web-automation:v1 -f Dockerfile ."
+                    sh "docker build -t spinny-web-automation:v1 -f deployment/Dockerfile ."
                     // below the line to create container name
                     sh "docker create --name auto-test-result spinny-web-automation:v1" 
                     // create directory to paste result build from container 
