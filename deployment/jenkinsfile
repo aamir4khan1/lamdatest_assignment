@@ -8,7 +8,7 @@ pipeline {
                     // below the line to create container name
                     sh "docker create --name spinny-test-result spinny-web-automation:v1" 
                     // create directory to paste result build from container 
-                    sh "mkdir automation-reports"
+                    sh "mkdir automation1-reports"
                     // copy paste test result to dir in Jenkins
                     sh "docker cp spinny-test-result:/usr/app/target/cucumber-html-reports/overview-features.html automation-reports/overview-features.html"
                 }
@@ -21,7 +21,7 @@ pipeline {
                         allowMissing: false, 
                         alwaysLinkToLastBuild: false, 
                         keepAll: false, 
-                        reportDir: 'automation-reports', 
+                        reportDir: 'automation1-reports', 
                         reportFiles: 'overview-features.html', 
                         reportName: 'HTML Report', 
                         reportTitles: ''
