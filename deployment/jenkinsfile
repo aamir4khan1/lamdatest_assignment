@@ -1,41 +1,54 @@
 pipeline {
     agent any
+
+    environment {
+        // Define an environment variable to store the container ID
+        CONTAINER_ID = ''
+    }
+
     stages {
-        stage('Test') {
+        stage('Build and Test') {
             steps {
                 script {
-                    sh "docker build -t spinny-web-automation:v1 -f deployment/Dockerfile ."
-                    // below the line to create container name
-                    sh "docker create --name spinny5-test-result spinny-web-automation:v1" 
-                    // create directory to paste result build from container 
-                    sh "mkdir spinnyautomation1-reports"
-                    // copy paste test result to dir in Jenkins
-                    sh "docker cp spinny5-test-result:/usr/app/target/cucumber-html-reports/overview-features.html spinnyautomation1-reports/overview-features.html"
+                    // Build the Docker image
+                    docker.build('consumer-website-automation', '.')
+
+                    // Run the Docker container and capture the container ID
+                    CONTAINER_ID = sh(script: 'docker run -d consumer-website-automation', returnStdout: true).trim()
                 }
             }
-           post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and publish HTML file.
-              success {
-                    publishHTML([
-                        allowMissing: false, 
-                        alwaysLinkToLastBuild: false, 
-                        keepAll: false, 
-                        reportDir: 'spinnyautomation1-reports', 
-                        reportFiles: 'overview-features.html', 
-                        reportName: 'HTML Report', 
+        }
+
+        stage('Run Tests') {
+            steps {
+                // Run tests inside the Docker container
+                script {
+                    docker.image('consumer-website-automation').inside(CONTAINER_ID) {
+                        // Run Maven command to execute tests
+                        sh 'mvn clean test'
+                    }
+                }
+            }
+        }
+
+        stage('Publish Cucumber Reports') {
+            steps {
+                // Copy Cucumber reports from Docker container to Jenkins workspace
+                script {
+                    sh "docker cp $CONTAINER_ID:/usr/src/app/target/cucumber-html-reports ./cucumber-reports"
+                }
+                // Publish HTML Cucumber reports in Jenkins
+                publishHTML(
+                    target: [
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll: false,
+                        reportDir: 'cucumber-reports',
+                        reportFiles: 'overview-features.html',
+                        reportName: 'HTML Cucumber Report',
                         reportTitles: ''
-                        
-                   ])
-                }
-           }
-       }
-        stage('clean after build'){
-            steps{
-                script{
-                    println 'Done for test automation'
-                    cleanWs()
-                }
+                    ]
+                )
             }
         }
     }
