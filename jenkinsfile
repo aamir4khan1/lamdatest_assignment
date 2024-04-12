@@ -1,30 +1,36 @@
 pipeline {
     agent any
-
+    
     environment {
-        // Define an environment variable to store the container ID
-        CONTAINER_ID = ''
+        // Define environment variables
+        DOCKER_IMAGE = 'spinny-web-automation' // Name of the Docker image
+        CONTAINER_ID = '' // Variable to store the container ID
     }
 
     stages {
-        stage('Build and Test') {
+        stage('Build Docker Image') {
             steps {
                 script {
                     // Build the Docker image
-                    docker.build('spinny-web-automation', '.')
-
-                    // Run the Docker container and capture the container ID
-                    CONTAINER_ID = sh(script: 'docker run -d spinny-web-automation', returnStdout: true).trim()
+                    docker.build(env.DOCKER_IMAGE, '.')
                 }
             }
         }
 
         stage('Run Tests') {
             steps {
-                // Run tests inside the Docker container
                 script {
-                    docker.image('spinny-web-automation').inside(CONTAINER_ID) {
-                        // Run Maven command to execute tests
+                    // Run the Docker container
+                    CONTAINER_ID = sh(script: "docker run -d ${env.DOCKER_IMAGE}", returnStdout: true).trim()
+                }
+            }
+        }
+
+        stage('Execute Tests') {
+            steps {
+                script {
+                    // Run tests inside the Docker container
+                    docker.image(env.DOCKER_IMAGE).inside(CONTAINER_ID) {
                         sh 'mvn clean test'
                     }
                 }
@@ -33,8 +39,8 @@ pipeline {
 
         stage('Publish Cucumber Reports') {
             steps {
-                // Copy Cucumber reports from Docker container to Jenkins workspace
                 script {
+                    // Copy Cucumber reports from Docker container to Jenkins workspace
                     sh "docker cp $CONTAINER_ID:/usr/src/app/target/cucumber-html-reports ./cucumber-reports"
                 }
                 // Publish HTML Cucumber reports in Jenkins
@@ -49,6 +55,16 @@ pipeline {
                         reportTitles: ''
                     ]
                 )
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                // Clean up - stop and remove the Docker container
+                script {
+                    sh "docker stop $CONTAINER_ID"
+                    sh "docker rm $CONTAINER_ID"
+                }
             }
         }
     }
