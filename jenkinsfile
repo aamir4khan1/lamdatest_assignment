@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    docker.build('spinny-web-automation', 'deployment/')
+                    docker.build('spinny-web-automation', '.')
 
                     // Run the Docker container and capture the container ID
                     CONTAINER_ID = sh(script: 'docker run -d spinny-web-automation', returnStdout: true).trim()
