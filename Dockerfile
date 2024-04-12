@@ -10,8 +10,9 @@ COPY pom.xml .
 # Copy the rest of the project files
 COPY src/ src/
 COPY ObjectRepository/ ObjectRepository/
+
 # Build the project
 RUN mvn -B -f pom.xml clean package
 
 # Set the command to run your tests
-CMD ["mvn", "test"]
+#CMD ["mvn", "test"]
