@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    docker.build('consumer-website-automation', '.')
+                    docker.build('consumer-website-automation', 'deployment/Dockerfile')
 
                     // Run the Docker container and capture the container ID
                     CONTAINER_ID = sh(script: 'docker run -d consumer-website-automation', returnStdout: true).trim()
