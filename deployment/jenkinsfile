@@ -11,10 +11,10 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    docker.build('spinny-web-automation', 'deployment/')
+                    docker.build('SpinnyWebAutomation', 'deployment/')
 
                     // Run the Docker container and capture the container ID
-                    CONTAINER_ID = sh(script: 'docker run -d spinny-web-automation', returnStdout: true).trim()
+                    CONTAINER_ID = sh(script: 'docker run -d SpinnyWebAutomation', returnStdout: true).trim()
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 // Run tests inside the Docker container
                 script {
-                    docker.image('spinny-web-automation').inside(CONTAINER_ID) {
+                    docker.image('SpinnyWebAutomation').inside(CONTAINER_ID) {
                         // Run Maven command to execute tests
                         sh 'mvn clean test'
                     }
