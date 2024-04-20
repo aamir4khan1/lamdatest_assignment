@@ -4,7 +4,7 @@ Background: Create an instance of android or ios driver before each scenario
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-  
+  @Smoke
    Scenario: User should be able to use explore popular brands section
     Then user scroll to explore popular brands section
     And click on maruti suzuki
