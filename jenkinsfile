@@ -18,16 +18,12 @@ pipeline {
         stage('Run Tests in Headless Mode') {
             steps {
                 script {
-                    try {
+                    
                         CONTAINER_ID = sh(script: "docker run -d ${env.DOCKER_IMAGE}", returnStdout: true).trim()
                         sh "docker exec $CONTAINER_ID mvn clean test"
                         sh "mkdir -p cucumber-reports"
                         sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./cucumber-reports"
-                    } finally {
-                        // Add cleanup steps in case of any errors
-                        sh "docker stop $CONTAINER_ID"
-                        sh "docker rm $CONTAINER_ID"
-                    }
+                    
                 }
             }
         }
