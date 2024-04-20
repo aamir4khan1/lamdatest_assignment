@@ -30,5 +30,4 @@ ENV DISPLAY=:99
 # Start Xvfb in the background
 CMD ["Xvfb", ":99", "-screen", "0", "1024x768x16"]
 
-# Start Chrome in headless mode
-google-chrome --headless --disable-gpu --remote-debugging-port=9222 --no-sandbox https://www.example.com
+
