@@ -30,7 +30,7 @@ public class Hooks {
 			// WebDriverManager.chromedriver().setup();
 			//WebDriverManager.chromedriver().clearDriverCache().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
+			//options.addArguments("--headless");
 			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 			return driver;
