@@ -29,4 +29,4 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 
 # Start Xvfb in the background
 #CMD Xvfb :99 -ac & mvn clean test
-mvn clean test
+#mvn clean test
