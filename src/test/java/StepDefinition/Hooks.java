@@ -51,7 +51,7 @@ public class Hooks {
 			mobileEmulation.put("deviceName", cr.valueOnTheKey("DeviceName"));
 
 			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("--headless");
+			//chromeOptions.addArguments("--headless");
 			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
 			driver = new ChromeDriver(chromeOptions);
