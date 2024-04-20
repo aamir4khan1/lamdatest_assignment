@@ -30,7 +30,7 @@ pipeline {
                 publishHTML(
                     target: [
                         allowMissing: false,
-                        alwaysLinkToLastBuild: false,
+                        alwaysLinkToLastBuild: true,
                         keepAll: false,
                         reportDir: 'cucumber-reports',
                         reportFiles: 'overview-features.html',
