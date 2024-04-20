@@ -21,10 +21,7 @@ pipeline {
                     
                         CONTAINER_ID = sh(script: "docker run -d ${env.DOCKER_IMAGE}", returnStdout: true).trim()
                         sh "docker exec $CONTAINER_ID mvn clean test"
-                        sh "mkdir -p automation-reports"
-                        sh "ls -l automation-reports"
-                        sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./automation-reports"
-                    sh "ls -l automation-reports"
+                        
                 }
             }
         }
@@ -33,9 +30,12 @@ pipeline {
     post {
         always {
             // Ensure HTML report directory exists
-           //script {
-               //sh "mkdir -p cucumber-reports"
-         // }
+           script {
+               sh "mkdir -p automation-reports"
+                        sh "ls -l automation-reports"
+                        sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./automation-reports"
+                    sh "ls -l automation-reports"
+         }
             // Debug: List files in cucumber-reports directory
          // script {
                // sh "ls -l cucumber-reports"
