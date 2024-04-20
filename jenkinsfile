@@ -58,9 +58,9 @@ pipeline {
                 )
             }
             // Debug: Print the content of the cucumber-reports directory
-          #  script {
-           #     sh "cat cucumber-reports/*"
-           # }
+          // script {
+          //     sh "cat cucumber-reports/*"
+           // }
             // Cleanup Docker container
             script {
                 sh "docker stop $CONTAINER_ID"
