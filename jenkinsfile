@@ -20,7 +20,7 @@ pipeline {
                 script {
                     CONTAINER_ID = sh(script: "docker run -d ${env.DOCKER_IMAGE}", returnStdout: true).trim()
                     sh "docker exec $CONTAINER_ID mvn clean test -Dheadless=true"
-                    sh "docker cp $CONTAINER_ID:/usr/src/app/target/cucumber-html-reports ./cucumber-reports"
+                    sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./cucumber-reports"
                 }
             }
         }
