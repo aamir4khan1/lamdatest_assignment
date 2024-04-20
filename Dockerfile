@@ -24,9 +24,11 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     && apt-get install -y google-chrome-stable
 
 
-# Set environment variables for headless mode
-#ENV DISPLAY=:99
+# Start Xvfb (if needed)
+Xvfb :99 -ac &
 
-# Start Xvfb in the background
-#CMD Xvfb :99 -ac & mvn clean test
-#mvn clean test
+# Set display variable
+export DISPLAY=:99
+
+# Start Chrome in headless mode
+google-chrome --headless --disable-gpu --remote-debugging-port=9222 --no-sandbox https://www.example.com
