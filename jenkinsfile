@@ -18,15 +18,24 @@ pipeline {
         stage('Run Tests in Headless Mode') {
             steps {
                 script {
-                    CONTAINER_ID = sh(script: "docker run -d ${env.DOCKER_IMAGE}", returnStdout: true).trim()
-                    sh "docker exec $CONTAINER_ID mvn clean test"
-                    sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./cucumber-reports"
+                    try {
+                        CONTAINER_ID = sh(script: "docker run -d ${env.DOCKER_IMAGE}", returnStdout: true).trim()
+                        sh "docker exec $CONTAINER_ID mvn clean test"
+                        sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./cucumber-reports"
+                    } finally {
+                        // Add cleanup steps in case of any errors
+                        sh "docker stop $CONTAINER_ID"
+                        sh "docker rm $CONTAINER_ID"
+                    }
                 }
             }
         }
-
-        post {
-            always {
+    }
+    
+    post {
+        always {
+            // Publish HTML report regardless of previous stage outcomes
+            script {
                 publishHTML(
                     target: [
                         allowMissing: false,
@@ -40,14 +49,11 @@ pipeline {
                 )
             }
         }
-
-        post {
-            always {
-                script {
-                    sh "docker stop $CONTAINER_ID"
-                    sh "docker rm $CONTAINER_ID"
-                }
-            }
+        
+        failure {
+            echo "Pipeline failed. Cleaning up..."
+            sh "docker stop $CONTAINER_ID"
+            sh "docker rm $CONTAINER_ID"
         }
     }
 }
