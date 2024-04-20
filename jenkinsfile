@@ -36,13 +36,13 @@ pipeline {
     post {
         always {
             // Ensure HTML report directory exists
-           # script {
-               # sh "mkdir -p cucumber-reports"
-          #  }
+           //script {
+               //sh "mkdir -p cucumber-reports"
+         // }
             // Debug: List files in cucumber-reports directory
-          #  script {
-               # sh "ls -l cucumber-reports"
-           # }
+         // script {
+               // sh "ls -l cucumber-reports"
+          // }
             // Publish HTML report regardless of previous stage outcomes
             script {
                 publishHTML(
