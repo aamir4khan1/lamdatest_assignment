@@ -41,8 +41,8 @@ pipeline {
             }
         }
 
-        stage('Cleanup') {
-            steps {
+        post {
+            always {
                 script {
                     sh "docker stop $CONTAINER_ID"
                     sh "docker rm $CONTAINER_ID"
