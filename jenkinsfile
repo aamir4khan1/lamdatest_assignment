@@ -21,7 +21,7 @@ pipeline {
                     try {
                         CONTAINER_ID = sh(script: "docker run -d ${env.DOCKER_IMAGE}", returnStdout: true).trim()
                         sh "docker exec $CONTAINER_ID mvn clean test"
-                        sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./cucumber-reports"
+                        sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./automation-reports"
                     } finally {
                         // Add cleanup steps in case of any errors
                         sh "docker stop $CONTAINER_ID"
@@ -40,8 +40,8 @@ pipeline {
                     target: [
                         allowMissing: false,
                         alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: 'cucumber-reports',
+                        keepAll: false,
+                        reportDir: 'automation-reports',
                         reportFiles: 'overview-features.html',
                         reportName: 'HTML Cucumber Report',
                         reportTitles: ''
