@@ -2,7 +2,7 @@
 FROM maven:3.8.6-openjdk-11-slim
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /usr/SpinnyWebAutomation
 
 # Copy the Maven project file
 COPY . .
