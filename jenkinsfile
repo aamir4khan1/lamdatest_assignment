@@ -31,7 +31,7 @@ pipeline {
         always {
             // Ensure HTML report directory exists
            script {
-               sh "mkdir -p automation-reports"
+             //  sh "mkdir -p automation-reports"
                         sh "ls -l automation-reports"
                         sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./automation-reports"
                     sh "ls -l automation-reports"
@@ -47,7 +47,7 @@ pipeline {
                         allowMissing: false,
                         alwaysLinkToLastBuild: true,
                         keepAll: false,
-                        reportDir: 'automation-reports',
+                        reportDir: 'HTML_20Cucumber_20Report',
                         reportFiles: 'overview-features.html',
                         reportName: 'HTML Cucumber Report',
                         reportTitles: ''
