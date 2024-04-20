@@ -46,7 +46,7 @@ pipeline {
                         allowMissing: false,
                         alwaysLinkToLastBuild: true,
                         keepAll: false,
-                        reportDir: 'cucumber-reports',
+                        reportDir: 'HTML_20Cucumber_20Report',
                         reportFiles: 'overview-features.html',
                         reportName: 'HTML Cucumber Report',
                         reportTitles: ''
