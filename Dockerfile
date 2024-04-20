@@ -24,8 +24,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     && apt-get install -y google-chrome-stable
 
 # Determine Chrome version and install corresponding ChromeDriver
-RUN CHROME_VERSION=$(google-chrome --product-version | grep -o "[^\.]*\.[^\.]*\.[^\.]*") \
-    && CHROMEDRIVER_VERSION="124.0.2540.25" \
+RUN CHROMEDRIVER_VERSION="124.0.2540.25" \
     && wget -q --continue -P /chromedriver "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip" \
     && unzip /chromedriver/chromedriver_linux64.zip -d /usr/local/bin/ \
     && rm -rf /chromedriver
