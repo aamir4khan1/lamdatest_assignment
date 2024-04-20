@@ -23,11 +23,6 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     && apt-get update -y \
     && apt-get install -y google-chrome-stable
 
-# Determine Chrome version and install corresponding ChromeDriver
-RUN CHROMEDRIVER_VERSION="124.0.2540.25" \
-    && wget -q --continue -P /chromedriver "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip" \
-    && unzip /chromedriver/chromedriver_linux64.zip -d /usr/local/bin/ \
-    && rm -rf /chromedriver
 
 # Set environment variables for headless mode
 ENV DISPLAY=:99
