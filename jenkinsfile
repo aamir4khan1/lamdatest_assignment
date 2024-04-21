@@ -35,6 +35,7 @@ pipeline {
              //  sh "mkdir -p automation-reports"
                         //sh "ls -l automation-reports"
                         sh "docker cp $CONTAINER_ID:/usr/SpinnyWebAutomation/target/cucumber-html-reports ./automation-reports"
+                         sh "apt update && apt install -y zip"
                         sh "zip -r automation-reports.zip automation-reports"
                     //sh "ls -l automation-reports"
          }
