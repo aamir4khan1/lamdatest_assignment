@@ -19,6 +19,12 @@
     </properties>
 
     <dependencies>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+		</dependency>
         <!-- These are the Cucumber dependencies -->
         <dependency>
             <artifactId>cucumber-java</artifactId>
@@ -26,12 +32,6 @@
             <version>4.8.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.5.2</version>
-        </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>

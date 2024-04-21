@@ -4,12 +4,12 @@ Feature: Verify Buy and Sell functionality
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-    
+   @Smoke 
   Scenario: User should be able to use sell button functionality
-    And user click on sell button
+    Then user click on sell button
     And land on sell page
-
+@Smoke
   Scenario: User should be able to use buy button functionality
-    And user click on buy button
+    Then user click on buy button
     And land on product listing page
  

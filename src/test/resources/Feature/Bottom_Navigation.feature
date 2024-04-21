@@ -4,9 +4,9 @@ Feature: Verify bottom navigation functionality
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-    
+    @Smoke
   Scenario: User should be able to use bottom navigation functionality
-   And botnav is visible and home icon selected
+   Then botnav is visible and home icon selected
    And user click on bottom navigation buy car icon
    And user click on shortlists icon	
    And user click on sell car icon
