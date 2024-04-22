@@ -43,13 +43,13 @@ pipeline {
          // script {
                // sh "ls -l cucumber-reports"
           // }
-           script {
-                slackSend(
-                    channel: env.SLACK_CHANNEL,
-                    message: "Cucumber reports zip file",
-                    file: "automation-reports.zip"
-                )
-            }
+          // script {
+              //  slackSend(
+                 //   channel: env.SLACK_CHANNEL,
+                   // message: "Cucumber reports zip file",
+                  //  file: "automation-reports.zip"
+               // )
+           // }
             // Publish HTML report regardless of previous stage outcomes
             script {
                 publishHTML(
