@@ -67,8 +67,10 @@ public class HomepageExploreMore {
 		Thread.sleep(4000);
 		WebElement BuyBackBannerImage = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_buyBackBannerImage")));
 		Assert.assertEquals(true, BuyBackBannerImage.isDisplayed());
-		WebElement exploreMoreWatchTheFilmButton = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_exploreMoreSectionBuyBackWatchTheFilmButton")));
-		Assert.assertEquals(true, exploreMoreWatchTheFilmButton.isDisplayed());
+	//	WebElement exploreMoreWatchTheFilmButton = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_exploreMoreSectionBuyBackWatchTheFilmButton")));
+	//	Assert.assertEquals(true, exploreMoreWatchTheFilmButton.isDisplayed());
+		WebElement buyBackContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_buyBackContainer")));
+		Assert.assertEquals(true, buyBackContainer.isDisplayed());
 		driver.navigate().back();
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;

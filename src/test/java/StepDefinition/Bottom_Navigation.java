@@ -74,8 +74,7 @@ public class Bottom_Navigation {
 		prm.click(driver, cr.valueOnTheKey("botnav_account"), "xpath");
 		Thread.sleep(2000);
 		prm.takeSceenshot(driver);
-		WebElement AccountLoginModalContainer = driver
-				.findElement(By.xpath(cr.valueOnTheKey("account_loginModalContainer")));
+		WebElement AccountLoginModalContainer = driver.findElement(By.xpath(cr.valueOnTheKey("account_loginModalContainer")));
 		Assert.assertEquals(true, AccountLoginModalContainer.isDisplayed());
 
 	}
