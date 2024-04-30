@@ -62,8 +62,7 @@ public class Homepage_BodyType {
 		prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeSedan"), "xpath");
 		Thread.sleep(3000);
 
-		boolean explorebodytypeViewAllSedan = driver
-				.findElement(By.xpath(cr.valueOnTheKey("plp_explorebodytypeViewAllSedan"))).isDisplayed();
+		boolean explorebodytypeViewAllSedan = driver.findElement(By.xpath(cr.valueOnTheKey("plp_explorebodytypeViewAllSedan"))).isDisplayed();
 		prm.click(driver, cr.valueOnTheKey("plp_explorebodytypeViewAllSedan"), "xpath");
 		Thread.sleep(5000);
 

@@ -55,10 +55,13 @@ public class Hooks {
 
 			ChromeOptions chromeOptions = new ChromeOptions();
 			//chromeOptions.addArguments("--headless");
-			chromeOptions.addArguments("--headless");
+			chromeOptions.addArguments("--disable-dev-shm-usage");
+			chromeOptions.addArguments("--ignore-certificate-errors");
+			chromeOptions.addArguments("--disable-extensions");
 			chromeOptions.addArguments("--disable-gpu");
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+			        
 
 			driver = new ChromeDriver(chromeOptions);
 			// driver = new ChromeDriver();

@@ -28,8 +28,8 @@ public class HomepageBuySellToggle_HubLocation {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,200)");
 		prm.click(driver, cr.valueOnTheKey("homepage_buyToggle"), "xpath");
-		Thread.sleep(3000);
-		prm.takeSceenshot(driver);
+		Thread.sleep(4000);
+	//	prm.takeSceenshot(driver);
 		WebElement buycontentSection = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_buyContentSection")));
 		Assert.assertEquals(true, buycontentSection.isDisplayed());
 		WebElement buySectionContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_buySectionContainer")));
