@@ -30,7 +30,9 @@ public class BaseSteps {
 
 	@And("user selects location")
 	public void select_location() throws InterruptedException {
-		prm.click(driver, cr.valueOnTheKey("homepage_detectMyLocation"), "xpath");
+		prm.click(driver, cr.valueOnTheKey("homepage_selectManually"), "xpath");
+		Thread.sleep(1000);
+		prm.click(driver, cr.valueOnTheKey("homepage_DelhiNCR"), "xpath");
 		// driver.findElement(AndroidHomepageScreen.homepage_detectMyLocation).click();
 		// // Detect my location click//
 		Thread.sleep(6000);
