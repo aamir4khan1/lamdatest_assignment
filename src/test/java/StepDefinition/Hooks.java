@@ -6,6 +6,7 @@ import io.cucumber.core.api.Scenario;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -54,18 +55,15 @@ public class Hooks {
 
 
 			ChromeOptions chromeOptions = new ChromeOptions();
-			//chromeOptions.addArguments("--headless");
+			chromeOptions.addArguments("--headless");
 			chromeOptions.addArguments("--disable-dev-shm-usage");
 			chromeOptions.addArguments("--ignore-certificate-errors");
 			chromeOptions.addArguments("--disable-extensions");
 			chromeOptions.addArguments("--disable-gpu");
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
-			        
 
 			driver = new ChromeDriver(chromeOptions);
-			// driver = new ChromeDriver();
-			driver.manage().window().maximize();
 			return driver;
 		}
 	}
