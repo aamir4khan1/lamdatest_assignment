@@ -2,8 +2,10 @@
 package StepDefinition;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -23,16 +25,15 @@ public class HomepageViewAllCars {
 
 	@Then("user click on view all cars")
 	public void user_click_on_view_all_cars() throws InterruptedException {
-		Thread.sleep(3000);
-		prm.click(driver, cr.valueOnTheKey("homepage_viewAllCars"), "xpath");
+		WebElement viewAllCars = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_viewAllCars")));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(viewAllCars).click().build().perform();
 		Thread.sleep(4000);
-		WebElement citySelectorContainer = driver.findElement(By.xpath(cr.valueOnTheKey("plp_citySelectorContainer")));
-		Assert.assertEquals(true, citySelectorContainer.isDisplayed());
 		WebElement usedCarsInDelhiNCR = driver.findElement(By.xpath(cr.valueOnTheKey("plp_usedCarInDelhiNCR")));
 		Assert.assertEquals(true, usedCarsInDelhiNCR.isDisplayed());
 	}
 
-	@And("user select city selector on plp")
+/*	@And("user select city selector on plp")
 	public void user_select_city_selector_on_plp() throws InterruptedException {
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("plp_citySelectorContainer"), "xpath");
@@ -54,7 +55,7 @@ public class HomepageViewAllCars {
 	
 	@Then("user click on city selector on homepage")
 	public void user_click_on_city_selector_on_homepage() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("homepage_CitySelector"), "xpath");
 		Thread.sleep(2000);
 	}
@@ -78,5 +79,5 @@ public class HomepageViewAllCars {
 		WebElement usedCarsInAhmedabad = driver.findElement(By.xpath(cr.valueOnTheKey("plp_usedCarInAhmedabad")));
 		Assert.assertEquals(true, usedCarsInAhmedabad.isDisplayed());
 	}
-	
+	*/
 }

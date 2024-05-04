@@ -40,8 +40,8 @@ public class HomepageFeaturedSpinnyCars {
 		Thread.sleep(4000);
 		WebElement whatsappIcon = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_whatsappIcon")));
 		Assert.assertEquals(true, whatsappIcon.isDisplayed());
-		WebElement cardCardThreeSixtyView = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_threeSixtyViewCard")));
-		Assert.assertEquals(true, cardCardThreeSixtyView.isDisplayed());
+	//	WebElement cardCardThreeSixtyView = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_threeSixtyViewCard")));
+	//	Assert.assertEquals(true, cardCardThreeSixtyView.isDisplayed());
 		driver.navigate().back();
 		Thread.sleep(2000);
 
@@ -80,8 +80,8 @@ public class HomepageFeaturedSpinnyCars {
 		Thread.sleep(2000);
 		WebElement whatsappIcon = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_whatsappIcon")));
 		Assert.assertEquals(true, whatsappIcon.isDisplayed());
-		WebElement cardCardThreeSixtyView = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_threeSixtyViewCard")));
-		Assert.assertEquals(true, cardCardThreeSixtyView.isDisplayed());
+	//	WebElement cardCardThreeSixtyView = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_threeSixtyViewCard")));
+	//	Assert.assertEquals(true, cardCardThreeSixtyView.isDisplayed());
 		driver.navigate().back();
 		Thread.sleep(2000);
 

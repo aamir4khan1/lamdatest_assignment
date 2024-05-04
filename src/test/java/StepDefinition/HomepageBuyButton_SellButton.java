@@ -53,7 +53,7 @@ public class HomepageBuyButton_SellButton {
 	public void user_click_on_buy_button() throws InterruptedException {
 		Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("homepage_buyButton"), "xpath");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	}
 
 	@And("land on product listing page")

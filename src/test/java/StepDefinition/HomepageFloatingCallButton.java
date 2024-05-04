@@ -27,13 +27,17 @@ public class HomepageFloatingCallButton {
 	@Then("user land on plp")
 	public void user_land_on_plp() throws InterruptedException {
 	prm.click(driver, cr.valueOnTheKey("botnav_buyCar"), "xpath");
-	Thread.sleep(2000);
+	Thread.sleep(4000);
 	}
 	
 	@And("scroll down the page")
 	public void scroll_down_the_page() throws InterruptedException {
 	JavascriptExecutor js = (JavascriptExecutor)driver;
-	js.executeScript("window.scroll(0,5000)");
+	js.executeScript("window.scroll(0,6000)");
+	Thread.sleep(2000);
+	js.executeScript("window.scroll(0,7000)");
+	Thread.sleep(2000);
+	js.executeScript("window.scroll(0,8000)");
 	Thread.sleep(2000);
 	
 	}

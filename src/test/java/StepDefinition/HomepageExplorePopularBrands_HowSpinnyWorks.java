@@ -46,10 +46,9 @@ public class HomepageExplorePopularBrands_HowSpinnyWorks {
 	@And("click on maruti suzuki")
 	public void click_on_maruti_suzuki() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("homepage_marutisuzukibrand"), "xpath");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		prm.takeSceenshot(driver);
-		WebElement quickFilterMarutiSuzuki = driver
-				.findElement(By.xpath(cr.valueOnTheKey("plp_quickfiltermarutisuzuki")));
+		WebElement quickFilterMarutiSuzuki = driver.findElement(By.xpath(cr.valueOnTheKey("plp_quickfiltermarutisuzuki")));
 		Assert.assertEquals(true, quickFilterMarutiSuzuki.isDisplayed());
 		Thread.sleep(2000);
 
@@ -117,6 +116,5 @@ public class HomepageExplorePopularBrands_HowSpinnyWorks {
 		Thread.sleep(2000);
 		WebElement howSpinnyWorksWatchTheFilmButton = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_HowSpinnyWorksLearnMoreWatchTheFilmButton")));
 		Assert.assertEquals(true, howSpinnyWorksWatchTheFilmButton.isDisplayed());
-		prm.click(driver, cr.valueOnTheKey("homepage_watchHowItWorksCloseButton"), "xpath");
 	}
 }

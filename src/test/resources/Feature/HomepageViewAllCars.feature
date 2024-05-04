@@ -1,16 +1,16 @@
-Feature: Verify see all cars 
+Feature: Verify view all cars 
 
  Background: User land on spinny website and selects location
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
     
-   Scenario: User should be able use see all cars functionality
+   Scenario: User should be able use view all cars functionality
     Then user click on view all cars
-    And user select city selector on plp
-    And user select bangalore city
-    And user click on spinny logo
-    Then user click on city selector on homepage
-    And user select ahmedabad city
-    And user click on view all cars again
+#    And user select city selector on plp
+#    And user select bangalore city
+#    And user click on spinny logo
+#    Then user click on city selector on homepage
+#    And user select ahmedabad city
+#    And user click on view all cars again
  

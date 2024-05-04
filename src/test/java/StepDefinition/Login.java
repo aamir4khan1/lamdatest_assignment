@@ -43,7 +43,7 @@ public class Login {
 			Thread.sleep(2000);
 			prm.click(driver, cr.valueOnTheKey("login_otp"), "xpath");
 			prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), ("xpath"), (cr.valueOnTheKey("otp")));
-			Thread.sleep(4000);
+			Thread.sleep(6000);
 			prm.takeSceenshot(driver);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
