@@ -55,7 +55,7 @@ public class Hooks {
 
 
 			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("--headless");
+		//	chromeOptions.addArguments("--headless");
 			chromeOptions.addArguments("--disable-dev-shm-usage");
 			chromeOptions.addArguments("--ignore-certificate-errors");
 			chromeOptions.addArguments("--disable-extensions");
