@@ -11,7 +11,7 @@ Feature: Verify location selector functionality on homepage
   #And validate the city on PLP
   #And user performs actions for multiple cities
   #
-  
+  #
     And user selects Delhi NCR on Home page
     And validate the city Delhi NCR on PLP
     And user selects Bangalore
@@ -37,7 +37,7 @@ Feature: Verify location selector functionality on homepage
     And user selects Lucknow
     And validate the city Lucknow on PLP
     And user selects Jaipur
-    And validate the city Jaipur on PLP
+    And validate the city Jaipur on PLP 
     And user selects Chandigarh
     And validate the city Chandigarh on PLP
     And user selects Coimbatore
