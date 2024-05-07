@@ -1,4 +1,4 @@
-Feature: Verify Buy and Sell functionality  
+Feature: Verify download app banner functionality on homepage 
 	
  Background: User land on spinny website and selects location
     Given user land on spinny website
