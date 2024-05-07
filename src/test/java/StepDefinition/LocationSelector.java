@@ -23,7 +23,7 @@ import io.cucumber.java.en.When;
 //import cucumber.api.java.en.And;
 //import testselement.screens.android.AndroidHomepageScreen;
 
-public class LocationSelectorManual {
+public class LocationSelector {
 	static ConfigReader cr = new ConfigReader();
 	WebDriver driver = StepDefinition.Hooks.driver;
 	Wait wait = new Wait();

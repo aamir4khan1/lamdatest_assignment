@@ -29,7 +29,7 @@ public class HomepageViewAllCars {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(viewAllCars).click().build().perform();
 		Thread.sleep(4000);
-		WebElement usedCarsInDelhiNCR = driver.findElement(By.xpath(cr.valueOnTheKey("plp_usedCarInDelhiNCR")));
+		WebElement usedCarsInDelhiNCR = driver.findElement(By.xpath(cr.valueOnTheKey("plp_usedCarsinDelhiNCR")));
 		Assert.assertEquals(true, usedCarsInDelhiNCR.isDisplayed());
 	}
 

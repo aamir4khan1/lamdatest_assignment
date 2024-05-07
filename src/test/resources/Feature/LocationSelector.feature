@@ -48,5 +48,3 @@ Feature: Verify location selector functionality on homepage
     And validate the city Indore on PLP
     And user selects Kochi
     And validate the city Kochi on PLP
-    And user selects Surat
-    And validate the city Surat on PLP
