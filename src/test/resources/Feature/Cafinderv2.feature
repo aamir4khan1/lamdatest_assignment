@@ -6,12 +6,11 @@ Given user land on spinny website
     And user selects location
 	
  Scenario: Car finder
-    Then clicks on the car finder banner on homepage
+    And clicks on the car finder banner on homepage
     #And user is navigated to find my car page
     And user selects price range
     And user selects fuel type preference
     And user selects transmission preference
-    #And taps on login button
     And user clicks on mobile number field
     And enters mobile number and otp code
     And validate carfinder plp

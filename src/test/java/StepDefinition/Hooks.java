@@ -55,7 +55,7 @@ public class Hooks {
 
 			ChromeOptions chromeOptions = new ChromeOptions();
 			//chromeOptions.addArguments("--headless");
-			chromeOptions.addArguments("--headless");
+			//chromeOptions.addArguments("--headless");
 			chromeOptions.addArguments("--disable-gpu");
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
