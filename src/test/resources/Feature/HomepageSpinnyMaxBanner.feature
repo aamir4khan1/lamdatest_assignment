@@ -1,4 +1,4 @@
-Feature: Verify spinny buzz functionality on homepage  
+Feature: Verify spinny max banner functionality on homepage  
 	
  Background: User land on spinny website and selects location
     Given user land on spinny website

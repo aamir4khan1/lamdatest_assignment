@@ -1,4 +1,4 @@
-Feature: Verify Buy and Sell functionality  
+Feature: Verify Buy button and Sell button functionality on homepage 
 	
  Background: User land on spinny website and selects location
     Given user land on spinny website

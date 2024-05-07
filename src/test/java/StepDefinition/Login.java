@@ -40,7 +40,7 @@ public class Login {
 			prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"), ("xpath"),(cr.valueOnTheKey("MobileNumber")));
 			Thread.sleep(2000);
 			prm.click(driver, cr.valueOnTheKey("login_proceed"), "xpath");
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			prm.click(driver, cr.valueOnTheKey("login_otp"), "xpath");
 			prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), ("xpath"), (cr.valueOnTheKey("otp")));
 			Thread.sleep(6000);

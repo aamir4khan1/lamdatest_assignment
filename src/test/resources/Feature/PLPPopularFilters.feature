@@ -1,4 +1,4 @@
-Feature: Verify sort filter functionality on plp
+Feature: Verify popular filter functionality on plp
 	
  Background: User land on spinny website and selects location
    Given user land on spinny website

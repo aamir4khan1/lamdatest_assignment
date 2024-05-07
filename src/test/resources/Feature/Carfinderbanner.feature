@@ -1,4 +1,4 @@
-Feature: Verify car finder functionality  
+Feature: Verify car finder functionality on homepage 
 
 Background: 
 Given user land on spinny website
