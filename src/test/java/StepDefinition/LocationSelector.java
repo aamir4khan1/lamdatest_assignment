@@ -77,7 +77,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 	
@@ -198,7 +198,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 	
@@ -267,7 +267,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 
@@ -335,7 +335,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 
@@ -401,7 +401,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 
@@ -466,7 +466,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 
@@ -532,7 +532,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 	
 	
@@ -601,7 +601,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 	
 
@@ -664,7 +664,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 	
@@ -789,7 +789,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 	
@@ -857,7 +857,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 	
@@ -922,7 +922,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 	
@@ -947,9 +947,10 @@ public class LocationSelector {
 	@And("user selects Jaipur")
 	public void user_selects_Jaipur() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("homepage_citySelector"), "xpath");
+		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,500)");
-
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("homepage_Jaipur"), "xpath");
 		Thread.sleep(2000);
 
@@ -958,7 +959,7 @@ public class LocationSelector {
 	@And("validate the city Jaipur on PLP")
 	public void validate_the_city_Jaipur_on_PLP() throws InterruptedException {
 	    prm.click(driver, cr.valueOnTheKey("homepage_buyButton"), "xpath");
-	    Thread.sleep(2000);
+	    Thread.sleep(4000);
 
 	    WebElement plp_citySelectorJaipur = driver.findElement(By.xpath(cr.valueOnTheKey("plp_citySelectorJaipur")));
 	    Assert.assertEquals(true, plp_citySelectorJaipur.isDisplayed());
@@ -990,7 +991,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 	
 
@@ -1056,7 +1057,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 	
 	
@@ -1085,6 +1086,7 @@ public class LocationSelector {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,900)");
+		Thread.sleep(2000);
 
 		prm.click(driver, cr.valueOnTheKey("homepage_Coimbatore"), "xpath");
 		Thread.sleep(2000);
@@ -1125,7 +1127,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 	
 
@@ -1156,6 +1158,7 @@ public class LocationSelector {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,900)");
+		Thread.sleep(2000);
 
 		prm.click(driver, cr.valueOnTheKey("homepage_Ghaziabad"), "xpath");
 		Thread.sleep(2000);
@@ -1197,7 +1200,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 	
 
@@ -1228,6 +1231,7 @@ public class LocationSelector {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,900)");
+		Thread.sleep(2000);
 
 		prm.click(driver, cr.valueOnTheKey("homepage_Indore"), "xpath");
 		Thread.sleep(2000);
@@ -1269,7 +1273,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 	
 
@@ -1298,6 +1302,8 @@ public class LocationSelector {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,1000)");
+		Thread.sleep(2000);
+
 		prm.click(driver, cr.valueOnTheKey("homepage_Kochi"), "xpath");
 		Thread.sleep(2000);
 	}
@@ -1338,7 +1344,7 @@ public class LocationSelector {
 	    }
 
 	    driver.navigate().back();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 
 
