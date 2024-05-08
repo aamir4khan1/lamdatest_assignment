@@ -38,7 +38,7 @@ public class Login {
 	public void user_enter_mobile_number() throws InterruptedException {
 		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
 		Thread.sleep(4000);
-		prm.click(driver, cr.valueOnTheKey("login_proceed"), "xpath");
+		prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
 		Thread.sleep(4000);
 	}
 

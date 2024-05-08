@@ -48,20 +48,19 @@ public class HomepageSpinnyMaxBanner {
 		WebElement cardCardThreeSixtyView = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_threeSixtyViewCard")));
 		Assert.assertEquals(true, cardCardThreeSixtyView.isDisplayed());
 		driver.navigate().back();
-		Thread.sleep(2000);
-		driver.navigate().back();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
+	//	driver.navigate().back();
+	//	Thread.sleep(4000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,4000)");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 
 	@And("click on explore button")
 	public void click_on_explore_button() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("homepage_spinnyMaxBannerExploreButton"), "xpath");
 		Thread.sleep(5000);
-		WebElement spinnyMaxFilterApplied = driver
-				.findElement(By.xpath(cr.valueOnTheKey("plp_SpinnyMaxCars_filter_applied")));
+		WebElement spinnyMaxFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_SpinnyMaxCars_filter_applied")));
 		Assert.assertEquals(true, spinnyMaxFilterApplied.isDisplayed());
 		driver.navigate().back();
 		Thread.sleep(2000);
