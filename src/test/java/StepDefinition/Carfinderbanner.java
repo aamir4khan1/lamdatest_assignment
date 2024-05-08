@@ -12,7 +12,8 @@ import cucumber.api.java.en.Then;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-public class carfinderbanner {
+
+ class carfinderbanner {
 	static ConfigReader cr = new ConfigReader();
     WebDriver driver = StepDefinition.Hooks.driver;
     Wait wait = new Wait();
@@ -41,20 +42,12 @@ public class carfinderbanner {
 	@And("user selects price range")
 	public void user_selects_price_range() throws InterruptedException {
 		Thread.sleep(2000);
-		WebElement spend = driver.findElement(By.xpath(cr.valueOnTheKey("spend"))); // Logout assertion//
+		WebElement spend = driver.findElement(By.xpath(cr.valueOnTheKey("spend"))); 
 		Assert.assertEquals(true, spend.isDisplayed());
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("Carfinder_pricerange"),"xpath");
 		
 		
-	}
-	@And("user selects lifestyle")
-	public void user_selects_lifestyle() throws InterruptedException {
-		Thread.sleep(2000);
-		WebElement category = driver.findElement(By.xpath(cr.valueOnTheKey("category")));
-		Assert.assertEquals(true, category.isDisplayed());
-		Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("Carfinder_lifestyle"),"xpath");
 		
 	}
 	@And("user selects fuel type preference")
@@ -68,6 +61,9 @@ public class carfinderbanner {
 	}
 	@And("user selects transmission preference")
 	public void user_selects_transmission_preference() throws InterruptedException {
+		Thread.sleep(2000);
+		WebElement optional = driver.findElement(By.xpath(cr.valueOnTheKey("transmission")));
+		Assert.assertEquals(true, optional.isDisplayed());
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("Carfinder_transmissiontype"),"xpath");
 		Thread.sleep(3000);
