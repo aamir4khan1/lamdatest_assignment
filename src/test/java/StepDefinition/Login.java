@@ -34,20 +34,19 @@ public class Login {
 		Thread.sleep(2000);
 	}
 
-	@And("enters mobile number and otp code")
-	public void enters_mobile_number_and_otp_code() {
-		try {
-			prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
-			Thread.sleep(4000);
-			prm.click(driver, cr.valueOnTheKey("login_proceed"),"xpath");
-			Thread.sleep(4000);
-		//	prm.click(driver, cr.valueOnTheKey("login_otp"),"xpath");
-			prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), ("xpath"), (cr.valueOnTheKey("otp")));
-			Thread.sleep(6000);
-			prm.takeSceenshot(driver);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	@And("user enters mobile number")
+	public void user_enter_mobile_number() throws InterruptedException {
+		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
+		Thread.sleep(4000);
+		prm.click(driver, cr.valueOnTheKey("login_proceed"), "xpath");
+		Thread.sleep(4000);
+	}
+
+	@And("user enters otp code")
+	public void user_enters_otp_code() throws InterruptedException {
+		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), ("xpath"), (cr.valueOnTheKey("otp")));
+		Thread.sleep(6000);
+		prm.takeSceenshot(driver);
 	}
 
 	@Then("logout button is visible")
