@@ -12,6 +12,7 @@ Given user land on spinny website
     And user selects fuel type preference
     And user selects transmission preference
     And user clicks on mobile number field
-    And enters mobile number and otp code
+    And user enters mobile number
+    And user enters otp code
     And validate carfinder plp
     #Then user is navigated to the PLP

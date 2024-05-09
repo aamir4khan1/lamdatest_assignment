@@ -70,7 +70,7 @@ public class PLPPopularFilters {
 
 	@And("land on plp with applied filters")
 	public void land_on_plp_with_applied_filters() throws InterruptedException {
-
+		Thread.sleep(2000);
 		WebElement cityTypeDLAppliedFloatingFilter = driver.findElement(By.xpath(cr.valueOnTheKey("plp_popularfiltersSectionViewAllCarsButtonFloatingSaveFiltersDL")));
 		Assert.assertEquals(true, cityTypeDLAppliedFloatingFilter.isDisplayed());
 		WebElement fuelTypePetrolAppliedFloatingFilter = driver.findElement(By.xpath(cr.valueOnTheKey("plp_PetrolTypeAppliedFloatingFilter")));
