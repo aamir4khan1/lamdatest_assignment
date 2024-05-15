@@ -22,23 +22,22 @@ public class HubTestDrive {
 	public void user_land_on_spinny_website() throws Exception {
 		
 	        driver.get(cr.valueOnTheKey("URL"));
-	    }
-	
-
-
-
-    @And("user clicks on the browse car button")
-    public void userClicksOnBrowseCarButton() throws InterruptedException{
-    	Thread.sleep(2000);
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,800)");
-		prm.click(driver, cr.valueOnTheKey("homepage_browseCars"), "xpath");
-		Thread.sleep(2000);
-       
+			/*
+			 * }
+			 * 
+			 * 
+			 * 
+			 * 
+			 * @And("user clicks on the browse car button") public void
+			 * userClicksOnBrowseCarButton() throws InterruptedException{
+			 * Thread.sleep(2000); JavascriptExecutor js = (JavascriptExecutor) driver;
+			 * js.executeScript("window.scroll(0,800)"); prm.click(driver,
+			 * cr.valueOnTheKey("homepage_browseCars"), "xpath"); Thread.sleep(2000);
+			 */       
     }
 
-    @And("user selects a car card")
-    public void userSelectsACarCard() throws InterruptedException{
+    @And("user select a car card")
+    public void userSelectACarCard() throws InterruptedException{
     	Thread.sleep(2000);
 		WebElement plp_quickfilters = driver.findElement(By.xpath(cr.valueOnTheKey("plp_quickfilters")));
 		Assert.assertEquals(true, plp_quickfilters.isDisplayed());
@@ -51,8 +50,8 @@ public class HubTestDrive {
         
     }
 
-    @And("user clicks on the Free test drive button")
-    public void userClicksOnFreeTestDriveButton() throws InterruptedException{
+    @And("user click on the Free test drive button")
+    public void userClickOnFreeTestDriveButton() throws InterruptedException{
     	Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("FreeHubTD"), "xpath");
 		Thread.sleep(2000);
@@ -68,8 +67,8 @@ public class HubTestDrive {
     }
     
     	
-	@And("user selects time")
-    public void userSelectsTime()throws InterruptedException {
+	@And("user chooses time")
+    public void userchoosesTime()throws InterruptedException {
     	
     		Thread.sleep(2000);
     		JavascriptExecutor js = (JavascriptExecutor) driver;

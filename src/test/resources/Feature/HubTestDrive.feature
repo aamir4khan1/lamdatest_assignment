@@ -9,13 +9,13 @@ Scenario: User should be able to schedule hub test drive
    
     
     And user clicks on the browse car button
-    And user selects a car card
+    And user select a car card
     #And user lands on the PDP
-    And user clicks on the Free test drive button
+    And user click on the Free test drive button
      And user clicks on mobile number field
     And user enters mobile number
     And user enters otp code
     And user selects date
-    And user selects time
+    And user chooses time
     And user clicks on Schedule hub test drive
     
