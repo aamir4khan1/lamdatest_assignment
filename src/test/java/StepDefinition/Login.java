@@ -40,12 +40,13 @@ public class Login {
 		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
 		Thread.sleep(4000);
 		
-		WebElement verifyYourNumberField = driver.findElement(By.xpath(cr.valueOnTheKey("verifyYourNumberField")));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(verifyYourNumberField).click().build().perform();
-		Thread.sleep(4000);
+	//	WebElement verifyYourNumberField = driver.findElement(By.xpath(cr.valueOnTheKey("verifyYourNumberField")));
+	//	Actions actions = new Actions(driver);
+	//	actions.moveToElement(verifyYourNumberField).click().build().perform();
+	//	Thread.sleep(4000);
 		
-	//	prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
+		//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
+		prm.clickByJavaScript(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
 		Thread.sleep(4000);
 	}
 
