@@ -33,19 +33,22 @@ public class Login {
 	public void user_clicks_on_mobile_number_field() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("login_mobileNumber"), "xpath");
 		Thread.sleep(5000);
+		prm.takeSceenshot(driver);
+
 	}
 
 	@And("user enters mobile number")
 	public void user_enter_mobile_number() throws InterruptedException {
 		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
 		Thread.sleep(4000);
-		
+		prm.takeSceenshot(driver);
+
 	//	WebElement verifyYourNumberField = driver.findElement(By.xpath(cr.valueOnTheKey("verifyYourNumberField")));
 	//	Actions actions = new Actions(driver);
 	//	actions.moveToElement(verifyYourNumberField).click().build().perform();
 	//	Thread.sleep(4000);
 		
-		//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
+	//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
 		prm.clickByJavaScript(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
 		Thread.sleep(4000);
 	}
