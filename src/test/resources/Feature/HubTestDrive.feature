@@ -18,4 +18,8 @@ Scenario: User should be able to schedule hub test drive
     And user selects date
     And user chooses time
     And user clicks on Schedule hub test drive
+    And user clicks on cancel button
+    And user chooses reason for cancellation
+    And user selects cancel CTA
+    
     
