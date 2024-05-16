@@ -25,13 +25,13 @@ public class Login {
 	public void click_on_account_tab() throws InterruptedException {
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("botnav_account"), "xpath");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	@And("user clicks on mobile number field")
 	public void user_clicks_on_mobile_number_field() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("login_mobileNumber"), "xpath");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	@And("user enters mobile number")
