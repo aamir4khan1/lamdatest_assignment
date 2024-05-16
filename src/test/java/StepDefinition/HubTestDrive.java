@@ -91,6 +91,31 @@ public class HubTestDrive {
 		Assert.assertEquals(true, Home_TDC_page.isDisplayed());
         
         Thread.sleep(2000);
+        
+    }
+
+    @And("user clicks on cancel button")
+    public void user_clicks_on_cancel_button() throws InterruptedException{
+    	Thread.sleep(2000);
+		prm.click(driver, cr.valueOnTheKey("cancel_button"), "xpath");
+		Thread.sleep(3000);
+		WebElement cancel_reason_screen = driver.findElement(By.xpath(cr.valueOnTheKey("cancel_reason_screen")));
+		Assert.assertEquals(true, cancel_reason_screen.isDisplayed());
+    }
+
+    @And("user chooses reason for cancellation")
+    public void user_chooses_reason_for_cancellation() throws InterruptedException{
+    	Thread.sleep(2000);
+		prm.click(driver, cr.valueOnTheKey("reason_select"), "xpath");
+    }
+
+    @And("user selects cancel CTA")
+    public void user_selects_cancel_CTA() throws InterruptedException{
+    	Thread.sleep(2000);
+		prm.click(driver, cr.valueOnTheKey("cancel_CTA"), "xpath");
+		Thread.sleep(3000);
+		WebElement cancel_screen = driver.findElement(By.xpath(cr.valueOnTheKey("cancel_screen")));
+		Assert.assertEquals(true, cancel_screen.isDisplayed());
     	
     }
 }
