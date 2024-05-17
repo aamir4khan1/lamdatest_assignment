@@ -4,6 +4,7 @@ package StepDefinition;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -25,20 +26,30 @@ public class Login {
 	public void click_on_account_tab() throws InterruptedException {
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("botnav_account"), "xpath");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	@And("user clicks on mobile number field")
 	public void user_clicks_on_mobile_number_field() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("login_mobileNumber"), "xpath");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
+		prm.takeSceenshot(driver);
+
 	}
 
 	@And("user enters mobile number")
 	public void user_enter_mobile_number() throws InterruptedException {
 		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
 		Thread.sleep(4000);
-		prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
+		prm.takeSceenshot(driver);
+
+	//	WebElement verifyYourNumberField = driver.findElement(By.xpath(cr.valueOnTheKey("verifyYourNumberField")));
+	//	Actions actions = new Actions(driver);
+	//	actions.moveToElement(verifyYourNumberField).click().build().perform();
+	//	Thread.sleep(4000);
+		
+	//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
+		prm.clickByJavaScript(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
 		Thread.sleep(4000);
 	}
 
