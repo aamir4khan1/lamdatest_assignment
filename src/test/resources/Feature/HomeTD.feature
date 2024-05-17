@@ -20,3 +20,7 @@ Scenario: User should be able to schedule home test drive
    # And user selects date
     And user selects time
     And user clicks on the schedule myloc test drive button
+    And user clicks on cancel button
+    And user chooses reason for cancellation
+    And user selects cancel CTA
+   
