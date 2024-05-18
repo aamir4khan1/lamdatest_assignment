@@ -1,6 +1,11 @@
 pipeline {
     agent {label 'codebuild'}
-    
+     stages {
+        stage('Cleanup') {
+            steps {
+                cleanWs()
+            }
+        }
     environment {
         DOCKER_IMAGE = 'spinny-web-automation'
         CONTAINER_ID = ''
