@@ -49,10 +49,20 @@ public class Login {
 	//	Thread.sleep(4000);
 		
 	//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		prm.clickByJavaScript(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		Thread.sleep(4000);
+		//prm.clickByJavaScript(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
+		//Thread.sleep(4000);
 	}
+	@And("user clicks on verify number button")
+	public void click_verify_mobile_number() throws InterruptedException {
+		//prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
+		//Thread.sleep(4000);
+		
 
+	
+		prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
+		Thread.sleep(4000);
+		prm.takeSceenshot(driver);
+	}
 	@And("user enters otp code")
 	public void user_enters_otp_code() throws InterruptedException {
 		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), ("xpath"), (cr.valueOnTheKey("otp")));
