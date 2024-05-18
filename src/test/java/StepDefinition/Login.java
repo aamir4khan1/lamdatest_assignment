@@ -73,12 +73,12 @@ public class Login {
 
 	
 		prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		Thread.sleep(4000);
+		Thread.sleep(8000);
 		prm.takeSceenshot(driver);
 	}
 	@And("user enters otp code")
 	public void user_enters_otp_code() throws InterruptedException {
-		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), ("xpath"), (cr.valueOnTheKey("otp")));
+		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), "xpath", (cr.valueOnTheKey("otp")));
 		Thread.sleep(6000);
 		prm.takeSceenshot(driver);
 	}
