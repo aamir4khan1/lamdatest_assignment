@@ -45,9 +45,9 @@ public class Login {
 		prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
 		
 		prm.takeSceenshot(driver);
-		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
-		prm.takeSceenshot(driver);
-		Thread.sleep(4000);
+		//prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
+		//prm.takeSceenshot(driver);
+		//Thread.sleep(4000);
 		
 	/*WebElement verifyYourNumberField = driver.findElement(By.xpath(cr.valueOnTheKey("verifyYourNumberField")));
 		Actions actions = new Actions(driver);
