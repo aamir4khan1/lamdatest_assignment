@@ -88,9 +88,11 @@ public class Hooks {
 		// Capture ScreenShot for non-failed test cases.
 		if (!scenario.isFailed()) {
 			File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			try {
 				FileUtils.copyFile(file, new File(
 						System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis() + ".png"));
+				scenario.embed(screenshot, "image/png");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
