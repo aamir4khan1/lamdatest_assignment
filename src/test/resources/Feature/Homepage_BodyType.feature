@@ -5,7 +5,7 @@ Feature: Verify body type functionality on homepage
    When Wait for the application page to load completely
    And user selects location
    
-     Scenario: Filter applied when user clicks on View all <Body Type> under Explore by body type section
+     Scenario: Filter applied when user clicks on View all body type under Explore by body type section
    
 	 And scroll body type section
    And Click on View all hatchbacks
