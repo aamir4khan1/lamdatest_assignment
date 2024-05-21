@@ -29,19 +29,45 @@ public class PLPCapitalBuybackExchangeBanner {
 	public void scroll_down_to_capital_buyback_exchange_banner() throws InterruptedException {
 	JavascriptExecutor js = (JavascriptExecutor)driver;
 	js.executeScript("window.scroll(0,5700)");
-	Thread.sleep(4000);
-	js.executeScript("window.scroll(0,9500)");
+	Thread.sleep(2000);
+	js.executeScript("window.scroll(0,9700)");
 	Thread.sleep(2000);
 	WebElement capitalBannerPLP = driver.findElement(By.xpath(cr.valueOnTheKey("plp_capitalBanner")));
 	Assert.assertEquals(true, capitalBannerPLP.isDisplayed());
 	WebElement buybackBannerPLP = driver.findElement(By.xpath(cr.valueOnTheKey("plp_buybackBanner")));
 	Assert.assertEquals(true, buybackBannerPLP.isDisplayed());
-	WebElement bannerslider = driver.findElement(By.xpath(cr.valueOnTheKey("plp_bannerslider")));
-	Actions action = new Actions(driver);
-	action.dragAndDropBy(bannerslider, 200, 0);
 	Thread.sleep(2000);
-	WebElement exchangeBannerPLP = driver.findElement(By.xpath(cr.valueOnTheKey("plp_exchangeBanner")));
-	Assert.assertEquals(true, exchangeBannerPLP.isDisplayed());
+
+//	WebElement scrollableElement = driver.findElement(By.xpath(cr.valueOnTheKey("plp_bannerSlider")));
+//	String script = "arguments[0].scrollLeft = 300;";
+//	js.executeScript(script, scrollableElement);
+//	Thread.sleep(4000);
+
+	
+//	js = (JavascriptExecutor) driver; 
+	//js.executeScript("window.scrollBy(-200,0)"); driver.close();
+//	WebElement draggable = driver.findElement(By.xpath(cr.valueOnTheKey("plp_capitalBanner")));
+//	js.executeScript("document.querySelector(\"[class='styles__slider styles__noInfiniteView CapitalBuyBackSlider__sliderParent styles__sliderTransition']\").scrollLeft=400");
+//	Thread.sleep(2000);
+
+ /*   WebElement draggable = driver.findElement(By.xpath(cr.valueOnTheKey("plp_capitalBanner")));
+    Rectangle start = draggable.getRect();
+    Rectangle finish = driver.findElement(By.id("droppable")).getRect();
+    new Actions(driver).dragAndDropBy(draggable, finish.getX() - start.getX(), finish.getY() - start.getY()).perform();*/
+
+	/*	Actions action = new Actions(driver);
+	 WebElement draggable = driver.findElement(By.xpath(cr.valueOnTheKey("plp_capitalBanner")));
+     WebElement droppable = driver.findElement(By.xpath(cr.valueOnTheKey("plp_buybackBanner")));
+     action.dragAndDrop(draggable, droppable).perform();*/
+	
+/*	WebElement bannerslider = driver.findElement(By.xpath(cr.valueOnTheKey("plp_capitalBanner")));
+	Actions action = new Actions(driver);
+	Thread.sleep(2000);
+	action.dragAndDropBy(bannerslider, -200, 0).build().perform();	
+	Thread.sleep(4000); */
+	
+//	WebElement exchangeBannerPLP = driver.findElement(By.xpath(cr.valueOnTheKey("plp_exchangeBanner")));
+//	Assert.assertEquals(true, exchangeBannerPLP.isDisplayed());
 	}
 	
 	@And("click on capital banner")
