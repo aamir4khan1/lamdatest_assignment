@@ -1,6 +1,7 @@
 pipeline {
     agent {label 'codebuild'}
-    
+   
+       
     environment {
         DOCKER_IMAGE = 'spinny-web-automation'
         CONTAINER_ID = ''
@@ -15,7 +16,11 @@ pipeline {
                 }
             }
         }
-
+ stage('Cleanup') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Run Tests in Headless Mode') {
             steps {
                 script {
