@@ -4,7 +4,7 @@ Feature: Verify shortlist functionality on plp
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-    
+    @regression
    Scenario: User should be able to see shortlist functionality
    Then user land on plp
    And click on shortlist icon on car card

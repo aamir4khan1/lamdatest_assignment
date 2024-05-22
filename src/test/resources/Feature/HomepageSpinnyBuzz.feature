@@ -4,7 +4,7 @@ Feature: Verify spinny buzz functionality on homepage
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-    
+   @regression 
    Scenario: User should be able to see spinny buzz functionality
    Then scroll down spinny buzz section
    And user able to see spinny buzz

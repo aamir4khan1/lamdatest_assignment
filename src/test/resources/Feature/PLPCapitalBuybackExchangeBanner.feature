@@ -4,7 +4,7 @@ Feature: Verify capital, buyback and exchange banner functionality on plp
    Given user land on spinny website
    When Wait for the application page to load completely
    And user selects location
-    
+   @regression 
    Scenario: User should be able to use  capital, buyback and exchange banner functionality on plp
    Then user land on plp
    And scroll down to capital buyback exchange banner

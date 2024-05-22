@@ -4,7 +4,7 @@ Feature: Verify explore more functionality on homepage
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-    
+   @regression 
    Scenario: User should be able to use explore more functionality
    Then user scroll down to explore more section
    And click on check eligibility

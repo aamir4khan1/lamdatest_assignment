@@ -4,7 +4,7 @@ Feature: Verify featured spinny cars functionality on homepage
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-    
+   @regression 
   Scenario: User should be able to use featured spinny cars functionality
 		Then scroll down to featured spinny cars section
     And clicked on car card under best buy for you tab

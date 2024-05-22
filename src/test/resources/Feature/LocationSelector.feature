@@ -4,7 +4,7 @@ Feature: Verify location selector functionality on homepage
    Given user land on spinny website
    When Wait for the application page to load completely
    And user selects location
-				
+	 @regression		
    Scenario: User should be able to select the city and the PLP must get updated
    
   #And user selects {city} on Home page

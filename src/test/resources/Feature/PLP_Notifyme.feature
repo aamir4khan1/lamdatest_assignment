@@ -5,7 +5,7 @@ Feature: Verify location selector functionality on homepage
    When Wait for the application page to load completely
    And user selects location
    
-   
+   @regression
     Scenario: Validate the notify me functionality on PLP page after applying some filters
     
     And user click on buy button
@@ -14,7 +14,7 @@ Feature: Verify location selector functionality on homepage
    	And user scroll down to view notify me widget
    	And Enter a number and click on notify me
    	And Validate the arrival of view all cars widget
-   
+   @regression
    Scenario: Validate the notify me functionality on PLP page for booked car
    
    And user click on buy button
