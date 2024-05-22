@@ -52,7 +52,7 @@ public class HomepageSpinnyMaxBanner {
 	//	driver.navigate().back();
 	//	Thread.sleep(4000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,4000)");
+		js.executeScript("window.scroll(0,4200)");
 		Thread.sleep(5000);
 	}
 

@@ -60,8 +60,7 @@ public class Bottom_Navigation {
 	@And("user click on sell car icon")
 	public void user_click_on_sell_car_icon() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("botnav_sellCar"), "xpath");
-		Thread.sleep(6000);
-		prm.takeSceenshot(driver);
+		Thread.sleep(8000);
 		WebElement SpinnySellBanner = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_spinnySellBanner")));
 		Assert.assertEquals(true, SpinnySellBanner.isDisplayed());
 		WebElement buyACar = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_buyACar")));
