@@ -77,6 +77,9 @@ pipeline {
             script {
                 sh "docker stop $CONTAINER_ID"
                 sh "docker rm $CONTAINER_ID"
+                echo "Selected environment: ${ENVIRONMENT}"
+                echo "Selected tags: ${tags}"
+                
             }
         }
         
@@ -86,4 +89,5 @@ pipeline {
             sh "docker rm $CONTAINER_ID"
         }
     }
+    
 }
