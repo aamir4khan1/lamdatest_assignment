@@ -87,25 +87,7 @@ pipeline {
             sh "docker rm $CONTAINER_ID"
         }
         
-      parameters {
-    choice(
-        name: '$ENVIRONMENT',
-        choices: "Production\nStaging",
-        description: 'Defining of environment variable' )
-        
-      parameters {
-    choice(
-        name: '$tags',
-        choices: "sanity\nregression",
-        description: 'Defining of environment variable' )
-  }    
+      
     }
 
-  
-  
-  
-  
-  
-  
-}
 }
