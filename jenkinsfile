@@ -77,8 +77,6 @@ pipeline {
             script {
                 sh "docker stop $CONTAINER_ID"
                 sh "docker rm $CONTAINER_ID"
-                echo "Selected environment: ${ENVIRONMENT}"
-                echo "Selected tags: ${tags}"
                 
             }
         }
@@ -89,5 +87,26 @@ pipeline {
             sh "docker rm $CONTAINER_ID"
         }
     }
-    
+    pipeline {
+  agent {label 'codebuild'}
+  parameters {
+    choice(
+        name: '$ENVIRONMENT',
+        choices: "Production\nStaging",
+        description: 'Defining of environment variable' )
+        
+   parameters {
+    choice(
+        name: '$tags',
+        choices: "sanity\nregression",
+        description: 'Defining of environment variable' )
+  }
+  
+  
+  
+  
+  
+  
+}
+}
 }
