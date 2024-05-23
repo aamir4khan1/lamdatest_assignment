@@ -86,27 +86,26 @@ pipeline {
             sh "docker stop $CONTAINER_ID"
             sh "docker rm $CONTAINER_ID"
         }
-    }
-    pipeline {
-  agent {label 'codebuild'}
-  parameters {
+        
+      parameters {
     choice(
         name: '$ENVIRONMENT',
         choices: "Production\nStaging",
         description: 'Defining of environment variable' )
         
-   parameters {
+      parameters {
     choice(
         name: '$tags',
         choices: "sanity\nregression",
         description: 'Defining of environment variable' )
-  }
+  }    
+    }
+
   
   
   
   
   
   
-}
 }
 }
