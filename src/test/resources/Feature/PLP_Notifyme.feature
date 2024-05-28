@@ -1,4 +1,4 @@
-Feature: Verify location selector functionality on homepage
+Feature: Verify Notify me functionality on homepage
    
  Background: User land on spinny website and selects location
    Given user land on spinny website

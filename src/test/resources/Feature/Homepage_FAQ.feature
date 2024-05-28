@@ -1,4 +1,4 @@
-Feature: Verify body type functionality on homepage
+Feature: Verify FAQ functionality on homepage
    
  Background: User land on spinny website and selects location
    Given user land on spinny website
