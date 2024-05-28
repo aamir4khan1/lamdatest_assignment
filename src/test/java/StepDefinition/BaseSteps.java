@@ -20,7 +20,7 @@ public class BaseSteps {
 	@Given("user land on spinny website")
 	public void user_land_on_spinny_website() throws Exception {
 
-		driver.get(cr.valueOnTheKey("URL"));
+		driver.get(cr.valueOnTheKey(System.getProperty("URL")));
 	}
 
 	@When("^Wait for the application page to load completely$")

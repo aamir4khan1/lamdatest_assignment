@@ -1,6 +1,9 @@
 pipeline {
     agent {label 'codebuild'}
-   
+      
+        parameters {
+        choice(name: 'URL', choices: ['Production','Staging'], description: 'Select the environment to run tests on')
+   }
        
     environment {
         DOCKER_IMAGE = 'spinny-web-automation'
@@ -26,7 +29,7 @@ pipeline {
                 script {
                     
                         CONTAINER_ID = sh(script: "docker run -d ${env.DOCKER_IMAGE}", returnStdout: true).trim()
-                        sh "docker exec $CONTAINER_ID mvn clean test"
+                        sh "docker exec $CONTAINER_ID mvn clean test -DURL=${params.URL}"
                         
                 }
             }
@@ -89,5 +92,4 @@ pipeline {
         
       
     }
-
 }
