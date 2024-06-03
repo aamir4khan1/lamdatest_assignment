@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class Hooks {
 	static WebDriver driver;
-	static DevTools devTools;
+	//static DevTools devTools;
 	static ConfigReader cr = new ConfigReader();
 
 	@Before
@@ -69,8 +69,8 @@ public class Hooks {
 			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
 			driver = new ChromeDriver(chromeOptions);
-			 devTools = ((HasDevTools) driver).getDevTools();
-	        devTools.createSession();
+			// devTools = ((HasDevTools) driver).getDevTools();
+	        //devTools.createSession();
 
 			return driver;
 		}
