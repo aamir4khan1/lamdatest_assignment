@@ -12,6 +12,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.HasDevTools;
 
 import Utility.ConfigReader;
 
@@ -23,6 +25,7 @@ import java.util.Map;
 
 public class Hooks {
 	static WebDriver driver;
+	static DevTools devTools;
 	static ConfigReader cr = new ConfigReader();
 
 	@Before
@@ -66,6 +69,9 @@ public class Hooks {
 			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
 			driver = new ChromeDriver(chromeOptions);
+			 devTools = ((HasDevTools) driver).getDevTools();
+	        devTools.createSession();
+
 			return driver;
 		}
 	}
