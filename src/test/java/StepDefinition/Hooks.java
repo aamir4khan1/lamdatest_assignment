@@ -72,7 +72,12 @@ public class Hooks {
 			driver = new ChromeDriver(chromeOptions);
 			devTools = ((HasDevTools) driver).getDevTools();
 	        devTools.createSession();
-	        devTools.addListener(Network.requestWillBeSent(), request -> { });
+	        devTools.addListener(Network.requestWillBeSent(), request -> {
+	            System.out.println("Request Method : " + request.getRequest().getMethod());
+	            System.out.println("Request URL : " + request.getRequest().getUrl());
+	            System.out.println("Request headers: " + request.getRequest().getHeaders().toString());
+	            System.out.println("Request body: " + request.getRequest().getPostData().toString());
+	        });
 			return driver;
 		}
 	}
