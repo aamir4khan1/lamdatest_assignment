@@ -45,6 +45,7 @@ public class HomepageSpinnyMaxBanner {
 		Thread.sleep(3000);
 		WebElement whatsappIcon = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_whatsappIcon")));
 		Assert.assertEquals(true, whatsappIcon.isDisplayed());
+		Thread.sleep(2000);
 		WebElement cardCardThreeSixtyView = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_threeSixtyViewCard")));
 		Assert.assertEquals(true, cardCardThreeSixtyView.isDisplayed());
 		driver.navigate().back();
