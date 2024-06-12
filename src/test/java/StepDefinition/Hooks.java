@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class Hooks {
 	static WebDriver driver;
-	//static DevTools devTools;
+	static DevTools devTools;
 	static ConfigReader cr = new ConfigReader();
 
 	@Before
