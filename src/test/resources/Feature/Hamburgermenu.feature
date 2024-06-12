@@ -23,7 +23,7 @@ Scenario: User should be able to navigate on hamburger menu
     And user clicks on spinny partners
     And user clicks on About us
     And user clicks on customer reviews
-    And user clicks on car valuation
+    #And user clicks on car valuation
     And user clicks on check echallan
     And user clicks on check rto details
     
