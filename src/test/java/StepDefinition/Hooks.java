@@ -70,8 +70,8 @@ public class Hooks {
 			chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
 			driver = new ChromeDriver(chromeOptions);
-//			devTools = ((HasDevTools) driver).getDevTools();
-//	        devTools.createSession();
+			devTools = ((HasDevTools) driver).getDevTools();
+	        devTools.createSession();
 //	        devTools.addListener(Network.requestWillBeSent(), request -> {
 //	            System.out.println("Request Method : " + request.getRequest().getMethod());
 //	            System.out.println("Request URL : " + request.getRequest().getUrl());
