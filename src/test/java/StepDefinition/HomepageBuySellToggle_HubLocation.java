@@ -34,6 +34,8 @@ public class HomepageBuySellToggle_HubLocation {
 		Assert.assertEquals(true, buycontentSection.isDisplayed());
 		WebElement buySectionContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_buySectionContainer")));
 		Assert.assertEquals(true, buySectionContainer.isDisplayed());
+		Thread.sleep(2000);
+
 	}
 
 	@And("user click on learn more button")

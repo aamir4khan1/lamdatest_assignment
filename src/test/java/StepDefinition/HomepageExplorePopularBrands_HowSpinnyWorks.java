@@ -101,7 +101,7 @@ public class HomepageExplorePopularBrands_HowSpinnyWorks {
 		Thread.sleep(2000);
 		WebElement videoOverlayContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_videoOverlayContainer")));
 		Assert.assertEquals(true, videoOverlayContainer.isDisplayed());
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("homepage_videoOverlayCloseButton"), "xpath");
 		Thread.sleep(5000);
 
