@@ -34,6 +34,8 @@ public class HomepageBuySellToggle_HubLocation {
 		Assert.assertEquals(true, buycontentSection.isDisplayed());
 		WebElement buySectionContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_buySectionContainer")));
 		Assert.assertEquals(true, buySectionContainer.isDisplayed());
+		Thread.sleep(2000);
+
 	}
 
 	@And("user click on learn more button")
@@ -123,12 +125,15 @@ public class HomepageBuySellToggle_HubLocation {
 		WebElement hubfilterapplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_hubFilterApplied")));
 		Assert.assertEquals(true, hubfilterapplied.isDisplayed()); // assertion hub location modal //
 		driver.navigate().back();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 	}
 
 	@And("click view all cars in delhi ncr")
 	public void click_view_all_cars_in_delhi_ncr() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,5000)");
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("homepage_hublocationViewAllCarsinGurgaon"), "xpath");
 		Thread.sleep(2000);
 		prm.takeSceenshot(driver);
