@@ -53,7 +53,8 @@ public class HomepageBuySellToggle_HubLocation {
 
 	@And("click on browse car")
 	public void click_on_browse_car() throws InterruptedException {
-		prm.click(driver, cr.valueOnTheKey("homepage_buySectionLearnMoreClose"), "xpath");
+		driver.navigate().back();
+		//	prm.click(driver, cr.valueOnTheKey("homepage_buySectionLearnMoreClose"), "xpath");
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("homepage_browseCars"), "xpath");
 		Thread.sleep(2000);
