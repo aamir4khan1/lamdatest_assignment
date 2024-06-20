@@ -60,7 +60,7 @@ public class hamburgermenu {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
     	Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("buy_spinny_car"), "xpath");
+		prm.clickByJavaScript(driver, cr.valueOnTheKey("buy_spinny_car"), "xpath");
 		Thread.sleep(2000);
 		WebElement plp_land = driver.findElement(By.xpath(cr.valueOnTheKey("plp_land")));
 		Assert.assertEquals(true, plp_land.isDisplayed());

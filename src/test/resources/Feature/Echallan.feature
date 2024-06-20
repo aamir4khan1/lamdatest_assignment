@@ -7,10 +7,13 @@ Background:
 Scenario: User should be able to verify echallan page
    
     
-    And user click on the on the hamburger menu
-    And user clicks on check echallan
-    And user lands on echallan page
+   
+    And user slects check_e_challan
     And user enters registration number
+    And user clicks on mobile number field
+    And user enters mobile number
+    And user clicks on verify number button
+    And user enters otp code
     
     
     
