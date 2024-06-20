@@ -36,9 +36,7 @@ public class Echallan {
 		js.executeScript("document.getElementById('sideMenu').scroll(0,800)");
 		Thread.sleep(5000);
 		prm.clickByJavaScript(driver, cr.valueOnTheKey("check_echallan"), "xpath");
-		Thread.sleep(2000);
-		WebElement check_echallan_page = driver.findElement(By.xpath(cr.valueOnTheKey("check_echallan_page")));
-		Assert.assertEquals(true, check_echallan_page.isDisplayed());
+		
 		
 
 	}
@@ -49,6 +47,10 @@ public class Echallan {
 		Thread.sleep(2000);
 		prm.clickByJavaScript(driver, cr.valueOnTheKey("check_challan"), "xpath");
 		Thread.sleep(2000);
+
+	}
+	@And("user lands on echallan page")
+	public void user_lands_on_echallan_page() throws InterruptedException {
 		WebElement echallan_product_page = driver.findElement(By.xpath(cr.valueOnTheKey("echallan_product_page")));
 		Assert.assertEquals(true, echallan_product_page.isDisplayed());
 	

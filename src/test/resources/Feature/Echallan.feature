@@ -14,6 +14,7 @@ Scenario: User should be able to verify echallan page
     And user enters mobile number
     And user clicks on verify number button
     And user enters otp code
+    And user lands on echallan page
     
     
     
