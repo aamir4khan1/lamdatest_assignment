@@ -11,8 +11,9 @@ Feature: Verify EMI Caculator on PDP
    And user clicks on the browse car button
    And user selects a car card
    And user view EMI Calculator
-  #And user clicks on mobile number field
-   #And user enters mobile number
-   # And user enters otp code
-   #And user view Loan Eligibility page
+   And user clicks on mobile number field
+  And user enters mobile number
+     And user clicks on verify number button
+  And user enters otp code
+  And user view Loan Eligibility page
    

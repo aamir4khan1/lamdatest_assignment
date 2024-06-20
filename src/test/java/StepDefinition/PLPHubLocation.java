@@ -48,8 +48,8 @@ public class PLPHubLocation {
 	
 	@And("user land on plp with hub filter applied")
 	public void user_land_on_plp_with_hub_filter_applied() throws InterruptedException {
-		WebElement trilliumHubFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_hubLocationModalViewCarsTrilliumFilterApplied")));
-		Assert.assertEquals(true, trilliumHubFilterApplied.isDisplayed());
+		WebElement FilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_hubLocationModalFilterApplied")));
+		Assert.assertEquals(true, FilterApplied.isDisplayed());
 		
 	}
 }
