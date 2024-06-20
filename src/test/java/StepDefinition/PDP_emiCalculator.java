@@ -11,6 +11,9 @@ import org.openqa.selenium.interactions.Actions;
 import Utility.ConfigReader;
 import Utility.Wait;
 import Utility.preMethods;
+
+import java.util.List;
+
 import org.junit.Assert;
 
 public class PDP_emiCalculator {
@@ -35,15 +38,40 @@ public class PDP_emiCalculator {
 	        JavascriptExecutor js = (JavascriptExecutor) driver;
 	        js.executeScript("window.scroll(0,150)");
 	        Thread.sleep(2000);
-	        prm.click(driver, cr.valueOnTheKey("PDP_EMICalculator"), "xpath");
-	        Thread.sleep(2000);
+	        // Define the XPaths for the CTA elements
+	        String xpathCTA1 = cr.valueOnTheKey("PDP_EMICalculator");
+	        String xpathCTA2 = cr.valueOnTheKey("PDP_EMICalculators");
+
+	        // Check for the first CTA element and click if found
+	        WebElement ctaElement = null;
+	        try {
+	            ctaElement = driver.findElement(By.xpath(xpathCTA1));
+	            if (ctaElement.isDisplayed()) {
+	                prm.click(driver, cr.valueOnTheKey("PDP_EMICalculator"), "xpath");
+	            }
+	        } catch (Exception e1) {
+	            try {
+	                // Check for the second CTA element and click if found
+	                ctaElement = driver.findElement(By.xpath(xpathCTA2));
+	                if (ctaElement.isDisplayed()) {
+	                    prm.click(driver, cr.valueOnTheKey("PDP_EMICalculators"), "xpath");
+	                }
+	            } catch (Exception e2) {
+	                System.out.println("No CTA buttons found on the page.");
+	                return; // Exit the method as no CTA button was found
+	            }
+	        }
+	       
+	        /*Thread.sleep(2000);
 	        prm.click(driver, cr.valueOnTheKey("PDP_EMI_cross"), "xpath");
 	        Thread.sleep(2000);
 	        WebElement Pdp_caroverviewReg = driver.findElement(By.xpath(cr.valueOnTheKey("PDP_emiassertioncross")));
 	        Assert.assertEquals(true, Pdp_caroverviewReg.isDisplayed());
 	        Thread.sleep(2000);
-	        prm.click(driver, cr.valueOnTheKey("PDP_EMICalculators"), "xpath");
+	        prm.click(driver, cr.valueOnTheKey("PDP_EMICalculators"), "xpath");*/
 	        Thread.sleep(3000);
+	        JavascriptExecutor jss = (JavascriptExecutor) driver;
+	        js.executeScript("window.scroll(0,150)");
 	        WebElement SLIDER1_XPATH = driver.findElement(By.xpath(cr.valueOnTheKey("SLIDER1_XPATH")));
 	        Assert.assertEquals(true, SLIDER1_XPATH.isDisplayed());
 	        Thread.sleep(2000);
@@ -70,14 +98,14 @@ public class PDP_emiCalculator {
 	        WebElement checkeliglogin = driver.findElement(By.xpath(cr.valueOnTheKey("checkeliglogin")));
 	        Assert.assertEquals(true, checkeliglogin.isDisplayed());  
 }
-	/*@And("user view Loan Eligibility page")
+	@And("user view Loan Eligibility page")
 	 public void user_view_Loan_Eligibility_page() throws InterruptedException{
 		Thread.sleep(3000);
         WebElement checkeliglogin = driver.findElement(By.xpath(cr.valueOnTheKey("loaneligpage")));
         Assert.assertEquals(true, checkeliglogin.isDisplayed()); 
         Thread.sleep(2000);
 		
-	}*/
+	}
 	 public static void moveSlider(WebDriver driver, WebElement slider, int percentage) {
 	        // Get slider width
 	        int width = slider.getSize().getWidth();
