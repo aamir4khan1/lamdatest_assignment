@@ -40,7 +40,8 @@ public class BaseSteps {
 //            System.out.println("Response Status: " + response.getResponse().getStatus());
 //            System.out.println("Response Status Text: " + response.getResponse().getStatusText());
 //        });
-		driver.get(cr.valueOnTheKey(System.getProperty("URL")));
+		driver.get(cr.valueOnTheKey(("URL")));
+		driver.manage().window().maximize();
 	}
 
 	@When("^Wait for the application page to load completely$")

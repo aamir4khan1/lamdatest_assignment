@@ -22,6 +22,8 @@ public class hamburgermenu {
 	public void user_land_on_spinny_website() throws Exception {
 		
 	        driver.get(cr.valueOnTheKey("URL"));
+	        
+	        
 			/*
 			 * }
 			 * 
@@ -44,11 +46,19 @@ public class hamburgermenu {
 		WebElement open_menu = driver.findElement(By.xpath(cr.valueOnTheKey("open_menu")));
 		Assert.assertEquals(true, open_menu.isDisplayed());
 		Thread.sleep(2000);
+		prm.click(driver, cr.valueOnTheKey("open_menu"), "xpath");
+		Thread.sleep(2000);
+		WebElement login_screen_screen = driver.findElement(By.xpath(cr.valueOnTheKey("login_screen_screen")));
+		Assert.assertEquals(true, login_screen_screen.isDisplayed());
+		prm.click(driver, cr.valueOnTheKey("back_1"), "xpath");
+		Thread.sleep(2000);
         
     }
 
     @And("user clicks on buy spinny assured")
     public void user_clicks_on_buy_spinny_assured() throws InterruptedException{
+    	Thread.sleep(2000);
+    	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
     	Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("buy_spinny_car"), "xpath");
 		Thread.sleep(2000);
@@ -123,6 +133,9 @@ public class hamburgermenu {
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("finance_your_car"), "xpath");
 		Thread.sleep(2000);
+		{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('sideMenu').scroll(0,300)");}
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("check_your_eligibility"), "xpath");
 		Thread.sleep(2000);
 		WebElement loan_page_1 = driver.findElement(By.xpath(cr.valueOnTheKey("loan_page_1")));
@@ -131,6 +144,9 @@ public class hamburgermenu {
 		prm.click(driver, cr.valueOnTheKey("logo_click"), "xpath");
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
+		Thread.sleep(2000);
+		{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('sideMenu').scroll(0,300)");}
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("know_your_emi"), "xpath");
 		Thread.sleep(2000);
@@ -144,6 +160,9 @@ public class hamburgermenu {
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
     	Thread.sleep(2000);
+    	{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('sideMenu').scroll(0,300)");}
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("spinny_finance_process"), "xpath");
 		Thread.sleep(2000);
 		WebElement loan_page_3 = driver.findElement(By.xpath(cr.valueOnTheKey("loan_page_3")));
@@ -162,11 +181,9 @@ public class hamburgermenu {
 
 	@And("clicks on spinny care")
     public void clicks_on_spinny_care()throws InterruptedException {
-    	Thread.sleep(2000);
-    	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
-    	Thread.sleep(2000);
-		WebElement open_menu = driver.findElement(By.xpath(cr.valueOnTheKey("open_menu")));
-		Assert.assertEquals(true, open_menu.isDisplayed());
+		Thread.sleep(2000);
+		{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('sideMenu').scroll(0,300)");}
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("spinny_care"), "xpath");
 		Thread.sleep(2000);
@@ -182,6 +199,9 @@ public class hamburgermenu {
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
 		Thread.sleep(2000);
+		{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('sideMenu').scroll(0,300)");}
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("how_spinny_care_works"), "xpath");
 		Thread.sleep(2000);
 		WebElement how_spinny_care_works_page = driver.findElement(By.xpath(cr.valueOnTheKey("how_spinny_care_works_page")));
@@ -194,21 +214,19 @@ public class hamburgermenu {
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
     	Thread.sleep(2000);
+		{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('sideMenu').scroll(0,300)");}
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("spinny_care"), "xpath");
 			    }
 
 	@And("user clicks on how it works")
     public void user_clicks_on_how_it_works()throws InterruptedException {
     	Thread.sleep(2000);
-    	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
-    	Thread.sleep(2000);
-		WebElement open_menu = driver.findElement(By.xpath(cr.valueOnTheKey("open_menu")));
-		Assert.assertEquals(true, open_menu.isDisplayed());
+		{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('sideMenu').scroll(0,300)");}
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("how_it_works"), "xpath");
-		Thread.sleep(2000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.getElementById('sideMenu').scroll(0,400)");
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("car_buying_process"), "xpath");
 		Thread.sleep(2000);
@@ -243,16 +261,14 @@ public class hamburgermenu {
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
     	Thread.sleep(2000);
+		{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('sideMenu').scroll(0,300)");}
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("how_it_works"), "xpath");
 	}
 
     @And("user clicks on your account")
     public void user_clicks_on_your_account() throws InterruptedException{
-    	Thread.sleep(2000);
-    	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
-    	Thread.sleep(2000);
-		WebElement open_menu = driver.findElement(By.xpath(cr.valueOnTheKey("open_menu")));
-		Assert.assertEquals(true, open_menu.isDisplayed());
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("document.getElementById('sideMenu').scroll(0,400)");
@@ -267,12 +283,11 @@ public class hamburgermenu {
     }
     @And("user clicks on car hub locations")
     public void user_clicks_on_car_hub_locations() throws InterruptedException{
-    	Thread.sleep(2000);
+		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
     	Thread.sleep(2000);
 		WebElement open_menu = driver.findElement(By.xpath(cr.valueOnTheKey("open_menu")));
 		Assert.assertEquals(true, open_menu.isDisplayed());
-		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("document.getElementById('sideMenu').scroll(0,400)");
 		Thread.sleep(2000);
@@ -282,8 +297,7 @@ public class hamburgermenu {
 		Assert.assertEquals(true, car_hub_locations_page.isDisplayed());
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("logo_click"), "xpath");
-		Thread.sleep(2000);
-    	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
+		
     }
     @And("user clicks on spinny assured")
     public void user_clicks_on_spinny_assured() throws InterruptedException{
@@ -320,7 +334,7 @@ public class hamburgermenu {
     		WebElement spinny_buyback_page = driver.findElement(By.xpath(cr.valueOnTheKey("spinny_buyback_page")));
     		Assert.assertEquals(true, spinny_buyback_page.isDisplayed());
     		Thread.sleep(2000);
-    		prm.click(driver, cr.valueOnTheKey("logo_click"), "xpath");
+    		prm.click(driver, cr.valueOnTheKey("back_arrow_2"), "xpath");
     		
 
     	}
@@ -357,7 +371,7 @@ public class hamburgermenu {
     		Assert.assertEquals(true, open_menu.isDisplayed());
     		Thread.sleep(2000);
     		JavascriptExecutor jq = (JavascriptExecutor) driver;
-    		jq.executeScript("document.getElementById('sideMenu').scroll(0,400)");
+    		jq.executeScript("document.getElementById('sideMenu').scroll(0,800)");
     		Thread.sleep(2000);
     		prm.click(driver, cr.valueOnTheKey("spinny_partners"), "xpath");
     		Thread.sleep(2000);
@@ -376,13 +390,11 @@ public class hamburgermenu {
     	@And("user clicks on About us")
         public void user_clicks_on_About_us() throws InterruptedException{
         	Thread.sleep(2000);
-        	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
-        	Thread.sleep(2000);
     		WebElement open_menu = driver.findElement(By.xpath(cr.valueOnTheKey("open_menu")));
     		Assert.assertEquals(true, open_menu.isDisplayed());
     		Thread.sleep(2000);
     		JavascriptExecutor js = (JavascriptExecutor) driver;
-    		js.executeScript("document.getElementById('sideMenu').scroll(0,400)");
+    		js.executeScript("document.getElementById('sideMenu').scroll(0,800)");
     		Thread.sleep(2000);
     		prm.click(driver, cr.valueOnTheKey("about_us"), "xpath");
     		Thread.sleep(2000);
@@ -439,7 +451,7 @@ public void user_clicks_on_check_rto_details() throws InterruptedException{
 	Assert.assertEquals(true, open_menu.isDisplayed());
 	Thread.sleep(2000);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("document.getElementById('sideMenu').scroll(0,800)");
+	js.executeScript("document.getElementById('sideMenu').scroll(0,1000)");
 	Thread.sleep(2000);
 	prm.click(driver, cr.valueOnTheKey("check_rto_details"), "xpath");
 	Thread.sleep(2000);
