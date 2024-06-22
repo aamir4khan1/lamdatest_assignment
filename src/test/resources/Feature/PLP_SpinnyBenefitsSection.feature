@@ -4,7 +4,8 @@ Feature: Verify spinny benefits section functionality on plp
    Given user land on spinny website
    When Wait for the application page to load completely
    And user selects location
-    
+   
+   @regression 
    Scenario: User should be able to use spinny benefits section functionality on plp
    Then user land on plp
    And scroll down to spinny benefits section

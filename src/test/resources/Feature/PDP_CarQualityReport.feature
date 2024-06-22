@@ -4,9 +4,9 @@ Feature: Verify Car Quality report functionality on pdp
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-   
+  
+  @regression 
    Scenario: User should be able to use Car quality report functionality
-   
    And user click on buy button
    And user select a car card
    And scroll down to inspection report section

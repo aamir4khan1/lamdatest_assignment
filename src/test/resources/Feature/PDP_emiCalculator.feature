@@ -6,6 +6,7 @@ Feature: Verify EMI Caculator on PDP
    When Wait for the application page to load completely
    And user selects location
 
+		@regression
    Scenario: User should be able to view EMI calculator
    
    And user clicks on the browse car button

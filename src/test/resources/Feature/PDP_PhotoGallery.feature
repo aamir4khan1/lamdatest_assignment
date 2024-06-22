@@ -6,8 +6,8 @@ Feature: Verify photo gallery functionality on homepage
    When Wait for the application page to load completely
    And user selects location
 
+	 @regression
    Scenario: User should be able to use photo gallery functionality
-   
    And user click on buy button
    And user select a car card
    And click on car image

@@ -4,6 +4,7 @@ Feature: Verify view all cars functionality on homepage
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
+   
    @regression 
    Scenario: User should be able use view all cars functionality
     Then user click on view all cars

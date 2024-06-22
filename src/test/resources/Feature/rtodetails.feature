@@ -3,10 +3,9 @@ Background:
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-@regression
-Scenario: User should be able to verify rto details page
-    
-   
+
+		@regression
+		Scenario: User should be able to verify rto details page
     And user selects rto details page
     And user enters rto_registration number
     And user clicks on mobile number field

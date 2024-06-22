@@ -4,6 +4,7 @@ Feature: Verify Search  page  functionality on homepage
    Given user land on spinny website
    When Wait for the application page to load completely
    And user selects location
+ 		
  		 @regression  
      Scenario: search page functionality
 	And user clicks on search bar on top
