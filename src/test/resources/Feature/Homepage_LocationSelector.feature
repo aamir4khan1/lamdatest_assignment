@@ -7,12 +7,9 @@ Feature: Verify location selector functionality on homepage
 	
 	 @regression		
    Scenario: User should be able to select the city and the PLP must get updated
-   
   #And user selects {city} on Home page
   #And validate the city on PLP
   #And user performs actions for multiple cities
-  #
-  #
     And user selects Delhi NCR on Home page
     And validate the city Delhi NCR on PLP
     And user selects Bangalore

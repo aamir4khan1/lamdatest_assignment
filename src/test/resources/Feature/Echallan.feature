@@ -4,11 +4,8 @@ Background:
     When Wait for the application page to load completely
     And user selects location
 
-@regression
-Scenario: User should be able to verify echallan page
-   
-    
-   
+    @regression
+    Scenario: User should be able to verify echallan page
     And user slects check_e_challan
     And user enters registration number
     And user clicks on mobile number field

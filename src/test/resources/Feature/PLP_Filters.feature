@@ -5,10 +5,8 @@ Background:
     When Wait for the application page to load completely
     And user selects location
 
-@regression
-Scenario: User should be able to apply filters
-   
-    
+		@regression
+		Scenario: User should be able to apply filters
     And user clicks on the browse car button
     And user clicks on the filter button
     #And user selects price filter

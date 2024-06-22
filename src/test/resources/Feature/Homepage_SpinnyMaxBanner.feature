@@ -10,7 +10,7 @@ Feature: Verify spinny max banner functionality on homepage
    Then scroll down to spinny max banner	
    And click on car card
    And click on explore button
-#   And click on shortlist icon
+#  And click on shortlist icon
    And click on view more luxury cars
   
  
