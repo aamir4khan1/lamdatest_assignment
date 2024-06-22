@@ -14,9 +14,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class HomepageExplorePopularBrands_HowSpinnyWorks {
+public class Homepage_ExplorePopularBrands_HowSpinnyWorks {
 
-	public HomepageExplorePopularBrands_HowSpinnyWorks() {
+	public Homepage_ExplorePopularBrands_HowSpinnyWorks() {
 
 	}
 

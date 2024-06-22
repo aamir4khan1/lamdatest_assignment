@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class PLPSpinnyBenefitsSection {
+public class Homepage_SpinnyBuzz {
 
-	public PLPSpinnyBenefitsSection() {
+	public Homepage_SpinnyBuzz() {
 
 	}
 
@@ -24,17 +24,18 @@ public class PLPSpinnyBenefitsSection {
 	Wait wait = new Wait();
 	static preMethods prm = new preMethods();
 
-	@And("scroll down to spinny benefits section")
-	public void scroll_down_to_spinny_benefits_section() throws InterruptedException {
+	@Then("scroll down spinny buzz section")
+	public void scroll_down_spinny_buzz_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,4500)");
+		js.executeScript("window.scroll(0,6000)");
 		Thread.sleep(2000);
 	}
-	
-	@And("validate spinny benefits section")
-	public void validate_spinny_benefits_section() throws InterruptedException {
-		WebElement spinnyBenefitsSectionContainer = driver.findElement(By.xpath(cr.valueOnTheKey("plp_spinnyBenefitsSectionBanner")));
-		Assert.assertEquals(true, spinnyBenefitsSectionContainer.isDisplayed());
+
+	@And("user able to see spinny buzz")
+	public void user_able_to_see_spinny_buzz() throws InterruptedException {
+		WebElement spinnyBuzzSection = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_spinnyBuzzSection")));
+		Assert.assertEquals(true, spinnyBuzzSection.isDisplayed());
 		Thread.sleep(2000);
 	}
+
 }

@@ -11,7 +11,7 @@ import Utility.Wait;
 import Utility.preMethods;
 import org.junit.Assert;
 
-public class HomeTD {
+public class PDP_HomeTD {
 	
 	static ConfigReader cr = new ConfigReader();
 	WebDriver driver = StepDefinition.Hooks.driver;

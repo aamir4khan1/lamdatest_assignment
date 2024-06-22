@@ -26,7 +26,7 @@ import io.cucumber.java.en.When;
 //import cucumber.api.java.en.And;
 //import testselement.screens.android.AndroidHomepageScreen;
 
-public class PDP_carOverview {
+public class PDP_CarOverview {
 	static ConfigReader cr = new ConfigReader();
 	WebDriver driver = StepDefinition.Hooks.driver;
 	Wait wait = new Wait();

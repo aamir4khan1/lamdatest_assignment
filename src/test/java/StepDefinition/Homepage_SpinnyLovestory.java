@@ -21,7 +21,7 @@ import io.cucumber.java.en.When;
 //import cucumber.api.java.en.And;
 //import testselement.screens.android.AndroidHomepageScreen;
 
-public class Homepage_spinnyLovestory {
+public class Homepage_SpinnyLovestory {
 	static ConfigReader cr = new ConfigReader();
 	WebDriver driver = StepDefinition.Hooks.driver;
 	Wait wait = new Wait();

@@ -4,10 +4,8 @@ Background:
     When Wait for the application page to load completely
     And user selects location
 
-@regression
-Scenario: User should be able to navigate on hamburger menu
-   
-    
+    @regression
+    Scenario: User should be able to navigate on hamburger menu
     And user click on the on the hamburger menu
     And user clicks on buy spinny assured
     And user clicks on buy spinny max

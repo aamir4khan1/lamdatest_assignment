@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class HomepageSpinnyBuzz {
+public class Homepage_InsightsThatDriveUs {
 
-	public HomepageSpinnyBuzz() {
+	public Homepage_InsightsThatDriveUs() {
 
 	}
 
@@ -24,18 +24,18 @@ public class HomepageSpinnyBuzz {
 	Wait wait = new Wait();
 	static preMethods prm = new preMethods();
 
-	@Then("scroll down spinny buzz section")
-	public void scroll_down_spinny_buzz_section() throws InterruptedException {
+	@And("scroll down to insights that drive us")
+	public void scroll_down_to_insights_that_drve_us() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,6000)");
+		js.executeScript("window.scroll(0,6500)");
 		Thread.sleep(2000);
 	}
 
-	@And("user able to see spinny buzz")
-	public void user_able_to_see_spinny_buzz() throws InterruptedException {
-		WebElement spinnyBuzzSection = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_spinnyBuzzSection")));
-		Assert.assertEquals(true, spinnyBuzzSection.isDisplayed());
+	@Then("user is able to see insights that drive us section")
+	public void user_is_able_to_see_insights_that_drive_us_section() throws InterruptedException {
+		WebElement insightsThatDriveUsContainer = driver
+				.findElement(By.xpath(cr.valueOnTheKey("homepage_insightsThatDriveUsSection")));
+		Assert.assertEquals(true, insightsThatDriveUsContainer.isDisplayed());
 		Thread.sleep(2000);
 	}
-
 }

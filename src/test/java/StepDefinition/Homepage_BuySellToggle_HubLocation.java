@@ -13,7 +13,7 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class HomepageBuySellToggle_HubLocation {
+public class Homepage_BuySellToggle_HubLocation {
 
 	static ConfigReader cr = new ConfigReader();
 	WebDriver driver = StepDefinition.Hooks.driver;

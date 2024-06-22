@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class PLPHubLocation {
+public class PLP_HubLocation {
 
-	public PLPHubLocation() {
+	public PLP_HubLocation() {
 
 	}
 

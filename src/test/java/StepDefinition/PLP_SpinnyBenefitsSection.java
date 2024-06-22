@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class HomepageInsightsThatDriveUs {
+public class PLP_SpinnyBenefitsSection {
 
-	public HomepageInsightsThatDriveUs() {
+	public PLP_SpinnyBenefitsSection() {
 
 	}
 
@@ -24,18 +24,17 @@ public class HomepageInsightsThatDriveUs {
 	Wait wait = new Wait();
 	static preMethods prm = new preMethods();
 
-	@And("scroll down to insights that drive us")
-	public void scroll_down_to_insights_that_drve_us() throws InterruptedException {
+	@And("scroll down to spinny benefits section")
+	public void scroll_down_to_spinny_benefits_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,6500)");
+		js.executeScript("window.scroll(0,4500)");
 		Thread.sleep(2000);
 	}
-
-	@Then("user is able to see insights that drive us section")
-	public void user_is_able_to_see_insights_that_drive_us_section() throws InterruptedException {
-		WebElement insightsThatDriveUsContainer = driver
-				.findElement(By.xpath(cr.valueOnTheKey("homepage_insightsThatDriveUsSection")));
-		Assert.assertEquals(true, insightsThatDriveUsContainer.isDisplayed());
+	
+	@And("validate spinny benefits section")
+	public void validate_spinny_benefits_section() throws InterruptedException {
+		WebElement spinnyBenefitsSectionContainer = driver.findElement(By.xpath(cr.valueOnTheKey("plp_spinnyBenefitsSectionBanner")));
+		Assert.assertEquals(true, spinnyBenefitsSectionContainer.isDisplayed());
 		Thread.sleep(2000);
 	}
 }

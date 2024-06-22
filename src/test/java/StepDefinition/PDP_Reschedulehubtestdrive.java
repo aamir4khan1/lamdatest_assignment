@@ -13,7 +13,7 @@ import cucumber.api.java.en.Then;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-public class reschedulehubtestdrive {
+public class PDP_Reschedulehubtestdrive {
 	static ConfigReader cr = new ConfigReader();
     WebDriver driver = StepDefinition.Hooks.driver;
     Wait wait = new Wait();

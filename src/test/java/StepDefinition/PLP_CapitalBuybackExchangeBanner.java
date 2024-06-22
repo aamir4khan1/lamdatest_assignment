@@ -14,9 +14,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class PLPCapitalBuybackExchangeBanner {
+public class PLP_CapitalBuybackExchangeBanner {
 
-	public PLPCapitalBuybackExchangeBanner() {
+	public PLP_CapitalBuybackExchangeBanner() {
 
 	}
 

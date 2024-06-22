@@ -21,7 +21,7 @@ import io.cucumber.java.en.When;
 //import cucumber.api.java.en.And;
 //import testselement.screens.android.AndroidHomepageScreen;
 
-public class Searchpage {
+public class Homepage_Searchpage {
 	static ConfigReader cr = new ConfigReader();
 	WebDriver driver = StepDefinition.Hooks.driver;
 	Wait wait = new Wait();

@@ -15,9 +15,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class PLPShortlist {
+public class PLP_Shortlist {
 
-	public PLPShortlist() {
+	public PLP_Shortlist() {
 
 	}
 

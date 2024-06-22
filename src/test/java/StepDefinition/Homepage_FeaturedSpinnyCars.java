@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class HomepageFeaturedSpinnyCars {
+public class Homepage_FeaturedSpinnyCars {
 
-	public HomepageFeaturedSpinnyCars() {
+	public Homepage_FeaturedSpinnyCars() {
 
 	}
 

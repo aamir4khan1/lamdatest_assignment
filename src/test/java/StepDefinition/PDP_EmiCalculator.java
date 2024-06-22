@@ -16,7 +16,7 @@ import java.util.List;
 
 import org.junit.Assert;
 
-public class PDP_emiCalculator {
+public class PDP_EmiCalculator {
 	
 	static ConfigReader cr = new ConfigReader();
 	WebDriver driver = StepDefinition.Hooks.driver;

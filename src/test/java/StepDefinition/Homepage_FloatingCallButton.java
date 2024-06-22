@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class HomepageFloatingCallButton {
+public class Homepage_FloatingCallButton {
 
-	public HomepageFloatingCallButton() {
+	public Homepage_FloatingCallButton() {
 
 	}
 

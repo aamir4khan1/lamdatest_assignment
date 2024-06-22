@@ -12,9 +12,9 @@ import Utility.Wait;
 import Utility.preMethods;
 import io.cucumber.java.en.And;
 
-public class HomepageDownloadAppBanner {
+public class Homepage_DownloadAppBanner {
 
-	public HomepageDownloadAppBanner() {
+	public Homepage_DownloadAppBanner() {
 
 	}
 

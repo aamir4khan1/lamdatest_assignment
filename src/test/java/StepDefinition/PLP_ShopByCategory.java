@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class PLPShopByCategory {
+public class PLP_ShopByCategory {
 
-	public PLPShopByCategory() {
+	public PLP_ShopByCategory() {
 
 	}
 

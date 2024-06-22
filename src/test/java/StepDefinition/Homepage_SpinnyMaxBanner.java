@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class HomepageSpinnyMaxBanner {
+public class Homepage_SpinnyMaxBanner {
 
-	public HomepageSpinnyMaxBanner() {
+	public Homepage_SpinnyMaxBanner() {
 
 	}
 

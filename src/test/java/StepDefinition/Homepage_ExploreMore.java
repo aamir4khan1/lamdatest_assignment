@@ -14,9 +14,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class HomepageExploreMore {
+public class Homepage_ExploreMore {
 
-	public HomepageExploreMore() {
+	public Homepage_ExploreMore() {
 
 	}
 

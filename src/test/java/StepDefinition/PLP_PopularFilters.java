@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class PLPPopularFilters {
+public class PLP_PopularFilters {
 
-	public PLPPopularFilters() {
+	public PLP_PopularFilters() {
 
 	}
 
