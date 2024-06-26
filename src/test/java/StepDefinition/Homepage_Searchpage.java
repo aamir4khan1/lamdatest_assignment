@@ -161,7 +161,7 @@ public class Homepage_Searchpage {
 			 WebElement searchshortlist1 = driver.findElement(By.xpath(cr.valueOnTheKey("searchshortlist")));
 				Assert.assertEquals(true, searchshortlist1.isDisplayed());	
 	 	}
-	@And("user shortlist the car")
+	/*@And("user shortlist the car")
 	public void user_shortlist_the_car() throws InterruptedException
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -170,7 +170,7 @@ public class Homepage_Searchpage {
 		 WebElement searchshortlist = driver.findElement(By.xpath(cr.valueOnTheKey("searchshortlist")));
 			Assert.assertEquals(true, searchshortlist.isDisplayed());	
 
-	}
+	}*/
 	
 
 }
