@@ -27,18 +27,31 @@ public class BaseSteps {
 //		devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 //
 //        // Add event listener to capture network requests
-//        devTools.addListener(Network.requestWillBeSent(), request -> {
-//            System.out.println("Request URL: " + request.getRequest().getUrl());
-//            System.out.println("Request Method: " + request.getRequest().getMethod());
-//        });
+//      devTools.addListener(Network.requestWillBeSent(), request -> {
+//           System.out.println("Request URL: " + request.getRequest().getUrl());
+//           System.out.println("Request Method: " + request.getRequest().getMethod());
+//           System.out.println("Request headers: " + request.getRequest().getHeaders().toString());
+//           System.out.println("Request body: " + request.getRequest().getPostData().toString());
+//       });
 //
-//        // Add event listener to capture network responses
-//        devTools.addListener(Network.responseReceived(), response -> {
-//            System.out.println("Response URL: " + response.getResponse().getUrl());
+////        // Add event listener to capture network responses
+//       devTools.addListener(Network.responseReceived(), response -> {
+//           System.out.println("Response URL: " + response.getResponse().getUrl());
 //            System.out.println("Response Status: " + response.getResponse().getStatus());
 //            System.out.println("Response Status Text: " + response.getResponse().getStatusText());
 //        });
-		driver.get(cr.valueOnTheKey(System.getProperty("URL")));
+
+		driver.get(cr.valueOnTheKey(("URL")));
+		driver.manage().window().maximize();
+
+		
+		if(System.getProperty("URL") != null) {
+			driver.get(cr.valueOnTheKey(System.getProperty("URL")));
+		} else {
+			driver.get(cr.valueOnTheKey("URL"));
+		}
+		
+
 	}
 
 	@When("^Wait for the application page to load completely$")
