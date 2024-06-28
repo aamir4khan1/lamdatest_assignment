@@ -66,7 +66,7 @@ public class Homepage_SpinnyMaxBanner {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,3900)");
+		js.executeScript("window.scroll(0,4200)");
 		Thread.sleep(4000);
 	}
 
@@ -87,8 +87,7 @@ public class Homepage_SpinnyMaxBanner {
 	public void click_on_view_more_luxury_cars() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("homepage_spinnyMaxBannerViewMoreLuxuryCars"), "xpath");
 		Thread.sleep(3000);
-		WebElement spinnyMaxFilterApplied = driver
-				.findElement(By.xpath(cr.valueOnTheKey("plp_SpinnyMaxCars_filter_applied")));
+		WebElement spinnyMaxFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_SpinnyMaxCars_filter_applied")));
 		Assert.assertEquals(true, spinnyMaxFilterApplied.isDisplayed());
 
 	}
