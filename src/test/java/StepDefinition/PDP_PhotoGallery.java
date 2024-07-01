@@ -38,11 +38,11 @@ public class PDP_PhotoGallery {
 		
 		WebElement photoGalleryBookNow = driver.findElement(By.xpath(cr.valueOnTheKey("photoGalleryBookNow")));
 		Assert.assertEquals(true, photoGalleryBookNow.isDisplayed());
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		WebElement photoGalleryFreeTestDrive = driver.findElement(By.xpath(cr.valueOnTheKey("photoGalleryFreeTestDrive")));
 		Assert.assertEquals(true, photoGalleryFreeTestDrive.isDisplayed());
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	}
 	
 	@And("click on interior tab")
