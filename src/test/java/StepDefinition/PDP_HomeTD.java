@@ -48,7 +48,7 @@ public class PDP_HomeTD {
 
     @And("user selects a car card")
     public void userSelectsACarCard() throws InterruptedException{
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
 		WebElement plp_quickfilters = driver.findElement(By.xpath(cr.valueOnTheKey("plp_quickfilters")));
 		Assert.assertEquals(true, plp_quickfilters.isDisplayed());
 		Thread.sleep(2000);
@@ -169,7 +169,7 @@ public class PDP_HomeTD {
 
     @And("user clicks on the schedule myloc test drive button")
     public void userClicksOnScheduleYloctestDriveButton() throws InterruptedException{
-    	Thread.sleep(2000);
+    	Thread.sleep(4000);
         prm.click(driver, cr.valueOnTheKey("Home_testdrive_schedule"), "xpath");
         Thread.sleep(6000);
         WebElement Home_TDC_page = driver.findElement(By.xpath(cr.valueOnTheKey("Home_TDC_page")));

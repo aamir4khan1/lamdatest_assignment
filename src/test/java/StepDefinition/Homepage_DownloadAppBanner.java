@@ -27,7 +27,7 @@ public class Homepage_DownloadAppBanner {
 	public void scroll_down_to_spinnt_app_banner() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,7700)");
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 
 		WebElement downloadSpinnyAppBanner = driver
 				.findElement(By.xpath(cr.valueOnTheKey("homepage_downloadSpinnyAppBanner")));
