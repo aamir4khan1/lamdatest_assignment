@@ -31,17 +31,17 @@ public class Homepage_Searchpage {
 	public void user_clicks_on_search_bar_on_top() throws InterruptedException {
 		
 		prm.click(driver, cr.valueOnTheKey("homepage_searchpage"), "xpath");
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		WebElement plp_landingOnPLP = driver.findElement(By.xpath(cr.valueOnTheKey("searchpageAsseartion")));
 	 	Assert.assertEquals(true, plp_landingOnPLP.isDisplayed());
 	      	}
 	@And("user clicks on  popular search")
 	public void user_clicks_on_popular_search() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		WebElement popularsearch = driver.findElement(By.xpath(cr.valueOnTheKey("popularsearch")));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(popularsearch).click().build().perform();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		WebElement searchfilter = driver.findElement(By.xpath(cr.valueOnTheKey("searchfilter")));
 	 	Assert.assertEquals(true, searchfilter.isDisplayed());
 		Thread.sleep(2000);
