@@ -1,4 +1,4 @@
-Feature: Verify download app banner functionality on p 
+Feature: Verify download app banner functionality on plp 
 	
  Background: User land on spinny website and selects location
     Given user land on spinny website
