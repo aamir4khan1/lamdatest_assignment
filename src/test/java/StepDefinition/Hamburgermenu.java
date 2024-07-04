@@ -292,7 +292,7 @@ public class Hamburgermenu {
 		js.executeScript("document.getElementById('sideMenu').scroll(0,400)");
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("car_hub_locations"), "xpath");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		WebElement car_hub_locations_page = driver.findElement(By.xpath(cr.valueOnTheKey("car_hub_locations_page")));
 		Assert.assertEquals(true, car_hub_locations_page.isDisplayed());
 		Thread.sleep(2000);

@@ -62,8 +62,6 @@ public class PDP_PhotoGallery {
 		Assert.assertEquals(true, dashboardVideoPlayer.isDisplayed());
 		Thread.sleep(2000);
 		
-		
-		
 		prm.click(driver, cr.valueOnTheKey("pdp_carCardImageInteriorTabDashboardVideoCloseButton"), "xpath");
 		Thread.sleep(2000);
 
