@@ -46,7 +46,7 @@ public class PDP_CarSpecifications {
     //	WebElement topFeaturesSection = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(cr.valueOnTheKey("pdp_topFeaturesSection"))));
     //	js.executeScript("arguments[0].scrollIntoView(true);", topFeaturesSection);
     	
-		js.executeScript("window.scroll(0,2100)");
+		js.executeScript("window.scroll(0,2200)");
 		Thread.sleep(2000);
 		
 		WebElement carSpecificationsSection = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_carSpecificationsSection")));
@@ -73,7 +73,7 @@ public class PDP_CarSpecifications {
 		Thread.sleep(2000);
 		
 		prm.click(driver, cr.valueOnTheKey("pdp_carSpecificationsFuelAndPerformanceTab"), "xpath");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		WebElement FuelAndPerformanceH2Header = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_carSpecificationsFuelAndPerformanceH2Header")));
 		Assert.assertEquals(true, FuelAndPerformanceH2Header.isDisplayed());	
 		Thread.sleep(2000);

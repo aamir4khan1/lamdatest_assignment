@@ -7,7 +7,7 @@ Feature: Verify Search  page  functionality on homepage
  		
    @regression  
    Scenario: search page functionality
-	 And user clicks on search bar on top
+   And user clicks on search bar on top
 	 And user clicks on  popular search
    And user tries to change location
    And user clicks on see all car

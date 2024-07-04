@@ -80,9 +80,9 @@ public class Login {
 		//Thread.sleep(3000);
 		//prm.takeSceenshot(driver);
 		//prm.sendTextToTextBox(driver, cr.valueOnTheKey("name"),("xpath"),"Testing");
-		Thread.sleep(1000);
+		Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 	}
 	@And("user enters otp code")
 	public void user_enters_otp_code() throws InterruptedException {

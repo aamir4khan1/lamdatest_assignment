@@ -75,13 +75,35 @@ public class Homepage_LocationSelector {
 	        e.printStackTrace();
 	        Assert.fail("Heading element not found");
 	    }
-
+	}
+	
+	@And("validate the seo inner content")
+	public void validate_the_seo_inner_content() throws InterruptedException {
+	    prm.click(driver, cr.valueOnTheKey("plp_H1HeadingInnerContent"), "xpath");
+	    Thread.sleep(2000);
+	
+	    WebElement plp_HeadingInnerContentBox = driver.findElement(By.xpath(cr.valueOnTheKey("plp_HeadingInnerContentBox")));
+	    Assert.assertEquals(true, plp_HeadingInnerContentBox.isDisplayed());
+	    Thread.sleep(2000);
+	    
+	    
+	    WebElement plp_H1taginnerContentHeading = driver.findElement(By.xpath(cr.valueOnTheKey("plp_H1taginnerContentHeading")));
+	    Assert.assertEquals(true, plp_H1taginnerContentHeading.isDisplayed());
+	    Thread.sleep(2000);
+	    
+	    
+	    WebElement plp_H1taginnerContentPara = driver.findElement(By.xpath(cr.valueOnTheKey("plp_H1taginnerContentPara")));
+	    Assert.assertEquals(true, plp_H1taginnerContentPara.isDisplayed());
+	    Thread.sleep(2000);
+	    
+	    prm.click(driver, cr.valueOnTheKey("plp_H1HeadingInnerContentCrossicon"), "xpath");
+	    Thread.sleep(2000);
+	    
 	    driver.navigate().back();
 	    Thread.sleep(2000);
+	    
+	    
 	}
-
-	
-	
 	
 	/*@And("validate the city Delhi NCR on PLP")
 	public void validate_the_city_Delhi_NCR_on_PLP() throws InterruptedException {
@@ -197,8 +219,6 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 
 	
@@ -266,8 +286,6 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 
 
@@ -334,8 +352,6 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 
 
@@ -400,8 +416,6 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 
 
@@ -465,8 +479,6 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 
 
@@ -531,8 +543,6 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 	
 	
@@ -600,8 +610,6 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 	
 
@@ -663,8 +671,7 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
+	    
 	}
 
 	
@@ -788,15 +795,8 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
+	   
 	}
-
-	
-	
-	
-	
-	
 	
 	
 /*	@And("validate the city Chennai on PLP")
@@ -856,8 +856,7 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
+	   
 	}
 
 	
@@ -921,13 +920,8 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
+	  
 	}
-
-	
-	
-
 
 	/*@And("validate the city Lucknow on PLP")
 	public void validate_the_city_Lucknow_on_PLP() throws InterruptedException {
@@ -989,9 +983,6 @@ public class Homepage_LocationSelector {
 	        e.printStackTrace();
 	        Assert.fail("Heading element not found");
 	    }
-
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 	
 
@@ -1055,9 +1046,6 @@ public class Homepage_LocationSelector {
 	        e.printStackTrace();
 	        Assert.fail("Heading element not found");
 	    }
-
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 	
 	
@@ -1126,8 +1114,6 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 	
 
@@ -1199,14 +1185,8 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 	
-
-
-	
-
 /*	@And("validate the city Ghaziabad on PLP")
 	public void validate_the_city_Ghaziabad_on_PLP() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("homepage_buyButton"), "xpath");
@@ -1272,12 +1252,7 @@ public class Homepage_LocationSelector {
 	        Assert.fail("Heading element not found");
 	    }
 
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
-	
-
-
 	/*
 	@And("validate the city Indore on PLP")
 	public void validate_the_city_Indore_on_PLP() throws InterruptedException {
@@ -1342,9 +1317,6 @@ public class Homepage_LocationSelector {
 	        e.printStackTrace();
 	        Assert.fail("Heading element not found");
 	    }
-
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	}
 
 

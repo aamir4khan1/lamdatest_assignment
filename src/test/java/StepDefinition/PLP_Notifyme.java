@@ -31,10 +31,7 @@ public class PLP_Notifyme {
 	Wait wait = new Wait();
 	static preMethods prm = new preMethods();	
 
-//	@And("user click on buy button")
-//	public void user_click_on_buy_button() throws InterruptedException {
-//		prm.click(driver, cr.valueOnTheKey("homepage_buyButton"), "xpath");
-//		Thread.sleep(4000);
+
 		
 	
 	

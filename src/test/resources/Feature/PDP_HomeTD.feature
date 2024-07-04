@@ -13,6 +13,7 @@ Background:
     And user clicks on the Free test drive button
     And user clicks on mobile number field
     And user enters mobile number
+    And user clicks on verify number button
     And user enters otp code
     And user selects my location
     And user enters home address
