@@ -1,4 +1,4 @@
-Feature: Verify user is able to view explore more car section PDP
+Feature: Verify user is able to verify neutral page
 
  Background: User land on spinny website and selects location
     Given user land on spinny website
@@ -6,7 +6,7 @@ Feature: Verify user is able to view explore more car section PDP
     And user selects location
    
      @regression 
-     Scenario: User should be able use view explore more car section PDP
+     Scenario: User should be able to verify neutral page
      Then user lands on neutral page
      And user selects sell car button
      And user verify car finder section
