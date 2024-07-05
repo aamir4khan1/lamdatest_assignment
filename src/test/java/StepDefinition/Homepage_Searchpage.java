@@ -31,7 +31,7 @@ public class Homepage_Searchpage {
 	public void user_clicks_on_search_bar_on_top() throws InterruptedException {
 		
 		prm.click(driver, cr.valueOnTheKey("homepage_searchpage"), "xpath");
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		WebElement plp_landingOnPLP = driver.findElement(By.xpath(cr.valueOnTheKey("searchpageAsseartion")));
 	 	Assert.assertEquals(true, plp_landingOnPLP.isDisplayed());
 	      	}
