@@ -85,7 +85,7 @@ public class PLP_Filters {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("brand2"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter1 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter1")));
+    	WebElement applied_filter1 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter1.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -125,7 +125,7 @@ try {
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("year_select"), "xpath");
 		Thread.sleep(2000);
-    	WebElement applied_filter2 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter2")));
+    	WebElement applied_filter2 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter2.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -172,7 +172,7 @@ try {
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("km_select"), "xpath");
 		Thread.sleep(2000);
-    	WebElement applied_filter3 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter3")));
+    	WebElement applied_filter3 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter3.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -221,7 +221,7 @@ try {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("fuel3"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter4 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter4")));
+    	WebElement applied_filter4 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter4.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -281,7 +281,7 @@ try {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("body4"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter5 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter5")));
+    	WebElement applied_filter5 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter5.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -336,7 +336,7 @@ try {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("transmission2"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter6 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter6")));
+    	WebElement applied_filter6 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter6.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -385,7 +385,7 @@ try {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("color_type2"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter7 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter7")));
+    	WebElement applied_filter7 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter7.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -434,7 +434,7 @@ try {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("feature_type2"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter8 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter8")));
+    	WebElement applied_filter8 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter8.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -490,7 +490,7 @@ try {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("seats4"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter9 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter9")));
+    	WebElement applied_filter9 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter9.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -547,7 +547,7 @@ catch (NoSuchElementException e)
         	Thread.sleep(2000);
         	prm.click(driver, cr.valueOnTheKey("rto_3"), "xpath");
         	Thread.sleep(2000);
-        	WebElement applied_filter10 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter10")));
+        	WebElement applied_filter10 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
     		Assert.assertEquals(true, applied_filter10.isDisplayed());
     		Thread.sleep(2000);
         	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -601,7 +601,7 @@ catch (NoSuchElementException e)
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("owner_select"), "xpath");
 		Thread.sleep(2000);
-    	WebElement applied_filter11 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter11")));
+    	WebElement applied_filter11 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter11.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -651,7 +651,7 @@ try {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("car_category_3"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter12 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter12")));
+    	WebElement applied_filter12 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter12.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -704,7 +704,7 @@ try {
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("hub2"), "xpath");
     	Thread.sleep(2000);
-    	WebElement applied_filter13 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter13")));
+    	WebElement applied_filter13 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
 		Assert.assertEquals(true, applied_filter13.isDisplayed());
 		Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");
@@ -751,7 +751,7 @@ try {
     		Thread.sleep(2000);
     		prm.click(driver, cr.valueOnTheKey("In_stock"), "xpath");
     		Thread.sleep(2000);
-        	WebElement applied_filter14 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter14")));
+        	WebElement applied_filter14 = driver.findElement(By.xpath(cr.valueOnTheKey("applied_filter")));
     		Assert.assertEquals(true, applied_filter14.isDisplayed());
     		Thread.sleep(2000);
         	prm.click(driver, cr.valueOnTheKey("apply"), "xpath");

@@ -14,6 +14,7 @@ Background:
     And user clicks on mobile number field
     And user enters mobile number
     And user enters otp code
+    And user clicks on verify number button
     And user selects date
     And user chooses time
     And user clicks on Schedule hub test drive

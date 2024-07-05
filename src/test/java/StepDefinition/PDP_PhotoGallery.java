@@ -38,11 +38,11 @@ public class PDP_PhotoGallery {
 		
 		WebElement photoGalleryBookNow = driver.findElement(By.xpath(cr.valueOnTheKey("photoGalleryBookNow")));
 		Assert.assertEquals(true, photoGalleryBookNow.isDisplayed());
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		WebElement photoGalleryFreeTestDrive = driver.findElement(By.xpath(cr.valueOnTheKey("photoGalleryFreeTestDrive")));
 		Assert.assertEquals(true, photoGalleryFreeTestDrive.isDisplayed());
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	}
 	
 	@And("click on interior tab")
@@ -83,6 +83,20 @@ public class PDP_PhotoGallery {
 		
 		prm.click(driver, cr.valueOnTheKey("pdp_carCardImageGalleryTabInteriorImagesTab"), "xpath");
 		Thread.sleep(2000);
+		
+		
+		prm.click(driver, cr.valueOnTheKey("pdp_InteriorDashboardVideoplayButton"), "xpath");
+		Thread.sleep(2000);
+		
+		WebElement pdp_InteriorDashboardVideopausebutton = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_InteriorDashboardVideopausebutton")));
+		Assert.assertEquals(true, pdp_InteriorDashboardVideopausebutton.isDisplayed());
+		Thread.sleep(2000);
+		
+		prm.click(driver, cr.valueOnTheKey("pdp_InteriorDashboardVideopausebutton"), "xpath");
+		Thread.sleep(2000);
+		
+		
+		
 		
 		
 		WebElement pdp_carCardImageGalleryTabInteriorImages = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_carCardImageGalleryTabInteriorImages")));

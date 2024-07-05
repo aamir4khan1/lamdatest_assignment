@@ -357,7 +357,7 @@ public class Hamburgermenu {
     		{JavascriptExecutor js = (JavascriptExecutor) driver;
     		js.executeScript("window.scroll(0,3200)");}
     		Thread.sleep(2000);
-    		prm.click(driver, cr.valueOnTheKey("sell_button"), "xpath");
+    		prm.click(driver, cr.valueOnTheKey("see_all_button"), "xpath");
     		Thread.sleep(2000);	
     		prm.click(driver, cr.valueOnTheKey("logo_click"), "xpath");
     		

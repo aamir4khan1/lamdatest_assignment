@@ -14,6 +14,7 @@ Background: User land on spinny website and selects location
     And user selects transmission preference
     And user clicks on mobile number field
     And user enters mobile number
+    And user clicks on verify number button
     And user enters otp code
     And validate carfinder plp
     #Then user is navigated to the PLP
