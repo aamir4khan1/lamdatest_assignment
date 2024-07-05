@@ -37,11 +37,11 @@ public class Homepage_Searchpage {
 	      	}
 	@And("user clicks on  popular search")
 	public void user_clicks_on_popular_search() throws InterruptedException {
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		WebElement popularsearch = driver.findElement(By.xpath(cr.valueOnTheKey("popularsearch")));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(popularsearch).click().build().perform();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		WebElement searchfilter = driver.findElement(By.xpath(cr.valueOnTheKey("searchfilter")));
 	 	Assert.assertEquals(true, searchfilter.isDisplayed());
 		Thread.sleep(2000);

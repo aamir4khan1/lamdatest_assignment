@@ -80,7 +80,7 @@ public class Login {
 		//Thread.sleep(3000);
 		//prm.takeSceenshot(driver);
 		//prm.sendTextToTextBox(driver, cr.valueOnTheKey("name"),("xpath"),"Testing");
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 		prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
 		Thread.sleep(3000);
 	}
