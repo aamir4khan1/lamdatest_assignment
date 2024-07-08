@@ -1,4 +1,4 @@
-Feature: Verify scheduling of home test drive
+Feature: Verify book now CTA on pdp
 
 Background:
     Given user land on spinny website
@@ -6,7 +6,7 @@ Background:
     And user selects location
 
 		@regression
-		Scenario: User should be able to schedule home test drive
+		Scenario: User should be able to book car on pdp
     And user clicks on the browse car button
     And user selects a car card
    #And user lands on the PDP
