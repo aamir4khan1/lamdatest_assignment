@@ -77,7 +77,7 @@ public class Homepage_Searchpage {
 		Thread.sleep(2000);
 		WebElement searchpagePLP = driver.findElement(By.xpath(cr.valueOnTheKey("searchpagePLP")));
 		Actions actionss = new Actions(driver);
-		actions.moveToElement(searchpagePLP).click().build().perform();
+		actionss.moveToElement(searchpagePLP).click().build().perform();
 		Thread.sleep(2000);
 		WebElement searchpageAsseartion = driver.findElement(By.xpath(cr.valueOnTheKey("searchpageAsseartion")));
 	 	Assert.assertEquals(true, searchpageAsseartion.isDisplayed());
@@ -86,9 +86,9 @@ public class Homepage_Searchpage {
 	@And("user clicks on car finder")
 	public void user_clicks_on_car_finder() throws InterruptedException {
 		Thread.sleep(2000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,500)");
-		Thread.sleep(4000);
+		JavascriptExecutor jss = (JavascriptExecutor) driver;
+		jss.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 400)");
+		 Thread.sleep(4000);
 		WebElement Search_CarFinder = driver.findElement(By.xpath(cr.valueOnTheKey("Search_CarFinder")));
 		Assert.assertEquals(true, Search_CarFinder.isDisplayed());
 		prm.click(driver, cr.valueOnTheKey("Search_CarFinder"),"xpath");
@@ -98,15 +98,24 @@ public class Homepage_Searchpage {
 		Thread.sleep(2000);
 		 driver.navigate().back();
 		 Thread.sleep(4000); 
+		 WebElement searchpagePLP = driver.findElement(By.xpath(cr.valueOnTheKey("searchpagePLP")));
+			Actions actions = new Actions(driver);
+			actions.moveToElement(searchpagePLP).click().build().perform();
+			 Thread.sleep(2000);
 	 	}
 	@And("user clicks on car available on hub")
 	public void user_clicks_on_car_available_on_hub() throws InterruptedException {
-		Thread.sleep(2000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,600)");
 		Thread.sleep(4000);
-		prm.click(driver, cr.valueOnTheKey("SearchHubCTA"),"xpath");
+	
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 600)");
+		 Thread.sleep(4000);
+		
+		 WebElement SearchHubCTA = driver.findElement(By.xpath(cr.valueOnTheKey("SearchHubCTA")));
+			Actions action = new Actions(driver);
+			action.moveToElement(SearchHubCTA).click().build().perform();
 		Thread.sleep(2000);
+		
 		WebElement Searchplphubfilter = driver.findElement(By.xpath(cr.valueOnTheKey("Searchplphubfilter")));
 	 	Assert.assertEquals(true, Searchplphubfilter.isDisplayed());
 		Thread.sleep(2000);
@@ -116,7 +125,8 @@ public class Homepage_Searchpage {
 		Thread.sleep(2000);
 		Thread.sleep(2000);
 		JavascriptExecutor jss = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,600)");
+		jss.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 600)");
+		 Thread.sleep(4000);
 		Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("searchviewallcity"),"xpath");
 		Thread.sleep(2000);
@@ -125,7 +135,7 @@ public class Homepage_Searchpage {
 		Thread.sleep(2000);
 		WebElement searchpagePLPs = driver.findElement(By.xpath(cr.valueOnTheKey("searchpagePLPs")));
 		Actions actionz = new Actions(driver);
-		actions.moveToElement(searchpagePLPs).click().build().perform();
+		actionz.moveToElement(searchpagePLPs).click().build().perform();
 		Thread.sleep(2000);
 		 	}
 	@And("user search in search bar")
@@ -155,9 +165,9 @@ public class Homepage_Searchpage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(searchshortlist).click().build().perform();
 		  Thread.sleep(3000);
-		  JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scroll(0,600)");
-			 Thread.sleep(3000);
+		  JavascriptExecutor jss = (JavascriptExecutor) driver;
+			jss.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 600)");
+			 Thread.sleep(4000);
 			 WebElement searchshortlist1 = driver.findElement(By.xpath(cr.valueOnTheKey("searchshortlist")));
 				Assert.assertEquals(true, searchshortlist1.isDisplayed());	
 	 	}
