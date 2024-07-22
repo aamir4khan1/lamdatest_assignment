@@ -62,7 +62,6 @@ public class Homepage_ViewAllCars {
 	
 	@And("user click on view all cars again")
 	public void user_click_on_view_all_cars_again() throws InterruptedException {
-		Thread.sleep(3000);
 		prm.click(driver, cr.valueOnTheKey("homepage_viewAllCars"), "xpath");
 		Thread.sleep(4000);
 		WebElement citySelectorContainer = driver.findElement(By.xpath(cr.valueOnTheKey("plp_citySelectorContainer")));
@@ -74,5 +73,4 @@ public class Homepage_ViewAllCars {
 		WebElement listingMainBanner = driver.findElement(By.xpath(cr.valueOnTheKey("plp_listingMainBanner")));
 		Assert.assertEquals(true, listingMainBanner.isDisplayed());
 	}
-	*/
 }
