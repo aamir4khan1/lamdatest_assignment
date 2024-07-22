@@ -40,10 +40,10 @@ public class Homepage_BuyButtonSellButton {
 	@And("land on sell page")
 	public void land_on_sell_page() throws InterruptedException {
 		prm.takeSceenshot(driver);
-	//	WebElement sellBanner = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_spinnySellBanner")));
-	//	Assert.assertEquals(true, sellBanner.isDisplayed());
-	//	WebElement sellPageContainer = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_sellPageContainer")));
-	//	Assert.assertEquals(true, sellPageContainer.isDisplayed());
+		WebElement sellYourCarText = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageYourCarText")));
+		Assert.assertEquals(true, sellYourCarText.isDisplayed());
+		WebElement sellpageNeedHelpButton = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageNeedHelp")));
+		Assert.assertEquals(true, sellpageNeedHelpButton.isDisplayed());
 		Thread.sleep(2000);
 	}
 
@@ -61,8 +61,8 @@ public class Homepage_BuyButtonSellButton {
 		prm.takeSceenshot(driver);
 		WebElement numberofusedcarsincity = driver.findElement(By.xpath(cr.valueOnTheKey("plp_headingcontent")));
 		Assert.assertEquals(true, numberofusedcarsincity.isDisplayed());
-	//	WebElement listingMainBanner = driver.findElement(By.xpath(cr.valueOnTheKey("plp_listingMainBanner")));
-	//	Assert.assertEquals(true, listingMainBanner.isDisplayed());
+		WebElement listingMainBanner = driver.findElement(By.xpath(cr.valueOnTheKey("plp_listingMainBanner")));
+		Assert.assertEquals(true, listingMainBanner.isDisplayed());
 		Thread.sleep(2000);
 	}
 }
