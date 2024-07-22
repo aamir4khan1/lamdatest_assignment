@@ -199,7 +199,7 @@ public class PDPKnowMoreSection {
         WebElement PDP_KnowMoreCTA = driver.findElement(By.xpath(cr.valueOnTheKey("PDP_KnowMoreCTA")));
         Actions actions = new Actions(driver);
         actions.moveToElement(PDP_KnowMoreCTA).click().build().perform();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     	prm.click(driver, cr.valueOnTheKey("pdp_KnowMoreMax"), "xpath");
     	Thread.sleep(2000);
     		
