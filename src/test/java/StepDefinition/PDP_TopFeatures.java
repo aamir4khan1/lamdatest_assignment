@@ -74,7 +74,17 @@ public class PDP_TopFeatures {
 		Thread.sleep(2000);	
 		WebElement topFeaturesExteriorTabH2Header = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_topFeaturesExteriorTabH2Header")));
 		Assert.assertEquals(true, topFeaturesExteriorTabH2Header.isDisplayed());
-		}
+		Thread.sleep(2000);	
+		WebElement topFeaturesSearchAnyFeaturesTextBox = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_topFeaturesSearchAnyFeaturesTextBox")));
+		Assert.assertEquals(true, topFeaturesSearchAnyFeaturesTextBox.isDisplayed());
+		prm.click(driver, cr.valueOnTheKey("pdp_topFeaturesSearchAnyFeaturesTextBox"), "xpath");
+		Thread.sleep(2000);	
+		prm.sendTextToTextBox(driver, cr.valueOnTheKey("pdp_topFeaturesSearchAnyFeaturesTextBox"),("xpath"),(cr.valueOnTheKey("pdp_topFeaturesSearchAnyFeaturesTextBoxSafetyText")));
+		Thread.sleep(4000);	
+//		WebElement topFeaturesSearchAnyFeaturesTextBoxSafetyTextResult = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_topFeaturesSearchAnyFeaturesTextBoxSafetyTextResult")));
+//		Assert.assertEquals(true, topFeaturesSearchAnyFeaturesTextBoxSafetyTextResult.isDisplayed());
+	
+	}
 	
 	}
 	
