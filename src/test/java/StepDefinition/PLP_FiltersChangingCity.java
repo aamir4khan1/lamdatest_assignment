@@ -279,7 +279,6 @@ public class PLP_FiltersChangingCity {
 				WebElement appliedFilterConfirm2 = driver.findElement(By.xpath(cr.valueOnTheKey("appliedFilterConfirm2")));
 				Assert.assertEquals(true, appliedFilterConfirm2.isDisplayed());
 				Thread.sleep(2000);
-
 		
 }
 }
