@@ -49,6 +49,9 @@ public class Homepage_BodyType {
 				.isDisplayed();
 		Assert.assertTrue(Hatchbackfilter);
 		Thread.sleep(2000);
+		
+		WebElement plp_h1TagHatchback = driver.findElement(By.xpath(cr.valueOnTheKey("plp_h1TagHatchback")));
+	    Assert.assertEquals(true, plp_h1TagHatchback.isDisplayed());
 	}
 
 	@And("Go back to the home page")
@@ -69,6 +72,10 @@ public class Homepage_BodyType {
 		boolean Sedanfilter = driver.findElement(By.xpath(cr.valueOnTheKey("plp_sedan_filter_applied"))).isDisplayed();
 		Assert.assertTrue(Sedanfilter);
 		Thread.sleep(2000);
+		
+		
+		WebElement plp_h1TagSedan = driver.findElement(By.xpath(cr.valueOnTheKey("plp_h1TagSedan")));
+	    Assert.assertEquals(true, plp_h1TagSedan.isDisplayed());
 
 	}
 
@@ -86,6 +93,10 @@ public class Homepage_BodyType {
 		boolean SUVfilter = driver.findElement(By.xpath(cr.valueOnTheKey("plp_SUV_filter_applied"))).isDisplayed();
 		Assert.assertTrue(SUVfilter);
 		Thread.sleep(4000);
+		
+		
+		WebElement plp_h1TagSUV = driver.findElement(By.xpath(cr.valueOnTheKey("plp_h1TagSUV")));
+	    Assert.assertEquals(true, plp_h1TagSUV.isDisplayed());
 
 	}
 
@@ -103,6 +114,10 @@ public class Homepage_BodyType {
 		boolean MUVfilter = driver.findElement(By.xpath(cr.valueOnTheKey("plp_MUV_filter_applied"))).isDisplayed();
 		Assert.assertTrue(MUVfilter);
 		Thread.sleep(2000);
+		
+		
+		WebElement plp_h1TagMUV = driver.findElement(By.xpath(cr.valueOnTheKey("plp_h1TagMUV")));
+	    Assert.assertEquals(true, plp_h1TagMUV.isDisplayed());
 	}
 
 }
