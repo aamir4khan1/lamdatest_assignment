@@ -4,14 +4,14 @@ Feature: Verify Buy Sell Toggle and Hub Location functionality on homepage
     Given user land on spinny website
     When Wait for the application page to load completely
     And user selects location
-    #
-#	 @regression
-   #Scenario: User should be able to use buy sell toggle functionality
-   #Then user click on buy toggle
-   #And user click on learn more button
-   #And click on browse car
-   #Then click on sell toggle
-   #And click on get price
+    
+	 @regression
+   Scenario: User should be able to use buy sell toggle functionality
+   Then user click on buy toggle
+   And user click on learn more button
+   And click on browse car
+   Then click on sell toggle
+   And click on get price
 
    @regression
    Scenario: User should be able to use hub location functionality

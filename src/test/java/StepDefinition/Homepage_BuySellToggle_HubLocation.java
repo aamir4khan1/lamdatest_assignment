@@ -125,6 +125,8 @@ public class Homepage_BuySellToggle_HubLocation {
 		prm.takeSceenshot(driver);
 		WebElement hubfilterapplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_hubFilterApplied")));
 		Assert.assertEquals(true, hubfilterapplied.isDisplayed()); // assertion hub location modal //
+		WebElement saveFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("savedFiltericon")));
+		Assert.assertEquals(true, saveFilterApplied.isDisplayed()); // assertion save filter chip //
 		driver.navigate().back();
 		Thread.sleep(4000);
 
