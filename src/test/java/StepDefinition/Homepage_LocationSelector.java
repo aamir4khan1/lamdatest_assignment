@@ -77,6 +77,7 @@ public class Homepage_LocationSelector {
 	    }
 	}
 	
+	
 	@And("validate the seo inner content")
 	public void validate_the_seo_inner_content() throws InterruptedException {
 	    prm.click(driver, cr.valueOnTheKey("plp_H1HeadingInnerContent"), "xpath");
@@ -99,10 +100,19 @@ public class Homepage_LocationSelector {
 	    prm.click(driver, cr.valueOnTheKey("plp_H1HeadingInnerContentCrossicon"), "xpath");
 	    Thread.sleep(2000);
 	    
-	    driver.navigate().back();
-	    Thread.sleep(2000);
 	    
-	    
+	}
+	@And("validate the car card with delhi city")
+	public void validate_the_car_card_with_delhi_city() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,6000)");
+		Thread.sleep(2000);
+		WebElement plp_carCardCity = driver.findElement(By.xpath(cr.valueOnTheKey("plp_carCardCityDelhi")));
+		Assert.assertEquals(true, plp_carCardCity.isDisplayed());
+		Thread.sleep(2000);
+		driver.navigate().back();
+		Thread.sleep(1000);
+		
 	}
 	
 	/*@And("validate the city Delhi NCR on PLP")
@@ -220,6 +230,18 @@ public class Homepage_LocationSelector {
 	    }
 
 	}
+	
+	 @And ("validate the car card with bangalore city")
+	 public void validate_the_car_card_with_bangalore_city() throws InterruptedException {
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("window.scroll(0,6000)");
+				Thread.sleep(2000);
+				WebElement plp_carCardCity = driver.findElement(By.xpath(cr.valueOnTheKey("plp_carCardCityBangalore")));
+				Assert.assertEquals(true, plp_carCardCity.isDisplayed());
+				Thread.sleep(2000);
+				driver.navigate().back();
+				Thread.sleep(1000);
+			}
 
 	
 
@@ -309,6 +331,8 @@ public class Homepage_LocationSelector {
 
 	@And("user selects Mumbai")
 	public void user_selects_Mumbai() throws InterruptedException {
+		driver.navigate().back();
+		Thread.sleep(1000);
 		prm.click(driver, cr.valueOnTheKey("homepage_citySelector"), "xpath");
 		prm.click(driver, cr.valueOnTheKey("homepage_Mumbai"), "xpath");
 		Thread.sleep(2000);
@@ -353,6 +377,19 @@ public class Homepage_LocationSelector {
 	    }
 
 	}
+	
+	@And ("validate the car card with mumbai city")
+	 public void validate_the_car_card_with_mumbai_city() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,6000)");
+		Thread.sleep(2000);
+		WebElement plp_carCardCityMumbai = driver.findElement(By.xpath(cr.valueOnTheKey("plp_carCardCityMumbai")));
+		Assert.assertEquals(true, plp_carCardCityMumbai.isDisplayed());
+		Thread.sleep(2000);
+		driver.navigate().back();
+		Thread.sleep(1000);
+	}
+	
 
 
 /*	@And("validate the city Mumbai on PLP")

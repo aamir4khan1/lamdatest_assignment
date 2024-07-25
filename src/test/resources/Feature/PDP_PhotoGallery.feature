@@ -1,4 +1,4 @@
-Feature: Verify photo gallery functionality on homepage
+Feature: Verify photo gallery functionality on PDP
    
  Background: User land on spinny website and selects location
    Given user land on spinny website
