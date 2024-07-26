@@ -11,6 +11,6 @@ Feature: Verify capital, buyback and exchange banner functionality on plp
    And scroll down to capital buyback exchange banner
    And click on capital banner
    And click on buyback banner
-   #And click on exchange banner
+   And click on exchange banner
 
  

@@ -50,6 +50,8 @@ public class PLP_HubLocation {
 	public void user_land_on_plp_with_hub_filter_applied() throws InterruptedException {
 		WebElement FilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_hubLocationModalFilterApplied")));
 		Assert.assertEquals(true, FilterApplied.isDisplayed());
+		WebElement saveFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("savedFiltericon")));
+		Assert.assertEquals(true, saveFilterApplied.isDisplayed()); // assertion save filter chip //
 		
 	}
 }

@@ -76,6 +76,8 @@ public class PLP_CapitalBuybackExchangeBanner {
 	Thread.sleep(2000);
 	WebElement spinnyCapitalBannerContainer = driver.findElement(By.xpath(cr.valueOnTheKey("plp_capitalBannerContainer")));
 	Assert.assertEquals(true, spinnyCapitalBannerContainer.isDisplayed());
+	WebElement usedCarLoanLandingSection = driver.findElement(By.xpath(cr.valueOnTheKey("applyFinance_usedCarLoanLandingSection")));
+	Assert.assertEquals(true, usedCarLoanLandingSection.isDisplayed());
 	driver.navigate().back();
 	Thread.sleep(2000);
 	}
@@ -86,16 +88,27 @@ public class PLP_CapitalBuybackExchangeBanner {
 	Thread.sleep(2000);
 	WebElement buyBackBannerImage = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_buyBackBannerImage")));
 	Assert.assertEquals(true, buyBackBannerImage.isDisplayed());
+	WebElement buyBackContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_buyBackContainer")));
+	Assert.assertEquals(true, buyBackContainer.isDisplayed());
 	driver.navigate().back();
 	Thread.sleep(2000);
 	}
 	
 	@And("click on exchange banner")
 	public void click_on_buyback_banner() throws InterruptedException {
+	JavascriptExecutor js = (JavascriptExecutor)driver;
+	js.executeScript("document.getElementsByClassName('CapitalBuyBackSlider__sliderParent')[0].style.transform = 'translateX(-250%)'");
+	Thread.sleep(5000);
+	js.executeScript("document.getElementsByClassName('CapitalBuyBackSlider__sliderParent')[0].style.transform = 'translateX(-220%)'");
+	Thread.sleep(5000);
 	prm.click(driver, cr.valueOnTheKey("plp_exchangeBanner"), "xpath");
 	Thread.sleep(2000);
 	WebElement spinnyCapitalBannerContainer = driver.findElement(By.xpath(cr.valueOnTheKey("plp_capitalBannerContainer")));
 	Assert.assertEquals(true, spinnyCapitalBannerContainer.isDisplayed());
+	WebElement sellPageCardHeading = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_sellFormCardHeading")));
+	Assert.assertEquals(true, sellPageCardHeading.isDisplayed());
+	WebElement sellToggleGetPriceSellFormOverlay = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_sellToggleGetPriceSellFormOverlay")));
+	Assert.assertEquals(true, sellToggleGetPriceSellFormOverlay.isDisplayed());
 	}
 	
 }
