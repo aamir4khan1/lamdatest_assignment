@@ -118,7 +118,7 @@ public class Neutral_page {
 		Thread.sleep(2000);
 		prm.clickByJavaScript(driver, cr.valueOnTheKey("watch_film"), "xpath");
 		Thread.sleep(2000);
-		prm.clickByJavaScript(driver, cr.valueOnTheKey("close_button"), "xpath");
+		prm.clickByJavaScript(driver, cr.valueOnTheKey("close_button_1"), "xpath");
 		Thread.sleep(2000);
 		{JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,1400)");}
