@@ -53,3 +53,40 @@ Feature: Verify high intent functionality on PDP
    And user refresh the page
    And validate your top choice tag  
    And validate high intent test drive CTA
+   And user click on spinny logo
+   And user click on botnav account
+   And click on logout
+   And click on yes button
+   
+   And user clicks on the browse car button
+   Then user selects first car card
+   And scroll down to inspection report section
+   Then click on view full report
+   And user clicks on mobile number field
+   And user enters mobile number
+   And user clicks on verify number button
+   And user enters otp code
+   And click on inspection report back
+   And user click on back button on pdp
+   And user refresh the page
+   And validate your top choice tag  
+   And validate high intent test drive CTA
+   And user click on spinny logo
+   And user click on botnav account
+   And click on logout
+   And click on yes button
+   
+   And user clicks on the browse car button
+   Then user selects first car card
+   And user clicks on the Book now button
+   And user clicks on mobile number field
+   And user enters mobile number
+   And user clicks on verify number button
+   And user enters otp code
+   And user click on back from book now
+   And user click on back button on pdp
+   And user refresh the page
+   And validate your top choice tag  
+   And validate high intent test drive CTA
+   
+   

@@ -107,6 +107,17 @@ public class PLP_HighIntent {
 		Thread.sleep(2000);
 	}
 	
+	@And("click on inspection report back")
+	public void click_on_inspection_report_back() throws InterruptedException {
+		prm.click(driver, cr.valueOnTheKey("pdp_inspectionReportModalBack"), "xpath");
+		Thread.sleep(2000);
+	}
+	
+	@And("user click on back from book now")
+	public void user_click_on_back_from_book_now() throws InterruptedException {
+		prm.click(driver, cr.valueOnTheKey("backarrow"), "xpath");
+		Thread.sleep(2000);
+	}
 	
 	}
 	
