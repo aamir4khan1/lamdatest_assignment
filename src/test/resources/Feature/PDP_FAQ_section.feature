@@ -1,4 +1,4 @@
-Feature: Verify Reschedule hub test drive functionality  
+Feature: Verify the FAQs on PDP section   
 
 Background:
     Given user land on spinny website

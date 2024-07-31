@@ -1,4 +1,4 @@
-Feature: Verify Reschedule hub test drive functionality  
+Feature: Verify Lovestory section on PDP  
 
 Background:
     Given user land on spinny website
