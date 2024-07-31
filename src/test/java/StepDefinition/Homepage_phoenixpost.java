@@ -22,67 +22,12 @@ public class Homepage_phoenixpost {
 	public void user_land_on_spinny_website() throws Exception {
 		
 	        driver.get(cr.valueOnTheKey("URL"));
-			/*
-			 * }
-			 * 
-			 * 
-			 * 
-			 * 
-			 * @And("user clicks on the browse car button") public void
-			 * userClicksOnBrowseCarButton() throws InterruptedException{
-			 * Thread.sleep(2000); JavascriptExecutor js = (JavascriptExecutor) driver;
-			 * js.executeScript("window.scroll(0,800)"); prm.click(driver,
-			 * cr.valueOnTheKey("homepage_browseCars"), "xpath"); Thread.sleep(2000);
-			 */       
-    }
-
-    @And("user select a car card")
-    public void userSelectACarCard() throws InterruptedException{
-    	Thread.sleep(2000);
-		WebElement plp_quickfilters = driver.findElement(By.xpath(cr.valueOnTheKey("plp_quickfilters")));
-		Assert.assertEquals(true, plp_quickfilters.isDisplayed());
-		Thread.sleep(2000);
-		{JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,750)");}
-		Thread.sleep(1000);
-		prm.click(driver, cr.valueOnTheKey("HubTDcard"), "xpath");
-		Thread.sleep(2000);
-        
-    }
-
-    @And("user click on the Free test drive button")
-    public void userClickOnFreeTestDriveButton() throws InterruptedException{
-    	Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("FreeHubTD"), "xpath");
-		Thread.sleep(2000);
-       
-    }
-
-    @And("user selects date")
-    public void user_Selects_date() throws InterruptedException{
-    	Thread.sleep(6000);
-		prm.click(driver, cr.valueOnTheKey("HubTDdate"), "xpath");
-		Thread.sleep(2000);
-       
-    }
-    
-    	
-	@And("user chooses time")
-    public void userchoosesTime()throws InterruptedException {
-    	
-    		Thread.sleep(2000);
-    		JavascriptExecutor js = (JavascriptExecutor) driver;
-    		js.executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)");
-    		Thread.sleep(2000);
-    	WebElement HubTDtimeselect = driver.findElement(By.xpath(cr.valueOnTheKey("HubTDtimeselect")));
-		Assert.assertEquals(true, HubTDtimeselect.isDisplayed());
-		Thread.sleep(2000);
-        prm.click(driver, cr.valueOnTheKey("Hub_testdrive_time"), "xpath");
+		
    	
     }
 
-    @And("user clicks on Schedule hub test drive")
-    public void user_clicks_on_Schedule_hub_test_drive() throws InterruptedException{
+    @And("user clicks on Schedule hub test drive2")
+    public void user_clicks_on_Schedule_hub_test_drive2() throws InterruptedException{
     	Thread.sleep(2000);
         prm.click(driver, cr.valueOnTheKey("Hub_testdrive_schedule"), "xpath");
         Thread.sleep(6000);
