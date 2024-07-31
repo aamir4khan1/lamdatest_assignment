@@ -86,7 +86,7 @@ public class PDP_benefitsandaddons {
 		WebElement page_spinny_assured = driver.findElement(By.xpath(cr.valueOnTheKey("page_spinny_assured")));
 		Assert.assertEquals(true, page_spinny_assured.isDisplayed());
 		Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("close_button"), "xpath");
+		prm.click(driver, cr.valueOnTheKey("close_button_2"), "xpath");
 		/*
 		 * Thread.sleep(2000); WebElement extended_warranty =
 		 * driver.findElement(By.xpath(cr.valueOnTheKey("extended_warranty")));
@@ -172,7 +172,7 @@ public class PDP_benefitsandaddons {
 		WebElement page_spinny_assured = driver.findElement(By.xpath(cr.valueOnTheKey("budget_page_confirm")));
 		Assert.assertEquals(true, page_spinny_assured.isDisplayed());
 		Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("close_button"), "xpath");
+		prm.click(driver, cr.valueOnTheKey("close_button_2"), "xpath");
 		/*
 		 * Thread.sleep(2000); WebElement extended_warranty =
 		 * driver.findElement(By.xpath(cr.valueOnTheKey("extended_warranty")));

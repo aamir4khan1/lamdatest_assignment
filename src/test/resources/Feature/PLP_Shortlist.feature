@@ -11,8 +11,8 @@ Feature: Verify shortlist functionality on plp
    And click on shortlist icon on car card
    And user clicks on mobile number field
    And user enters mobile number
-   And user enters otp code
    And user clicks on verify number button
+   And user enters otp code
    And car gets shortlisted
    Then user click on header shortlist icon 
    And user can see shortlisted car on shortlist section

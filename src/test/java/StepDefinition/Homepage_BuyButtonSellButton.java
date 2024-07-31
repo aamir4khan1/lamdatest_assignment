@@ -42,8 +42,12 @@ public class Homepage_BuyButtonSellButton {
 		prm.takeSceenshot(driver);
 		WebElement sellYourCarText = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageYourCarText")));
 		Assert.assertEquals(true, sellYourCarText.isDisplayed());
-		WebElement sellpageNeedHelpButton = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageNeedHelp")));
-		Assert.assertEquals(true, sellpageNeedHelpButton.isDisplayed());
+	//	WebElement sellpageNeedHelpButton = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageNeedHelp")));
+	//	Assert.assertEquals(true, sellpageNeedHelpButton.isDisplayed());
+		WebElement RCContainer = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageRCContainer")));
+		Assert.assertEquals(true, RCContainer.isDisplayed());
+		WebElement fetchCarDetailsButton = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageFetchCarDetailsButton")));
+		Assert.assertEquals(true, fetchCarDetailsButton.isDisplayed());
 		Thread.sleep(2000);
 	}
 
