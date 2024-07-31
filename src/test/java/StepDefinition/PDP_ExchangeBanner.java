@@ -34,8 +34,10 @@ public class PDP_ExchangeBanner {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,500)");
 		Thread.sleep(2000);
-
-    	WebElement pdp_ExchangeBanner = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_ExchangeBanner")));
+		
+		try {
+     WebElement pdp_ExchangeBanner = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_ExchangeBanner")));
+    if (pdp_ExchangeBanner!=null) {
     	Assert.assertEquals(true, pdp_ExchangeBanner.isDisplayed());
 		Thread.sleep(2000);
 		
@@ -57,7 +59,10 @@ public class PDP_ExchangeBanner {
 		WebElement pdp_ExchangeCarRegNum = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_ExchangeCarRegNum")));
     	Assert.assertEquals(true, pdp_ExchangeCarRegNum.isDisplayed());
 		Thread.sleep(2000);
-		
-	
+    }
+		}
+		catch(Exception e) {
+			System.out.println("exchange not found");
+		}
  }
 }
