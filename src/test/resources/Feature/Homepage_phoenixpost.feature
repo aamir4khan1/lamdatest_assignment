@@ -18,7 +18,7 @@ Background:
     And user enters otp code
     And user selects date
     And user chooses time
-    And user clicks on Schedule hub test drive
+    And user clicks on Schedule hub test drive2
     And user clicks on booknow button
     And user clicks on gethelp button
     And user clicks on Addmorecar button
