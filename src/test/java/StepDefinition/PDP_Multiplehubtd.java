@@ -40,10 +40,11 @@ public class PDP_Multiplehubtd {
     @And("clicks on add button")
     public void clicks_on_add_button() throws InterruptedException{
     	Thread.sleep(2000);
-		WebElement add_heading = driver.findElement(By.xpath(cr.valueOnTheKey("add_heading")));
-		Assert.assertEquals(true, add_heading.isDisplayed());
     	{JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,750)");}
+		WebElement add_heading = driver.findElement(By.xpath(cr.valueOnTheKey("add_heading")));
+		Assert.assertEquals(true, add_heading.isDisplayed());
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("add"), "xpath");
 		Thread.sleep(3000);
 		WebElement added_car = driver.findElement(By.xpath(cr.valueOnTheKey("added_car")));
