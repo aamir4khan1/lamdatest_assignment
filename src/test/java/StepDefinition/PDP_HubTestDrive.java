@@ -97,6 +97,12 @@ public class PDP_HubTestDrive {
     @And("user clicks on cancel button")
     public void user_clicks_on_cancel_button() throws InterruptedException{
     	Thread.sleep(2000);
+    	{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(50,0)");}
+    	Thread.sleep(2000);
+    	{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,200)");}
+    	Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("cancel_button"), "xpath");
 		Thread.sleep(3000);
 		WebElement cancel_reason_screen = driver.findElement(By.xpath(cr.valueOnTheKey("cancel_reason_screen")));
