@@ -114,8 +114,10 @@ public class Pheonix_Discovery {
 	
 	@And("user view recommended cars pheonix card")
 	 public void userviewrecommendedcarspheonixcard() throws InterruptedException{
-		Thread.sleep(3000);
-		WebElement  container = driver.findElement(By.cssSelector(".UserActivitySlider__userActivitySlider"));
+		{JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,-700)");}
+		Thread.sleep(4000);
+		/*WebElement  container = driver.findElement(By.cssSelector(".UserActivitySlider__userActivitySlider"));
 		 WebElement cardToMove = driver.findElement(By.cssSelector(".PhoenixRecentlyViewedCard__listingCardV3"));
 		 Actions actions = new Actions(driver);
 		 actions.clickAndHold(cardToMove).moveByOffset(200,0) 
@@ -127,11 +129,13 @@ public class Pheonix_Discovery {
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
-		
-		 Thread.sleep(4000);
-		/*WebElement Homepagerecommded = driver.findElement(By.xpath(cr.valueOnTheKey("Homepagerecommded")));
-	       Assert.assertEquals(true, Homepagerecommded.isDisplayed()); 
-	       Thread.sleep(2000);*/
+		*/
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementsByClassName('PhoenixRecentlyViewed__recentlyViewedCars')[0].getElementsByClassName('UserActivitySlider__userActivitySlider')[0].style.transform = 'translateX(-6000px)'");
+		Thread.sleep(2000);
+		//WebElement Homepagerecommded = driver.findElement(By.xpath(cr.valueOnTheKey("Homepagerecommded")));
+	    //   Assert.assertEquals(true, Homepagerecommded.isDisplayed()); 
+	       Thread.sleep(3000);
 		
 	        }
 	@And("user verify pheonix filters")
@@ -139,13 +143,11 @@ public class Pheonix_Discovery {
 		Thread.sleep(3000);
 		prm.click(driver, cr.valueOnTheKey("filter"), "xpath");
 		Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("HomepagePLPFilter1"), "xpath");
+		prm.click(driver, cr.valueOnTheKey("HomepagePLPFilter3"), "xpath");
     	Thread.sleep(2000);
-    	prm.click(driver, cr.valueOnTheKey("HompagePhRadio"), "xpath");
+    	prm.click(driver, cr.valueOnTheKey("PH_PlpFilters"), "xpath");
     	Thread.sleep(2000);
-    	prm.click(driver, cr.valueOnTheKey("HomepagePLPFilter2"), "xpath");
-    	Thread.sleep(2000);
-    	prm.click(driver, cr.valueOnTheKey("HomepagePLPFilter2"), "xpath");
+    	prm.click(driver, cr.valueOnTheKey("smart_brandmodel"), "xpath");
     	Thread.sleep(2000);
     	prm.click(driver, cr.valueOnTheKey("smart_brand2"), "xpath");
     	Thread.sleep(2000);
@@ -153,15 +155,39 @@ public class Pheonix_Discovery {
     	Thread.sleep(3000);
         prm.click(driver, cr.valueOnTheKey("PLP_pheonix"), "xpath");
         Thread.sleep(3000);
-        WebElement HomepagePHFilterApply = driver.findElement(By.xpath(cr.valueOnTheKey("HomepagePHFilterApply")));
+        WebElement HomepagePHFilterApply = driver.findElement(By.xpath(cr.valueOnTheKey("PhPLPFilterApply")));
         Assert.assertEquals(true, HomepagePHFilterApply.isDisplayed()); 
         Thread.sleep(2000);
-        prm.click(driver, cr.valueOnTheKey("HomepagePHFilterApply"), "xpath");
+        prm.click(driver, cr.valueOnTheKey("PhPLPFilterApply"), "xpath");
         Thread.sleep(2000);
         
 	        }
 	
 	
+	@And("verify the saved filter")
+	 public void verifythesavedfilter() throws InterruptedException{
+		 Thread.sleep(2000);
+	        WebElement PhPLPFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("PhPLPFilterApplied")));
+	        Assert.assertEquals(true, PhPLPFilterApplied.isDisplayed()); 
+	        Thread.sleep(2000);
+	        prm.click(driver, cr.valueOnTheKey("PLP_pheonix"), "xpath");
+	        Thread.sleep(3000);
+	        prm.click(driver, cr.valueOnTheKey("PhHomepageClick"), "xpath");
+	       }
+	@And("user verify on pheonix saved filter")
+	 public void userverifyonpheonixsavedfilter() throws InterruptedException{
+		 Thread.sleep(2000);
+		 prm.click(driver, cr.valueOnTheKey("PLP_pheonix"), "xpath");
+	        Thread.sleep(3000);
+	        WebElement PhHomepageClick = driver.findElement(By.xpath(cr.valueOnTheKey("PhHomepageClick")));
+	        Actions actions = new Actions(driver);
+	        actions.moveToElement(PhHomepageClick).click().build().perform();
+	        Thread.sleep(3000);
+	       /* JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("document.getElementsByClassName('UserActivitySlider__userActivitySliderContainer')[0].style.transform = 'translateX(-6000px)'");
+			 Thread.sleep(3000);
+		        prm.click(driver, cr.valueOnTheKey("PhHomepageSaved"), "xpath");*/
+	       }
 	
 
     }

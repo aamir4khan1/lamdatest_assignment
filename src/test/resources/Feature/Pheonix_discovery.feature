@@ -21,5 +21,12 @@ Feature: Verify Pheonix functionality
     And user view recently viewed Max pheonix card
     And user clicks on the browse car button
     And user verify pheonix filters 
+		And user click on save button 
+		And user clicks on mobile number field
+  And user enters mobile number
+   And user clicks on verify number button
+   And user enters otp code
+  And user validate the saved filters assertions
+  And user verify on pheonix saved filter
     
  
