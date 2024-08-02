@@ -8,7 +8,7 @@ Feature: Verify page scroll functionality on plp
    @regression 
    Scenario: User should be able to use page scroll functionality on plp
    Then user land on plp
-   And scroll down the plp
+   And scroll down to page two
    And scroll down to page three
    And scroll down to page four
 

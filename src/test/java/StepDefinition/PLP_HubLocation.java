@@ -27,9 +27,9 @@ public class PLP_HubLocation {
 	@And("scroll down to hub location functionality")
 	public void scroll_down_to_hub_location_functionality() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,7800)");
+		js.executeScript("window.scroll(0,9200)");
 		Thread.sleep(2000);
-		js.executeScript("window.scroll(0,7800)");
+		js.executeScript("window.scroll(0,9200)");
 
 	}
 	

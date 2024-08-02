@@ -24,7 +24,7 @@ public class PLP_PageScroll {
 	Wait wait = new Wait();
 	static preMethods prm = new preMethods();
 
-	@And("scroll down the plp")
+	@And("scroll down to page two")
 	public void scroll_down_to_page_two() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,4500)");
