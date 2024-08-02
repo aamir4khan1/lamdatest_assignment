@@ -237,10 +237,10 @@ public class PDP_CarQualityReport {
 		 
 		WebElement pdp_CarQualityChecklist = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_CarQualityChecklist")));
 		Assert.assertEquals(true, pdp_CarQualityChecklist.isDisplayed());
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 				
 		prm.click(driver, cr.valueOnTheKey("pdp_CarQualityChecklistCTA"), "xpath");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		WebElement pdp_CarQualityChecklistBottomsheet = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_CarQualityChecklistBottomsheet")));
 		Assert.assertEquals(true, pdp_CarQualityChecklistBottomsheet.isDisplayed());

@@ -35,6 +35,8 @@ public class PDP_PhotoGallery {
 	@And("click on car image")
 	public void user_click_on_car_image () throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("pdp_carCardImage"), "xpath");
+		Thread.sleep(2000);
+
 		
 		WebElement photoGalleryBookNow = driver.findElement(By.xpath(cr.valueOnTheKey("photoGalleryBookNow")));
 		Assert.assertEquals(true, photoGalleryBookNow.isDisplayed());
@@ -90,7 +92,7 @@ public class PDP_PhotoGallery {
 		
 		WebElement pdp_InteriorDashboardVideopausebutton = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_InteriorDashboardVideopausebutton")));
 		Assert.assertEquals(true, pdp_InteriorDashboardVideopausebutton.isDisplayed());
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
 		prm.click(driver, cr.valueOnTheKey("pdp_InteriorDashboardVideopausebutton"), "xpath");
 		Thread.sleep(2000);
