@@ -27,7 +27,9 @@ public class PLP_ShopByCategory {
 	@And("scroll down to shop by category section")
 	public void scroll_down_to_shop_by_category_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1200)");
+	//	js.executeScript("window.scroll(0,1200)");
+		js.executeScript("window.scroll(0,3000)");
+
 		Thread.sleep(2000);
 	}
 
@@ -81,7 +83,8 @@ public class PLP_ShopByCategory {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1200)");
+//		js.executeScript("window.scroll(0,1200)");
+		js.executeScript("window.scroll(0,3000)");
 		Thread.sleep(2000);
 	}
 
@@ -95,7 +98,8 @@ public class PLP_ShopByCategory {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1200)");
+	//	js.executeScript("window.scroll(0,1200)");
+		js.executeScript("window.scroll(0,3000)");
 		Thread.sleep(2000);
 	}
 
@@ -139,7 +143,8 @@ public class PLP_ShopByCategory {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1200)");
+//		js.executeScript("window.scroll(0,1200)");
+		js.executeScript("window.scroll(0,3000)");
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("plp_shopByCategoryBudgetTab"), "xpath");
 		Thread.sleep(2000);
@@ -155,7 +160,8 @@ public class PLP_ShopByCategory {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1200)");
+//		js.executeScript("window.scroll(0,1200)");
+		js.executeScript("window.scroll(0,3000)");
 		Thread.sleep(2000);
 	}
 
@@ -200,7 +206,8 @@ public class PLP_ShopByCategory {
 		driver.navigate().back();
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1200)");
+//		js.executeScript("window.scroll(0,1200)");
+		js.executeScript("window.scroll(0,3000)");
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("plp_shopByCategoryMaxTab"), "xpath");
 		Thread.sleep(2000);

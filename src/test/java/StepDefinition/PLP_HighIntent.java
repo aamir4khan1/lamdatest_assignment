@@ -86,6 +86,8 @@ public class PLP_HighIntent {
 	
 	@And("click on calculate your emi")
 	public void click_on_calculate_your_emi() throws InterruptedException {
+	   	JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,300)");
 		prm.click(driver, cr.valueOnTheKey("PDP_EMICalculator"), "xpath");
 		Thread.sleep(2000);
 	}

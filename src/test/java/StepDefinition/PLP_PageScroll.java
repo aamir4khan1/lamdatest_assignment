@@ -28,7 +28,7 @@ public class PLP_PageScroll {
 	public void scroll_down_to_page_two() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,4500)");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		WebElement card30 = driver.findElement(By.xpath(cr.valueOnTheKey("plp_card30")));
 		Assert.assertEquals(true, card30.isDisplayed());
 	}
@@ -37,7 +37,7 @@ public class PLP_PageScroll {
 	public void scroll_down_to_page_three() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,11000)");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		WebElement card45 = driver.findElement(By.xpath(cr.valueOnTheKey("plp_card45")));
 		Assert.assertEquals(true, card45.isDisplayed());
 	}
@@ -46,7 +46,7 @@ public class PLP_PageScroll {
 	public void scroll_down_to_page_four() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,17500)");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		WebElement card65 = driver.findElement(By.xpath(cr.valueOnTheKey("plp_card65")));
 		Assert.assertEquals(true, card65.isDisplayed());
 	}

@@ -27,7 +27,7 @@ public class PLP_PopularFilters {
 	@And("scroll down till popular filter section")
 	public void scroll_down_till_popular_filter_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,3000)");
+		js.executeScript("window.scroll(0,4700)");
 		Thread.sleep(2000);
 		WebElement popularFilterSection = driver.findElement(By.xpath(cr.valueOnTheKey("plp_popularFilterSection")));
 		Assert.assertEquals(true, popularFilterSection.isDisplayed());

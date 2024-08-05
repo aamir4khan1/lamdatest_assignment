@@ -28,9 +28,10 @@ public class PLP_CapitalBuybackExchangeBanner {
 	@And("scroll down to capital buyback exchange banner")
 	public void scroll_down_to_capital_buyback_exchange_banner() throws InterruptedException {
 	JavascriptExecutor js = (JavascriptExecutor)driver;
-	js.executeScript("window.scroll(0,5700)");
-	Thread.sleep(2000);
-	js.executeScript("window.scroll(0,9700)");
+	js.executeScript("window.scroll(0,1000)");
+//	js.executeScript("window.scroll(0,5700)");
+//	Thread.sleep(2000);
+//	js.executeScript("window.scroll(0,9700)");
 	Thread.sleep(2000);
 	WebElement capitalBannerPLP = driver.findElement(By.xpath(cr.valueOnTheKey("plp_capitalBanner")));
 	Assert.assertEquals(true, capitalBannerPLP.isDisplayed());
