@@ -3,9 +3,24 @@ import io.cucumber.java.en.Given;
 
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.WebDriver; 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import org.openqa.selenium.devtools.v85.emulation.Emulation;
+
+
+import com.google.common.base.Optional;
+
 import Utility.ConfigReader;
 import Utility.Wait;
 import Utility.preMethods;
@@ -130,16 +145,26 @@ public class PDP_HomeTD {
     private boolean isStringNotEmpty(String userInput) {
 		// TODO Auto-generated method stub
 		return false;
-	}
+	}*/
 
-	/*@And("user selects date")
-    public void userSelectsDate()throws InterruptedException {
+
+	@And("user select date")
+    public void userSelectDate()throws InterruptedException {
      Thread.sleep(20000);
 		WebElement Home_testdrive_change = driver.findElement(By.xpath(cr.valueOnTheKey("Home_testdrive_select_Date")));
 		Assert.assertEquals(true, Home_testdrive_change.isDisplayed());
+		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.getElementsByClassName(\"ScheduleTestDrive__container\")[0].scrollTo(0,300)");}
-    	
+		js.executeScript("document.getElementsByClassName(\"ScheduleTestDrive__container\")[0].scrollTo(0,300)");
+	    Thread.sleep(2000);
+	    prm.click(driver, cr.valueOnTheKey("Home_testdrive_see_all"), "xpath");
+	    Thread.sleep(2000);
+	    prm.click(driver, cr.valueOnTheKey("Home_testdrive_date_selected"), "xpath");
+
+	    
+	   
+	    
+	}
 		/*
 		 * Thread.sleep(2000); prm.click(driver,
 		 * cr.valueOnTheKey("Home_testdrive_date"), "xpath"); Thread.sleep(2000);
@@ -147,10 +172,7 @@ public class PDP_HomeTD {
 		
        
 
-    //private boolean isStringNotEmpty(String userInput) {
-		// TODO Auto-generated method stub
-		//return false;
-	//}
+
 
 	@And("user selects time")
     public void userSelectsTime()throws InterruptedException {
@@ -159,8 +181,8 @@ public class PDP_HomeTD {
     		JavascriptExecutor js = (JavascriptExecutor) driver;
     		js.executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)");
     		Thread.sleep(2000);
-    	WebElement Home_testdrive_time = driver.findElement(By.xpath(cr.valueOnTheKey("Home_testdrive_time")));
-		Assert.assertEquals(true, Home_testdrive_time.isDisplayed());
+    		WebElement Home_testdrive_time_slot_v = driver.findElement(By.xpath(cr.valueOnTheKey("Home_testdrive_time_slot_v")));
+    		Assert.assertEquals(true, Home_testdrive_time_slot_v.isDisplayed());
 		Thread.sleep(2000);
        // prm.clickByJavaScript(driver, cr.valueOnTheKey("Home_testdrive_timee"),"xpath");
         prm.click(driver, cr.valueOnTheKey("Home_testdrive_timee"), "xpath");
@@ -170,12 +192,27 @@ public class PDP_HomeTD {
     @And("user clicks on the schedule myloc test drive button")
     public void userClicksOnScheduleYloctestDriveButton() throws InterruptedException{
     	Thread.sleep(2000);
+    	//driver.manage().window().setSize(new Dimension(375, (int)(812 * 0.61)));
+		/*
+		 * DevTools devTools = ((ChromeDriver) driver).getDevTools();
+		 * devTools.createSession();
+		 * //devTools.send(Emulation.setDeviceMetricsOverride(375, 812, 3, true, null,
+		 * null, null, null, null, null, 0.61, null, null));
+		 * devTools.send(Emulation.setDeviceMetricsOverride( 375, 812, 3, true,
+		 * Optional.ofNullable(null), // optional width Optional.ofNullable(null), //
+		 * optional height Optional.ofNullable(null), // optional screen width
+		 * Optional.ofNullable(null), // optional screen height
+		 * Optional.ofNullable(null), // optional position x Optional.ofNullable(null),
+		 * // optional position y 0.61, // scale factor Optional.ofNullable(null), //
+		 * optional screen orientation Optional.ofNullable(null), // optional viewport
+		 * Optional.ofNullable(null) // optional display feature ));
+		 */
+    	Thread.sleep(2000);
         prm.click(driver, cr.valueOnTheKey("Home_testdrive_schedule"), "xpath");
         Thread.sleep(6000);
         WebElement Home_TDC_page = driver.findElement(By.xpath(cr.valueOnTheKey("Home_TDC_page")));
 		Assert.assertEquals(true, Home_TDC_page.isDisplayed());
         
-        Thread.sleep(2000);
     	
     }
 }

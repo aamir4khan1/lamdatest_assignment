@@ -17,7 +17,7 @@ Background:
     And user enters otp code
     And user selects my location
     And user enters home address
-  # And user selects date
+    And user select date
     And user selects time
     And user clicks on the schedule myloc test drive button
     And user clicks on cancel button
