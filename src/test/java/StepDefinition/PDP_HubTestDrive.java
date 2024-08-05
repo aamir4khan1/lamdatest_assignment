@@ -61,6 +61,8 @@ public class PDP_HubTestDrive {
     @And("user selects date")
     public void user_Selects_date() throws InterruptedException{
     	Thread.sleep(6000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)");
 		prm.click(driver, cr.valueOnTheKey("HubTDdate"), "xpath");
 		Thread.sleep(2000);
        
