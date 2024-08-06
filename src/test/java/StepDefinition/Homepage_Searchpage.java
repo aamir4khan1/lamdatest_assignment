@@ -108,7 +108,7 @@ public class Homepage_Searchpage {
 		Thread.sleep(4000);
 	
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 600)");
+		js.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 1000)");
 		 Thread.sleep(4000);
 		
 		 WebElement SearchHubCTA = driver.findElement(By.xpath(cr.valueOnTheKey("SearchHubCTA")));
@@ -125,7 +125,7 @@ public class Homepage_Searchpage {
 		Thread.sleep(2000);
 		Thread.sleep(2000);
 		JavascriptExecutor jss = (JavascriptExecutor) driver;
-		jss.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 600)");
+		jss.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 1000)");
 		 Thread.sleep(4000);
 		Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("searchviewallcity"),"xpath");
