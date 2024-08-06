@@ -64,9 +64,10 @@ public class PDP_Reschedulehubtestdrive {
         WebElement time_head = driver.findElement(By.xpath(cr.valueOnTheKey("time_head")));
 		Assert.assertEquals(true, time_head.isDisplayed());
     	Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)");
         prm.click(driver, cr.valueOnTheKey("time_picker"), "xpath");
         
-        Thread.sleep(2000);
     }
 
     @And("user click saveedit button")
