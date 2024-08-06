@@ -16,7 +16,7 @@ Feature: Verify Search  page  functionality on homepage
    And user search in search bar
    And user view recently viewed car 
    #And user clicks on mobile number field
-  # And user enters mobile number
-   #And user clicks on verify number button
+  #And user enters mobile number
+  #And user clicks on verify number button
    #And user enters otp code
   # And user shortlist the car
