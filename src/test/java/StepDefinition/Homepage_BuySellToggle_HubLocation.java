@@ -26,7 +26,7 @@ public class Homepage_BuySellToggle_HubLocation {
 	public void user_click_on_buy_toggle() throws InterruptedException {
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,200)");
+		js.executeScript("window.scroll(0,300)");
 		prm.click(driver, cr.valueOnTheKey("homepage_buyToggle"), "xpath");
 		Thread.sleep(4000);
 	//	prm.takeSceenshot(driver);
@@ -40,6 +40,9 @@ public class Homepage_BuySellToggle_HubLocation {
 
 	@And("user click on learn more button")
 	public void user_click_on_learn_more_button() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,900)");
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("homepage_buySectionLearnMore"), "xpath");
 		Thread.sleep(4000);
 		//prm.takeSceenshot(driver);
@@ -108,7 +111,7 @@ public class Homepage_BuySellToggle_HubLocation {
 	@Then("user scroll down to hub location")
 	public void user_scroll_down_to_hub_location() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,5000)");
+		js.executeScript("window.scroll(0,5200)");
 		Thread.sleep(6000);
 		prm.takeSceenshot(driver);
 		WebElement hubLocationSection = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_hublocationSection")));
@@ -135,7 +138,7 @@ public class Homepage_BuySellToggle_HubLocation {
 	@And("click view all cars in delhi ncr")
 	public void click_view_all_cars_in_delhi_ncr() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,5000)");
+		js.executeScript("window.scroll(0,5200)");
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("homepage_hublocationViewAllCarsinGurgaon"), "xpath");
 		Thread.sleep(2000);
