@@ -37,7 +37,7 @@ public class PDP_CarQualityReport {
 	   
 	   public void scroll_down_to_inspection_report_section () throws InterruptedException {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scroll(0,1300)");
+			js.executeScript("window.scroll(0,800)");
 			
 			WebElement inspectionReportSection = driver.findElement(By.xpath(cr.valueOnTheKey("inspectionReportSection")));
 			Assert.assertEquals(true, inspectionReportSection.isDisplayed());
