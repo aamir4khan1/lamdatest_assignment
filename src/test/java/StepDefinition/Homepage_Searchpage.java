@@ -82,7 +82,39 @@ public class Homepage_Searchpage {
 		WebElement searchpageAsseartion = driver.findElement(By.xpath(cr.valueOnTheKey("searchpageAsseartion")));
 	 	Assert.assertEquals(true, searchpageAsseartion.isDisplayed());
 		Thread.sleep(2000);
+		
 		}
+	@And("user clicks on explore more")
+	public void user_clicks_on_explore_more() throws InterruptedException {
+		Thread.sleep(2000);
+		JavascriptExecutor jss = (JavascriptExecutor) driver;
+		jss.executeScript("document.getElementsByClassName('ModalOverlay__modalOverlayContainer')[0].scroll(0, 200)");
+		 Thread.sleep(4000);
+		WebElement Search_CarFinder = driver.findElement(By.xpath(cr.valueOnTheKey("searchpageExplore")));
+		Assert.assertEquals(true, Search_CarFinder.isDisplayed());
+		Thread.sleep(3000);
+		WebElement searchpageexploretype = driver.findElement(By.xpath(cr.valueOnTheKey("searchpageexploretype")));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(searchpageexploretype).click().build().perform();;
+		Thread.sleep(3000);
+		WebElement serchpageexploreasseration = driver.findElement(By.xpath(cr.valueOnTheKey("serchpageexploreasseration")));
+		Assert.assertEquals(true, serchpageexploreasseration.isDisplayed());
+		Thread.sleep(3000);
+		WebElement searchpageexplorebycta = driver.findElement(By.xpath(cr.valueOnTheKey("searchpageexplorebycta")));
+		Actions actionss = new Actions(driver);
+		actionss.moveToElement(searchpageexplorebycta).click().build().perform();;
+		Thread.sleep(3000);
+		WebElement searchpagebodytypefilter = driver.findElement(By.xpath(cr.valueOnTheKey("searchpagebodytypefilter")));
+		Assert.assertEquals(true, searchpagebodytypefilter.isDisplayed());
+		Thread.sleep(3000);
+		 WebElement searchpagePLP = driver.findElement(By.xpath(cr.valueOnTheKey("searchpagePLPs")));
+			Actions actionsss = new Actions(driver);
+			actionsss.moveToElement(searchpagePLP).click().build().perform();
+			 Thread.sleep(2000);
+			 WebElement searchpageAsseartion = driver.findElement(By.xpath(cr.valueOnTheKey("searchpageAsseartion")));
+			 	Assert.assertEquals(true, searchpageAsseartion.isDisplayed());
+			 	Thread.sleep(2000);
+	 	}
 	@And("user clicks on car finder")
 	public void user_clicks_on_car_finder() throws InterruptedException {
 		Thread.sleep(2000);
@@ -171,7 +203,7 @@ public class Homepage_Searchpage {
 			 WebElement searchshortlist1 = driver.findElement(By.xpath(cr.valueOnTheKey("searchshortlist")));
 				Assert.assertEquals(true, searchshortlist1.isDisplayed());	
 	 	}
-	/*@And("user shortlist the car")
+	@And("user shortlist the car")
 	public void user_shortlist_the_car() throws InterruptedException
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -180,7 +212,7 @@ public class Homepage_Searchpage {
 		 WebElement searchshortlist = driver.findElement(By.xpath(cr.valueOnTheKey("searchshortlist")));
 			Assert.assertEquals(true, searchshortlist.isDisplayed());	
 
-	}*/
+	}
 	
 
 }
