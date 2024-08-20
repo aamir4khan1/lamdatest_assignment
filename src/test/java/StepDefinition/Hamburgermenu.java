@@ -347,7 +347,7 @@ public class Hamburgermenu {
     		Assert.assertEquals(true, open_menu.isDisplayed());
     		Thread.sleep(2000);
     		JavascriptExecutor jj = (JavascriptExecutor) driver;
-    		jj.executeScript("document.getElementById('sideMenu').scroll(0,400)");
+    		jj.executeScript("document.getElementById('sideMenu').scroll(0,600)");
     		Thread.sleep(2000);
     		prm.click(driver, cr.valueOnTheKey("spinny_exchange"), "xpath");
     		Thread.sleep(2000);
@@ -398,6 +398,8 @@ public class Hamburgermenu {
     		Thread.sleep(2000);
     		prm.click(driver, cr.valueOnTheKey("about_us"), "xpath");
     		Thread.sleep(2000);
+    		prm.click(driver, cr.valueOnTheKey("about_spinny"), "xpath");
+    		Thread.sleep(2000);
     		WebElement about_us_page = driver.findElement(By.xpath(cr.valueOnTheKey("about_us_page")));
     		Assert.assertEquals(true, about_us_page.isDisplayed());
     		Thread.sleep(2000);
@@ -407,6 +409,7 @@ public class Hamburgermenu {
 
 @And("user clicks on customer reviews")
 public void user_clicks_on_customer_reviews() throws InterruptedException{
+	
 	Thread.sleep(2000);
 	prm.click(driver, cr.valueOnTheKey("hamburger"), "xpath");
 	Thread.sleep(2000);
@@ -415,6 +418,8 @@ public void user_clicks_on_customer_reviews() throws InterruptedException{
 	Thread.sleep(2000);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("document.getElementById('sideMenu').scroll(0,800)");
+	Thread.sleep(2000);
+	prm.click(driver, cr.valueOnTheKey("about_us"), "xpath");
 	Thread.sleep(2000);
 	prm.click(driver, cr.valueOnTheKey("customer_reviews"), "xpath");
 	Thread.sleep(2000);
