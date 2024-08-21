@@ -2,6 +2,7 @@ package StepDefinition;
 
 import java.util.NoSuchElementException;
 
+
 import org.junit.Assert;
 
 import org.openqa.selenium.By;
@@ -36,13 +37,21 @@ public class PDP_CarQualityReport {
 	   @And ("scroll down to inspection report section")
 	   
 	   public void scroll_down_to_inspection_report_section () throws InterruptedException {
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scroll(0,800)");
-			
+		  
+
+		    Thread.sleep(2000);
+		    JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("window.scroll(0,1100)");
+	       
+			Thread.sleep(2000);
 			WebElement inspectionReportSection = driver.findElement(By.xpath(cr.valueOnTheKey("inspectionReportSection")));
 			Assert.assertEquals(true, inspectionReportSection.isDisplayed());
-			Thread.sleep(2000);
-			
+			Thread.sleep(4000);
+//			
+//		    WebElement pdp_inspectionReportViewFullReport = driver.findElement(By.id("pdp_inspectionReportViewFullReport"));
+//		    ((JavascriptExecutor) driver).executeScript("arguments[1000].scrollIntoView(true);", pdp_inspectionReportViewFullReport);
+		
+		
 	   }
 	   
 	   @Then("click on view full report")

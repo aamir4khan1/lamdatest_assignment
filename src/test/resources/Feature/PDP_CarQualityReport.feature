@@ -23,8 +23,8 @@ Feature: Verify Car Quality report functionality on pdp
    And Validate download inspection report button
    And Validate book now and free test drive cta
    And click on view full checklist
-   
+   #
  #  And click on download inspection report icon
  #  And click on view full checklist
    #And click on get report on pdp
-		
+#		
