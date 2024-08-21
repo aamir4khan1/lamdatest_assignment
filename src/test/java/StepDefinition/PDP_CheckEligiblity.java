@@ -36,7 +36,7 @@ public class PDP_CheckEligiblity {
 	@And("user scroll down to check eligibility section")
 	public void user_scroll_down_to_check_eligiblity_section() throws InterruptedException {
     JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("window.scroll(0,3400)");
+	js.executeScript("window.scroll(0,3600)");
 	Thread.sleep(2000);
 	}
 	
