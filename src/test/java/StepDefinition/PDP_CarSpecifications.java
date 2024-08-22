@@ -46,7 +46,7 @@ public class PDP_CarSpecifications {
     //	WebElement topFeaturesSection = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(cr.valueOnTheKey("pdp_topFeaturesSection"))));
     //	js.executeScript("arguments[0].scrollIntoView(true);", topFeaturesSection);
     	
-		js.executeScript("window.scroll(0,2200)");
+		js.executeScript("window.scroll(0,2300)");
 		Thread.sleep(2000);
 		
 		WebElement carSpecificationsSection = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_carSpecificationsSection")));
