@@ -116,8 +116,6 @@ public class Neutral_page {
 		WebElement video_player = driver.findElement(By.xpath(cr.valueOnTheKey("video_player")));
 		Assert.assertEquals(true, video_player.isDisplayed());
 		Thread.sleep(2000);
-		prm.clickByJavaScript(driver, cr.valueOnTheKey("watch_film"), "xpath");
-		Thread.sleep(2000);
 		prm.clickByJavaScript(driver, cr.valueOnTheKey("close_button_1"), "xpath");
 		Thread.sleep(2000);
 		{JavascriptExecutor js = (JavascriptExecutor) driver;
