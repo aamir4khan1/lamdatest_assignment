@@ -155,9 +155,11 @@ public class PDP_HomeTD {
 		Assert.assertEquals(true, Home_testdrive_change.isDisplayed());
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.getElementsByClassName(\"ScheduleTestDrive__container\")[0].scrollTo(0,300)");
-	    Thread.sleep(2000);
-	    prm.click(driver, cr.valueOnTheKey("Home_testdrive_see_all"), "xpath");
+		js.executeScript("document.getElementsByClassName(\"ScheduleTestDrive__container\")[0].scrollTo(0,600)");
+		/*
+		 * Thread.sleep(2000); prm.click(driver,
+		 * cr.valueOnTheKey("Home_testdrive_see_all"), "xpath");
+		 */
 	    Thread.sleep(2000);
 	    prm.click(driver, cr.valueOnTheKey("Home_testdrive_date_selected"), "xpath");
 

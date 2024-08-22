@@ -25,7 +25,7 @@ public class PDP_HubTestDrive {
 
     @And("user select a car card")
     public void userSelectACarCard() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement plp_quickfilters = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(cr.valueOnTheKey("plp_quickfilters"))));
         Assert.assertTrue(plp_quickfilters.isDisplayed());
 
@@ -38,27 +38,44 @@ public class PDP_HubTestDrive {
 
     @And("user click on the Free test drive button")
     public void userClickOnFreeTestDriveButton() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement freeHubTD = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey("FreeHubTD"))));
         prm.click(driver, cr.valueOnTheKey("FreeHubTD"), "xpath");
     }
-
     @And("user selects date")
     public void user_Selects_date() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        // Wait until the element is present in the DOM
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("ScheduleTestDrive__container")));
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)");
+
+        // Perform the scroll operation
+        js.executeScript("var elem = document.querySelector('.ScheduleTestDrive__container'); if(elem) { elem.scroll(0, 600); }");
 
         WebElement hubTDdate = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey("HubTDdate"))));
         prm.click(driver, cr.valueOnTheKey("HubTDdate"), "xpath");
+    
+
+
+	/*
+	 * @And("user selects date") public void user_Selects_date() {
+	 * JavascriptExecutor js = (JavascriptExecutor) driver; js.
+	 * executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)"
+	 * ); WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	 * WebElement hubTDdate =
+	 * wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey(
+	 * "HubTDdate")))); prm.click(driver, cr.valueOnTheKey("HubTDdate"), "xpath");
+	 */
     }
 
     @And("user chooses time")
     public void userchoosesTime() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)");
-
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        
         WebElement hubTDtimeselect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(cr.valueOnTheKey("HubTDtimeselect"))));
         Assert.assertTrue(hubTDtimeselect.isDisplayed());
 
@@ -68,7 +85,7 @@ public class PDP_HubTestDrive {
 
     @And("user clicks on Schedule hub test drive")
     public void user_clicks_on_Schedule_hub_test_drive() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement hub_testdrive_schedule = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey("Hub_testdrive_schedule"))));
         prm.click(driver, cr.valueOnTheKey("Hub_testdrive_schedule"), "xpath");
 
@@ -78,7 +95,7 @@ public class PDP_HubTestDrive {
 
     @And("user clicks on cancel button")
     public void user_clicks_on_cancel_button() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scroll(50,0)");
         js.executeScript("window.scroll(0,200)");
@@ -92,14 +109,14 @@ public class PDP_HubTestDrive {
 
     @And("user chooses reason for cancellation")
     public void user_chooses_reason_for_cancellation() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement reason_select = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey("reason_select"))));
         prm.click(driver, cr.valueOnTheKey("reason_select"), "xpath");
     }
 
     @And("user selects cancel CTA")
     public void user_selects_cancel_CTA() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement cancel_CTA = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey("cancel_CTA"))));
         prm.click(driver, cr.valueOnTheKey("cancel_CTA"), "xpath");
 

@@ -14,86 +14,107 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
+import java.time.Duration;
+
 public class Login {
 
-	static ConfigReader cr = new ConfigReader();
-	WebDriver driver = StepDefinition.Hooks.driver;
-	Wait wait = new Wait();
-	static preMethods prm = new preMethods();
+    static ConfigReader cr = new ConfigReader();
+    WebDriver driver = StepDefinition.Hooks.driver;
+    Wait wait = new Wait();
+    static preMethods prm = new preMethods();
 
-	@Then("click on account tab")
-	public void click_on_account_tab() throws InterruptedException {
-		Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("botnav_account"), "xpath");
-		Thread.sleep(5000);
-	}
+    @Then("click on account tab")
+    public void click_on_account_tab() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement accountTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey("botnav_account"))));
+        
+        int tries = 0;
+        while (tries < 2) {
+            try {
+                accountTab.click();
+                break;
+            } catch (Exception e) {
+                tries++;
+                if (tries >= 2) throw e;
+            }
+        }
+    }
 
-	@And("user clicks on mobile number field")
-	public void user_clicks_on_mobile_number_field() throws InterruptedException {
-		prm.click(driver, cr.valueOnTheKey("login_mobileNumber"), "xpath");
-		Thread.sleep(5000);
-		prm.takeSceenshot(driver);
+    @And("user clicks on mobile number field")
+    public void user_clicks_on_mobile_number_field() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement mobileNumberField = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey("login_mobileNumber"))));
 
-	}
+        int tries = 0;
+        while (tries < 2) {
+            try {
+                mobileNumberField.click();
+                break;
+            } catch (Exception e) {
+                tries++;
+                if (tries >= 2) throw e;
+            }
+        }
+        prm.takeSceenshot(driver);
+    }
 
-	@And("user enters mobile number")
-	public void user_enter_mobile_number() throws InterruptedException {
-		//prm.click(driver, cr.valueOnTheKey("whatsapp_box"), "xpath");
-		//prm.takeSceenshot(driver);
-		Thread.sleep(1000);
-		//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		
-		//prm.takeSceenshot(driver);
-		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
-		//prm.takeSceenshot(driver);
-		//Thread.sleep(4000);
-		
-	/*WebElement verifyYourNumberField = driver.findElement(By.xpath(cr.valueOnTheKey("verifyYourNumberField")));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(verifyYourNumberField).click().build().perform();
-		Thread.sleep(4000);
-		prm.takeSceenshot(driver);
-*/
-		//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		//prm.clickByJavaScript(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		//Thread.sleep(4000);
-	//	prm.takeSceenshot(driver);
+    @And("user enters mobile number")
+    public void user_enter_mobile_number() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement mobileNumberField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(cr.valueOnTheKey("login_mobileNumber"))));
 
-	//	WebElement verifyYourNumberField = driver.findElement(By.xpath(cr.valueOnTheKey("verifyYourNumberField")));
-	//	Actions actions = new Actions(driver);
-	//	actions.moveToElement(verifyYourNumberField).click().build().perform();
-	//	Thread.sleep(4000);
-		
-	//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		//prm.clickByJavaScript(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		//Thread.sleep(4000);
-	}
-	@And("user clicks on verify number button")
-	public void click_verify_mobile_number() throws InterruptedException {
-		//prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"),("xpath"),(cr.valueOnTheKey("MobileNumber")));
-		//Thread.sleep(4000);
-		
+        int tries = 0;
+        while (tries < 2) {
+            try {
+                prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_mobileNumber"), "xpath", cr.valueOnTheKey("MobileNumber"));
+                break;
+            } catch (Exception e) {
+                tries++;
+                if (tries >= 2) throw e;
+            }
+        }
+    }
 
-	
-		//prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		//Thread.sleep(3000);
-		//prm.takeSceenshot(driver);
-		//prm.sendTextToTextBox(driver, cr.valueOnTheKey("name"),("xpath"),"Testing");
-		Thread.sleep(1000);
-		prm.click(driver, cr.valueOnTheKey("verify_your_number"), "xpath");
-		Thread.sleep(6000);
-	}
-	@And("user enters otp code")
-	public void user_enters_otp_code() throws InterruptedException {
-		prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), "xpath", (cr.valueOnTheKey("otp")));
-		Thread.sleep(6000);
-		prm.takeSceenshot(driver);
-	}
+    @And("user clicks on verify number button")
+    public void click_verify_mobile_number() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement verifyButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cr.valueOnTheKey("verify_your_number"))));
 
-	@Then("logout button is visible")
-	public void logout_button_is_visible() {
-		WebElement Logout = driver.findElement(By.xpath(cr.valueOnTheKey("account_logout")));
-		Assert.assertEquals(true, Logout.isDisplayed());
-	}
+        int tries = 0;
+        while (tries < 2) {
+            try {
+                verifyButton.click();
+                break;
+            } catch (Exception e) {
+                tries++;
+                if (tries >= 2) throw e;
+            }
+        }
+    }
 
+    @And("user enters otp code")
+    public void user_enters_otp_code() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement otpField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(cr.valueOnTheKey("login_otp"))));
+
+        int tries = 0;
+        while (tries < 2) {
+            try {
+                prm.sendTextToTextBox(driver, cr.valueOnTheKey("login_otp"), "xpath", cr.valueOnTheKey("otp"));
+                break;
+            } catch (Exception e) {
+                tries++;
+                if (tries >= 2) throw e;
+            }
+        }
+        prm.takeSceenshot(driver);
+    }
+
+    @Then("logout button is visible")
+    public void logout_button_is_visible() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement logoutButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(cr.valueOnTheKey("account_logout"))));
+
+        Assert.assertTrue(logoutButton.isDisplayed(), "Logout button should be visible");
+    }
 }
