@@ -5,7 +5,7 @@ Background:
     When Wait for the application page to load completely
     And user selects location
 
-		@regression
+		@change
 		Scenario: User should be able to schedule home test drive
     And user clicks on the browse car button
     And user selects a car card
