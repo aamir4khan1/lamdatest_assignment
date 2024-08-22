@@ -5,7 +5,7 @@ Feature: Verify login
     When Wait for the application page to load completely
     And user selects location
     
-    @sanity
+    @change
   	Scenario: User selects login
     Then click on account tab
     And user clicks on mobile number field
