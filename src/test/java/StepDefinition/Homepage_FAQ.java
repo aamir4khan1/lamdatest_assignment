@@ -30,7 +30,7 @@ public class Homepage_FAQ {
 	@And("scroll till FAQs section")
 	public void scroll_till_FAQs_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,7800)");
+		js.executeScript("window.scroll(0,7900)");
 		Thread.sleep(2000);
 		
 	}
@@ -46,6 +46,7 @@ public class Homepage_FAQ {
 	@And("user clicks on visit help center")
 	public void user_clicks_on_visit_help_center() throws InterruptedException {
 		driver.findElement(By.xpath(cr.valueOnTheKey("homepage_visitHelpCenterButton")));
+		
 		prm.click(driver, cr.valueOnTheKey("homepage_visitHelpCenterButton"), "xpath");
 		Thread.sleep(2000);
 		WebElement signIn = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_visitHelpCenterButtonSignIn")));

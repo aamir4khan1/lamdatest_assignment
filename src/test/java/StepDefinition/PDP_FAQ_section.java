@@ -23,7 +23,7 @@ public class PDP_FAQ_section {
     @And("scroll till FAQ on PDP Page")
 	   public void scroll_till_Lovestory_section() throws InterruptedException {
 				JavascriptExecutor js = (JavascriptExecutor) driver;
-				js.executeScript("window.scroll(0,6700)");
+				js.executeScript("window.scroll(0,6800)");
 				Thread.sleep(2000);
 		 }
 }
