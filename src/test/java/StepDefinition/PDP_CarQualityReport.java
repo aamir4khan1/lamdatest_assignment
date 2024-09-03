@@ -214,7 +214,7 @@ public class PDP_CarQualityReport {
 	  
 	  public void scroll_to_full_checklist_section () throws InterruptedException {
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scroll(0,3300)");
+			js.executeScript("window.scroll(0,3600)");
 	  }
 	   
 	   @And("Validate download inspection report button")
@@ -243,14 +243,34 @@ public class PDP_CarQualityReport {
 	   
 	   @And("click on view full checklist")	// NA for Max Cars //
 		public void click_on_view_full_checklist () throws InterruptedException {
-		 
-		WebElement pdp_CarQualityChecklist = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_CarQualityChecklist")));
-		Assert.assertEquals(true, pdp_CarQualityChecklist.isDisplayed());
+		   
+		   int attempts = 0;
+		   boolean isElementFound = false;
+		   while (attempts < 10) {  // Attempt to find the element 10 times (you can adjust this number)
+		       try {
+		           WebElement pdp_CarQualityChecklistCTA = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_CarQualityChecklist")));
+		           if (pdp_CarQualityChecklistCTA.isDisplayed()) {
+		               Assert.assertTrue(pdp_CarQualityChecklistCTA.isDisplayed());
+		               Thread.sleep(2000);
+		               ((JavascriptExecutor) driver).executeScript("arguments[0].click();", pdp_CarQualityChecklistCTA);
+		               isElementFound = true;
+		               Thread.sleep(3000);
+		               break;  // Exit the loop if the element is found and clicked
+		           }
+		       } catch (NoSuchElementException e) {
+		           // If element is not found, scroll down using JavaScript
+		           ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,200);");  // Adjust the scroll value as needed
+		           Thread.sleep(2000);  // Wait for 2 seconds before the next attempt
+		       }
+		       attempts++;
+		   }
+
+		   if (!isElementFound) {
+		       throw new AssertionError("Element not found after several attempts.");
+		   }
+		   
 		Thread.sleep(2000);
-				
 		prm.click(driver, cr.valueOnTheKey("pdp_CarQualityChecklistCTA"), "xpath");
-		Thread.sleep(2000);
-		
 		WebElement pdp_CarQualityChecklistBottomsheet = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_CarQualityChecklistBottomsheet")));
 		Assert.assertEquals(true, pdp_CarQualityChecklistBottomsheet.isDisplayed());
 		

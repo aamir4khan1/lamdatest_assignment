@@ -23,7 +23,7 @@ public class PDP_Love_story {
     @And("scroll till Lovestory on PDP Page")
 	   public void scroll_till_Lovestory_section() throws InterruptedException {
 				JavascriptExecutor js = (JavascriptExecutor) driver;
-				js.executeScript("window.scroll(0,5400)");
+				js.executeScript("window.scroll(0,5200)");
 				Thread.sleep(2000);
 		 }
 	
