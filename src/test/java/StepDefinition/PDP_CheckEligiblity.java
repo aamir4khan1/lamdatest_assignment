@@ -35,18 +35,10 @@ public class PDP_CheckEligiblity {
 	
 	@And("user scroll down to check eligibility section")
 	public void user_scroll_down_to_check_eligiblity_section() throws InterruptedException {
-		/*
-		 * JavascriptExecutor js = (JavascriptExecutor) driver;
-		 * js.executeScript("window.scroll(0,3600)");
-		 */
-	    String pdp_checkEligibilityButtonXPath = cr.valueOnTheKey("pdp_checkEligibilityButton");
-	    
-	    // Find the element using the retrieved XPath
-	    WebElement pdp_checkEligibilityButton = driver.findElement(By.xpath(pdp_checkEligibilityButtonXPath));
-	    
-	    // Scroll into view using JavaScriptExecutor
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("arguments[0].scrollIntoView(true);", pdp_checkEligibilityButton);
+	
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("window.scroll(0,3600)");
+		
 	Thread.sleep(2000);
 	}
 	
