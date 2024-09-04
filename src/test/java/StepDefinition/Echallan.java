@@ -46,11 +46,12 @@ public class Echallan {
 		prm.sendTextToTextBox(driver, cr.valueOnTheKey("registration_number"),("xpath"),(cr.valueOnTheKey("Number_number")));
 		Thread.sleep(2000);
 		prm.clickByJavaScript(driver, cr.valueOnTheKey("check_challan"), "xpath");
-		Thread.sleep(2000);
+		
 
 	}
 	@And("user lands on echallan page")
 	public void user_lands_on_echallan_page() throws InterruptedException {
+		Thread.sleep(5000);
 		WebElement echallan_product_page = driver.findElement(By.xpath(cr.valueOnTheKey("echallan_product_page")));
 		Assert.assertEquals(true, echallan_product_page.isDisplayed());
 	

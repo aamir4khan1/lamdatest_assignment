@@ -34,21 +34,24 @@ public class Homepage_BuyButtonSellButton {
 	public void user_click_on_sell_button() throws InterruptedException {
 		Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("homepage_sellButton"), "xpath");
-		Thread.sleep(2000);
+		
 	}
 
 	@And("land on sell page")
 	public void land_on_sell_page() throws InterruptedException {
+		Thread.sleep(2000);
 		prm.takeSceenshot(driver);
 		WebElement sellYourCarText = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageYourCarText")));
 		Assert.assertEquals(true, sellYourCarText.isDisplayed());
 	//	WebElement sellpageNeedHelpButton = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageNeedHelp")));
 	//	Assert.assertEquals(true, sellpageNeedHelpButton.isDisplayed());
+		Thread.sleep(2000);
 		WebElement RCContainer = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageRCContainer")));
 		Assert.assertEquals(true, RCContainer.isDisplayed());
+		Thread.sleep(2000);
 		WebElement fetchCarDetailsButton = driver.findElement(By.xpath(cr.valueOnTheKey("sellpageFetchCarDetailsButton")));
 		Assert.assertEquals(true, fetchCarDetailsButton.isDisplayed());
-		Thread.sleep(2000);
+		
 	}
 
 	// Buy_button__Test_Case//
@@ -57,16 +60,18 @@ public class Homepage_BuyButtonSellButton {
 	public void user_click_on_buy_button() throws InterruptedException {
 		Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("homepage_buyButton"), "xpath");
-		Thread.sleep(4000);
+		
 	}
 
 	@And("land on product listing page")
 	public void land_on_product_listing_page() throws InterruptedException {
+		Thread.sleep(2000);
 		prm.takeSceenshot(driver);
 		WebElement numberofusedcarsincity = driver.findElement(By.xpath(cr.valueOnTheKey("plp_headingcontent")));
 		Assert.assertEquals(true, numberofusedcarsincity.isDisplayed());
+		Thread.sleep(2000);
 		WebElement listingMainBanner = driver.findElement(By.xpath(cr.valueOnTheKey("plp_listingMainBanner")));
 		Assert.assertEquals(true, listingMainBanner.isDisplayed());
-		Thread.sleep(2000);
+		
 	}
 }

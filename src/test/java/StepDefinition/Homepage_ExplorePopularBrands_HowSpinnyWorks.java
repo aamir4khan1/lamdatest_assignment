@@ -88,7 +88,7 @@ public class Homepage_ExplorePopularBrands_HowSpinnyWorks {
 	@And("user scroll down to how spinny works section")
 	public void user_scroll_down_to_how_spinny_works_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1900)");
+		js.executeScript("window.scroll(0,2400)");
 		Thread.sleep(2000);
 		WebElement HowSpinnyWorksContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_HowSpinnyWorksContainer")));
 		Assert.assertEquals(true, HowSpinnyWorksContainer.isDisplayed());
