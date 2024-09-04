@@ -53,7 +53,7 @@ public class PDP_Reschedulehubtestdrive {
         WebElement date_head = driver.findElement(By.xpath(cr.valueOnTheKey("date_head")));
 		Assert.assertEquals(true, date_head.isDisplayed());
     	Thread.sleep(2000);
-        prm.click(driver, cr.valueOnTheKey("date_picker"), "xpath");
+       // prm.click(driver, cr.valueOnTheKey("date_picker"), "xpath");
         
         Thread.sleep(2000);
     }
