@@ -3,7 +3,7 @@ Feature: Verify benefits and addons section on PDP
 Background:
     Given user land on spinny website
     When Wait for the application page to load completely
-    And user selects location
+    
 
 		@regression
 		Scenario: User should be able to view benefits and addons section on PDP

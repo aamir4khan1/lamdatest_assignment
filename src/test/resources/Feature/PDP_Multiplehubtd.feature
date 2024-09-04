@@ -3,7 +3,7 @@ Feature: Verify multiple Hub test drive functionality
 Background:
     Given user land on spinny website
     When Wait for the application page to load completely
-    And user selects location
+    #And user selects location
 
 	@regression
 		Scenario: User should be able to schedule multiple hub test drive

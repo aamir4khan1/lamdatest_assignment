@@ -82,7 +82,7 @@ public class Homepage_Carfinderv2 {
 		
 		@And("validate carfinder plp")
 		public void validate_carfinder_plp() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		WebElement carfinder_plp = driver.findElement(By.xpath(cr.valueOnTheKey("carfinder_plp")));
 		Assert.assertEquals(true, carfinder_plp.isDisplayed());
 		
