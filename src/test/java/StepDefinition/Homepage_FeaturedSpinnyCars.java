@@ -27,7 +27,7 @@ public class Homepage_FeaturedSpinnyCars {
 	@Then("scroll down to featured spinny cars section")
 	public void scroll_down_to_featured_spinny_cars_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,2300)");
+		js.executeScript("window.scroll(0,2900)");
 		WebElement featuredSpinnyCarsContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_featuredSpinnyCarsContainer")));
 		Assert.assertEquals(true, featuredSpinnyCarsContainer.isDisplayed());
 
