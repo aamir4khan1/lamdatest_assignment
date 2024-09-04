@@ -10,3 +10,4 @@ Background:
     And user selects a car card
     And scroll till FAQ on PDP Page
     And User able to see FAQs section
+    

@@ -29,7 +29,7 @@ public class PLP_HubLocation {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,9200)");
 		Thread.sleep(2000);
-		js.executeScript("window.scroll(0,9200)");
+		js.executeScript("window.scroll(0,9400)");
 
 	}
 	
@@ -48,6 +48,8 @@ public class PLP_HubLocation {
 	
 	@And("user land on plp with hub filter applied")
 	public void user_land_on_plp_with_hub_filter_applied() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,1200)");
 		WebElement FilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_hubLocationModalFilterApplied")));
 		Assert.assertEquals(true, FilterApplied.isDisplayed());
 		WebElement saveFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("savedFiltericon")));
