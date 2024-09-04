@@ -37,7 +37,7 @@ public class PDPKnowMoreSection {
         WebElement PDP_KnowMoreCTA = driver.findElement(By.xpath(cr.valueOnTheKey("PDP_KnowMoreCTA")));
         Actions actions = new Actions(driver);
         actions.moveToElement(PDP_KnowMoreCTA).click().build().perform();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         WebElement PDP_KnowMoreAssuredLogo = driver.findElement(By.xpath(cr.valueOnTheKey("PDP_KnowMoreAssuredLogo")));
         Assert.assertEquals(true, PDP_KnowMoreAssuredLogo.isDisplayed());
         Thread.sleep(3000);
@@ -119,7 +119,7 @@ public class PDPKnowMoreSection {
     }
     @And("user Clicks on Know more CTA of budget")
     public void userClicksonKnowmoreCTAofbudget() throws InterruptedException {
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
         WebElement PDP_KnowMoreCTA = driver.findElement(By.xpath(cr.valueOnTheKey("PDP_KnowMoreCTA")));
         Actions actions = new Actions(driver);
         actions.moveToElement(PDP_KnowMoreCTA).click().build().perform();
@@ -195,7 +195,7 @@ public class PDPKnowMoreSection {
     }
     @And("user Clicks on Know more CTA of Max")
     public void userClicksonKnowmoreCTAofMax() throws InterruptedException {
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
         WebElement PDP_KnowMoreCTA = driver.findElement(By.xpath(cr.valueOnTheKey("PDP_KnowMoreCTA")));
         Actions actions = new Actions(driver);
         actions.moveToElement(PDP_KnowMoreCTA).click().build().perform();
