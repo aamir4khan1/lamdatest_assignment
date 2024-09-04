@@ -57,7 +57,7 @@ public class PLP_Smartfilter {
     public void userClicksOnBrowseCarButton() throws InterruptedException{
     	Thread.sleep(2000);
     	{JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,2500)");}
+		js.executeScript("window.scroll(0,2800)");}
 		Thread.sleep(6000);
 		//WebElement plp_quickfilters = driver.findElement(By.xpath("plp_smartFilter"));
 		//Assert.assertEquals(true, plp_quickfilters.isDisplayed());
@@ -66,8 +66,8 @@ public class PLP_Smartfilter {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(plp_smartfilterClick).click().build().perform();
 		Thread.sleep(2000);
-		WebElement car2 = driver.findElement(By.xpath(cr.valueOnTheKey("plp_smartFilterApplied")));
-		Assert.assertEquals(true, car2.isDisplayed());
+		WebElement plp_smartFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_smartFilterApplied")));
+		Assert.assertEquals(true, plp_smartFilterApplied.isDisplayed());
 		
        
     }
