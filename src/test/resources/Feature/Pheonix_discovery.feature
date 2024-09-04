@@ -3,7 +3,7 @@ Feature: Verify Pheonix functionality
  Background: User land on spinny website and selects location
     Given user land on spinny website
     When Wait for the application page to load completely
-    And user selects location
+    #And user selects location
     
     @sanity 
   	Scenario: User should able to see pheonix functionality
