@@ -28,7 +28,7 @@ public class Homepage_ExploreMore {
 	@Then("user scroll down to explore more section")
 	public void user_scroll_down_to_explore_more_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,5500)");
+		js.executeScript("window.scroll(0,6000)");
 		Thread.sleep(2000);
 		WebElement exploreMoreSectionContainer = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_exploreMoreSectionContainer")));
 		Assert.assertEquals(true, exploreMoreSectionContainer.isDisplayed());
@@ -36,6 +36,7 @@ public class Homepage_ExploreMore {
 
 	@And("click on check eligibility")
 	public void click_on_check_eligiblity() throws InterruptedException {
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("homepage_checkEligiblity"), "xpath");
 		Thread.sleep(2000);
 		WebElement SpinnyCapitaContainer = driver.findElement(By.xpath(cr.valueOnTheKey("applyFinance_spinnyCapitalContainer")));

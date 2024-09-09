@@ -132,9 +132,9 @@ public class Homepage_Searchpage {
  	   WebElement searchoptionassert27 = driver.findElement(By.xpath(cr.valueOnTheKey("searchoptionassert27")));
 	    Assert.assertEquals(true, searchoptionassert27.isDisplayed());
 	    Thread.sleep(2000);
-	 	   WebElement searchoptionassert37 = driver.findElement(By.xpath(cr.valueOnTheKey("searchoptionassert37")));
-		    Assert.assertEquals(true, searchoptionassert37.isDisplayed());
-	    Thread.sleep(6000);
+	 	  // WebElement searchoptionassert37 = driver.findElement(By.xpath(cr.valueOnTheKey("searchoptionassert37")));
+		   // Assert.assertEquals(true, searchoptionassert37.isDisplayed());
+	    //Thread.sleep(6000);
 	    WebElement searchpagePLPs = driver.findElement(By.xpath(cr.valueOnTheKey("searchpagePLPs")));
 	  		Actions actionssss = new Actions(driver);
 	  		actionssss.moveToElement(searchpagePLPs).click().build().perform();

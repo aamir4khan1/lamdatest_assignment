@@ -85,9 +85,9 @@ public class PDP_HomeTD {
 
     @And("user selects my location")
     public void userSelectsMyLocation() throws InterruptedException{
-    	Thread.sleep(6000);
+    	Thread.sleep(4000);
 		prm.click(driver, cr.valueOnTheKey("HomeTDLoactionTab"), "xpath");
-		Thread.sleep(2000);
+		
        
     }
     

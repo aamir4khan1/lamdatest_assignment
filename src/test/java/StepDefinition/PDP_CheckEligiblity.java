@@ -44,13 +44,14 @@ public class PDP_CheckEligiblity {
 	
 	@And("click on check eligiblity button")
 	public void click_on_check_eligibility_button() throws InterruptedException {
-	prm.click(driver, cr.valueOnTheKey("pdp_checkEligibilityButton"), "xpath");
+	prm.click(driver, cr.valueOnTheKey("pdp_checkEligibility"), "xpath");
 	Thread.sleep(2000);
 	}	
 
 	@And("validate apply finance page is visible")
 	public void validate_apply_finance_page_is_visible() throws InterruptedException {
-	WebElement usedCarLoanMobileContainer = driver.findElement(By.xpath(cr.valueOnTheKey("usedCarLoanMobileContainer")));
+		Thread.sleep(3000);
+	WebElement usedCarLoanMobileContainer = driver.findElement(By.xpath(cr.valueOnTheKey("applyFinance_usedCarLoanLandingSection")));
 	Assert.assertEquals(true, usedCarLoanMobileContainer.isDisplayed());
 	
 	}
