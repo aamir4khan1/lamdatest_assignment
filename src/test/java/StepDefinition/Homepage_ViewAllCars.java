@@ -32,6 +32,7 @@ public class Homepage_ViewAllCars {
 		Thread.sleep(6000);
 		WebElement usedCarsInDelhiNCR = driver.findElement(By.xpath(cr.valueOnTheKey("plp_usedCarsinDelhiNCR")));
 		Assert.assertEquals(true, usedCarsInDelhiNCR.isDisplayed());
+		Thread.sleep(2000);
 	}
 
 	@And("user select bangalore city")
