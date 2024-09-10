@@ -13,9 +13,9 @@ import Utility.preMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class PLP_HubLocation {
+public class Homepage_HubLocation {
 
-	public PLP_HubLocation() {
+	public Homepage_HubLocation() {
 
 	}
 
@@ -27,9 +27,9 @@ public class PLP_HubLocation {
 	@And("scroll down to hub location functionality")
 	public void scroll_down_to_hub_location_functionality() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,9200)");
+		js.executeScript("window.scroll(0,4800)");
 		Thread.sleep(2000);
-		js.executeScript("window.scroll(0,9400)");
+		
 
 	}
 	

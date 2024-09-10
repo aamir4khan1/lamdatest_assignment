@@ -7,7 +7,7 @@ Feature: Verify hub location functionality on plp
    
    @regression 
    Scenario: User should be able to use hub location functionality on plp
-   Then user land on plp
+   #Then user land on plp
    And scroll down to hub location functionality
    And validate hub location modal
    And click on view cars under hub location modal

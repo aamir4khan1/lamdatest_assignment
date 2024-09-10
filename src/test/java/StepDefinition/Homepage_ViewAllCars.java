@@ -25,12 +25,14 @@ public class Homepage_ViewAllCars {
 
 	@Then("user click on view all cars")
 	public void user_click_on_view_all_cars() throws InterruptedException {
+		Thread.sleep(2000);
 		WebElement viewAllCars = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_viewAllCars")));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(viewAllCars).click().build().perform();
 		Thread.sleep(4000);
 		WebElement usedCarsInDelhiNCR = driver.findElement(By.xpath(cr.valueOnTheKey("plp_usedCarsinDelhiNCR")));
 		Assert.assertEquals(true, usedCarsInDelhiNCR.isDisplayed());
+		Thread.sleep(2000);
 	}
 
 	@And("user select bangalore city")
