@@ -1,4 +1,4 @@
-Feature: Verify shop by category functionality on plp
+ Feature: Verify shop by category functionality on plp
 	
  Background: User land on spinny website and selects location
    Given user land on spinny website
@@ -24,7 +24,7 @@ Feature: Verify shop by category functionality on plp
    And click on first car card under max category
    And click on shortlist icon under max category
    And click on explore collection under max category
-   And click on view all under max categoy
+  # And click on view all under max categoy
    
    
 

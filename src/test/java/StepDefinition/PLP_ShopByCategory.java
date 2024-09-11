@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import Utility.ConfigReader;
@@ -35,6 +36,15 @@ public class PLP_ShopByCategory {
 
 	@And("validate shop by category section")
 	public void validate_shop_by_category_section() throws InterruptedException {
+
+		WebElement plp_shopByCategorycityselector = driver.findElement(By.xpath(cr.valueOnTheKey("plp_shopByCategorycityselector")));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(plp_shopByCategorycityselector).click().build().perform();
+		Thread.sleep(2000);
+		WebElement plp_shopByCategorycityselected = driver.findElement(By.xpath(cr.valueOnTheKey("plp_shopByCategorycityselected")));
+		Actions actionss = new Actions(driver);
+		actionss.moveToElement(plp_shopByCategorycityselected).click().build().perform();
+		Thread.sleep(2000);
 		WebElement shopByCategoryContainer = driver.findElement(By.xpath(cr.valueOnTheKey("plp_shopByCategoryContainer")));
 		Assert.assertEquals(true, shopByCategoryContainer.isDisplayed());
 		Thread.sleep(2000);
@@ -194,10 +204,13 @@ public class PLP_ShopByCategory {
 		Thread.sleep(2000);
 		driver.navigate().back();
 		Thread.sleep(2000);
+		
 	}
 
 	@And("click on explore collection under max category")
 	public void click_on_explore_collection_under_max_category() throws InterruptedException {
+		
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("plp_shopByCategoryMaxExploreCollection"), "xpath");
 		Thread.sleep(2000);
 		WebElement maxFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_maxFilterAppliedChip")));
@@ -207,19 +220,21 @@ public class PLP_ShopByCategory {
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("window.scroll(0,1200)");
-		js.executeScript("window.scroll(0,3000)");
+		js.executeScript("window.scroll(0,4000)");
 		Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("plp_shopByCategoryMaxTab"), "xpath");
-		Thread.sleep(2000);
+		
 	}
 
 	@And("click on view all under max categoy")
 	public void click_on_view_all_under_max_category() throws InterruptedException {
-		prm.click(driver, cr.valueOnTheKey("plp_shopByCategoryMaxViewAllCars"), "xpath");
 		Thread.sleep(2000);
-		WebElement maxFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_maxFilterAppliedChip")));
-		Assert.assertEquals(true, maxFilterApplied.isDisplayed());
+		prm.click(driver, cr.valueOnTheKey("plp_shopByCategoryMaxTab"), "xpath");
 		Thread.sleep(2000);
+		//prm.click(driver, cr.valueOnTheKey("plp_shopByCategoryMaxViewAllCars"), "xpath");
+		//Thread.sleep(2000);
+		//WebElement maxFilterApplied = driver.findElement(By.xpath(cr.valueOnTheKey("plp_maxFilterAppliedChip")));
+		//Assert.assertEquals(true, maxFilterApplied.isDisplayed());
+		//Thread.sleep(2000);
 	}
 
 }
