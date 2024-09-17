@@ -7,27 +7,24 @@ WORKDIR /usr/SpinnyWebAutomation
 # Copy the Maven project file
 COPY . .
 
-# Install dependencies for headless mode
+# Install necessary dependencies, including AWS CLI
 RUN apt-get update && \
     apt-get install -y \
-    xvfb \
     curl \
     wget \
     unzip \
     gnupg \
+    awscli \
     && rm -rf /var/lib/apt/lists/*
 
-# Add Google Chrome repository and install Chrome
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
-    && apt-get update -y \
-    && apt-get install -y google-chrome-stable
 
+# Define environment variables for the S3 bucket and path
+ARG S3_BUCKET
+ARG S3_PATH
+ARG URL
 
-# Set up Xvfb display
-ENV DISPLAY=:99
+# Run Maven tests
+RUN mvn clean test -DURL=${URL}
 
-# Start Xvfb in the background
-CMD ["Xvfb", ":99", "-screen", "0", "1024x768x16"]
-
-
+# Upload the report to S3 using the provided bucket and path
+RUN aws s3 cp /usr/SpinnyWebAutomation/target/cucumber-html-reports s3://${S3_BUCKET}/${S3_PATH} --recursive
