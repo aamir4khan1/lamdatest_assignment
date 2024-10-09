@@ -59,16 +59,16 @@ public class BaseSteps {
 		Wait.implicitWait(2, driver);
 	}
 
-	/*@And("user selects location")
+	@And("user selects location")
 	public void select_location() throws InterruptedException {
 		prm.click(driver, cr.valueOnTheKey("homepage_selectManually"), "xpath");
 		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("homepage_DelhiNCR"), "xpath");
 		Thread.sleep(2000);
 		// driver.findElement(AndroidHomepageScreen.homepage_detectMyLocation).click();
-		// // Detect my location click//
-		Thread.sleep(6000);*/
+		// Detect my location click
+		Thread.sleep(6000);
 
-	}
+	}}
 
 
