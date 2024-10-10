@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         plugin = {"json:target/cucumber.json"},
         // tags = {"@change"},
 
-       tags = {"@change"},
+       
 
         monochrome = true)
 public class TestRunner {
