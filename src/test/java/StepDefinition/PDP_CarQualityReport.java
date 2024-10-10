@@ -37,7 +37,12 @@ public class PDP_CarQualityReport {
 	   @And ("scroll down to inspection report section")
 	   
 	   public void scroll_down_to_inspection_report_section () throws InterruptedException {
-		  
+		   Thread.sleep(2000);
+		    JavascriptExecutor js1 = (JavascriptExecutor) driver;
+	        js1.executeScript("window.scroll(0,7000)");
+	        Thread.sleep(2000);
+		    JavascriptExecutor js2 = (JavascriptExecutor) driver;
+	        js2.executeScript("window.scroll(7000,0)");
 
 		    Thread.sleep(2000);
 		    JavascriptExecutor js = (JavascriptExecutor) driver;
