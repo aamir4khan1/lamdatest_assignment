@@ -5,7 +5,7 @@ Feature: Verify Car Quality report functionality on pdp
     When Wait for the application page to load completely
     #And user selects location
   
-   @regression 
+   @change 
    Scenario: User should be able to use Car quality report functionality
    And user click on buy button
    And user select a car card
