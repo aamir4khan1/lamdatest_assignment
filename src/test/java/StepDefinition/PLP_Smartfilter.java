@@ -56,9 +56,11 @@ public class PLP_Smartfilter {
     @And("user should able to see Smart filter")
     public void userClicksOnBrowseCarButton() throws InterruptedException{
     	Thread.sleep(2000);
-    	{JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,2800)");}
-		Thread.sleep(6000);
+    	
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,2800)");
+		Thread.sleep(2000);
+		
 		//WebElement plp_quickfilters = driver.findElement(By.xpath("plp_smartFilter"));
 		//Assert.assertEquals(true, plp_quickfilters.isDisplayed());
 		

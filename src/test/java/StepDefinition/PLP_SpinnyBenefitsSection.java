@@ -27,7 +27,10 @@ public class PLP_SpinnyBenefitsSection {
 	@And("scroll down to spinny benefits section")
 	public void scroll_down_to_spinny_benefits_section() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,4500)");
+		js.executeScript("window.scroll(0,10000)");
+		Thread.sleep(2000);
+		JavascriptExecutor jss = (JavascriptExecutor) driver;
+		jss.executeScript("window.scroll(45000,0)");
 		Thread.sleep(2000);
 	}
 	
