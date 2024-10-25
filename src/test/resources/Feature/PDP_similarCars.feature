@@ -7,8 +7,8 @@ Feature: Verify user is able to view similar car section PDP
    
      @regression 
      Scenario: User should be able use view similar car section PDP
-     Then user click on view all cars
-     And user selects a car_card
+     And user click on buy button
+     And user select a car card
      And user views similar car section
      
 

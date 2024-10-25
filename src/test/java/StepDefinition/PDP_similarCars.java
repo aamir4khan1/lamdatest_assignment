@@ -23,14 +23,14 @@ public class PDP_similarCars {
 	Wait wait = new Wait();
 	static preMethods prm = new preMethods();
 
-	@Then("user selects a car_card")
-	public void user_selects_a_car_card() throws InterruptedException {
-		Thread.sleep(2000);
-        prm.click(driver, cr.valueOnTheKey("car_card"), "xpath");
-        WebElement PDP_main_image = driver.findElement(By.xpath(cr.valueOnTheKey("PDP_main_image")));
-		Assert.assertEquals(true, PDP_main_image.isDisplayed());
-		
-	}
+//	@Then("user selects a car_card")
+//	public void user_selects_a_car_card() throws InterruptedException {
+//		Thread.sleep(2000);
+//        prm.click(driver, cr.valueOnTheKey("car_card"), "xpath");
+//        WebElement PDP_main_image = driver.findElement(By.xpath(cr.valueOnTheKey("PDP_main_image")));
+//		Assert.assertEquals(true, PDP_main_image.isDisplayed());
+//		
+//	}
 
 	@And("user views similar car section")
 	public void user_select_city_selector_on_plp() throws InterruptedException {

@@ -1,6 +1,7 @@
 package StepDefinition;
 
 import org.junit.Assert;
+import org.junit.internal.management.ThreadMXBean;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -43,6 +44,15 @@ public class Homepage_BodyType {
 
 	@And("Click on View all hatchbacks")
 	public void click_on_View_all_hatchbacks() throws InterruptedException {
+		
+		// Locating the element using XPath
+		WebElement element = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_explorebodytypeViewAllHatchbacks")));
+
+		// Executing JavaScript to scroll the element into view
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+		
+		
 		prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeViewAllHatchbacks"), "xpath");
 		Thread.sleep(5000);
 		boolean Hatchbackfilter = driver.findElement(By.xpath(cr.valueOnTheKey("plp_hatchback_filter_applied")))
@@ -62,6 +72,13 @@ public class Homepage_BodyType {
 
 	@Then("Click on Sedan and View All Sedan")
 	public void Click_on_Sedan_and_View_All_Sedan() throws InterruptedException {
+
+		// Locating the element using XPath
+		WebElement element = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_explorebodytypeSedan")));
+
+		// Executing JavaScript to scroll the element into view
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		
 		prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeSedan"), "xpath");
 		Thread.sleep(3000);
 
@@ -81,12 +98,28 @@ public class Homepage_BodyType {
 
 	@Then("Click on SUV and View All SUVs")
 	public void Click_on_SUV_and_View_All_SUVs() throws InterruptedException {
+				
+		// Locating the element using XPath
+//		WebElement element = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_explorebodytypeSUV")));
+//
+//		// Executing JavaScript to scroll the element into view
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//		
+		WebElement element = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_explorebodytypeSUV")));
+		boolean isDisplayedAndEnabled = element.isDisplayed() && element.isEnabled();
+		if (isDisplayedAndEnabled) {
+		    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		    ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, -100);");
+		    prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeSUV"), "xpath");
+		} else {
+		    System.out.println("Element is obscured by another element or not ready");
+		}
 
-		prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeSUV"), "xpath");
+				
+		//prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeSUV"), "xpath");
 		Thread.sleep(3000);
 
-		boolean explorebodytypeViewAllSUVs = driver
-				.findElement(By.xpath(cr.valueOnTheKey("homepage_explorebodytypeViewAllSUVs"))).isDisplayed();
+		boolean explorebodytypeViewAllSUVs = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_explorebodytypeViewAllSUVs"))).isDisplayed();
 		prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeViewAllSUVs"), "xpath");
 		Thread.sleep(5000);
 
@@ -102,9 +135,16 @@ public class Homepage_BodyType {
 
 	@Then("Click on MUV and View All MUVs")
 	public void Click_on_MUV_and_View_All_MUVs() throws InterruptedException {
-		prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeSUV"), "xpath");
-		Thread.sleep(3000);
+		// Locating the element using XPath
+		WebElement element = driver.findElement(By.xpath(cr.valueOnTheKey("homepage_explorebodytypeMUV")));
 
+		// Executing JavaScript to scroll the element into view
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		
+		 ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, -150);");
+		
+		 prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeSUV"), "xpath");
+		 
 		prm.click(driver, cr.valueOnTheKey("homepage_explorebodytypeMUV"), "xpath");
 		Thread.sleep(3000);
 
