@@ -30,6 +30,11 @@ public class Homepage_ViewAllCars {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(viewAllCars).click().build().perform();
 		Thread.sleep(6000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0,300)");
+		Thread.sleep(2000);
+		JavascriptExecutor jss = (JavascriptExecutor) driver;
+		jss.executeScript("window.scroll(300,0)");
 		WebElement usedCarsInDelhiNCR = driver.findElement(By.xpath(cr.valueOnTheKey("plp_usedCarsinDelhiNCR")));
 		Assert.assertEquals(true, usedCarsInDelhiNCR.isDisplayed());
 		Thread.sleep(2000);

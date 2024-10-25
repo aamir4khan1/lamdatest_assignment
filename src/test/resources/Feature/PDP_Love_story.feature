@@ -4,7 +4,7 @@ Background:
     Given user land on spinny website
     When Wait for the application page to load completely
     #And user selects location
-    
+    @regression
     Scenario: Validate the love story section on pdp
     And user clicks on the browse car button
     And user selects a car card

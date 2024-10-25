@@ -5,7 +5,7 @@ Feature: Verify Pheonix functionality
     When Wait for the application page to load completely
     #And user selects location
     
-    @sanity 
+    @regression 
   	Scenario: User should able to see pheonix functionality
     And user clicks on the browse car button
     And user apply assured car filter
