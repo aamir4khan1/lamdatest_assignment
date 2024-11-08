@@ -3,7 +3,7 @@ Feature: verify the filters remain intact while changing city
 Background:
 	  Given user land on spinny website
     When Wait for the application page to load completely
-    #And user selects location
+    And user selects location
     
     @regression
     Scenario: filter should remain intact while changing city

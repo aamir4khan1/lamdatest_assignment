@@ -3,7 +3,7 @@ Feature: Verify the FAQs on PDP section
 Background:
     Given user land on spinny website
     When Wait for the application page to load completely
-    #And user selects location
+    And user selects location
     @regression
     Scenario: Validate the love story section on pdp
     And user clicks on the browse car button
