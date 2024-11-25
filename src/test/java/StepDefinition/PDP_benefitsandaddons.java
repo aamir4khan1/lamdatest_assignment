@@ -81,7 +81,7 @@ public class PDP_benefitsandaddons {
 		WebElement roadside_assistance = driver.findElement(By.xpath(cr.valueOnTheKey("roadside_assistance")));
 		Assert.assertEquals(true, roadside_assistance.isDisplayed());
 		Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("learnn_more"), "xpath");
+		prm.click(driver, cr.valueOnTheKey("assured_tag"), "xpath");
 		Thread.sleep(2000);
 		WebElement page_spinny_assured = driver.findElement(By.xpath(cr.valueOnTheKey("page_spinny_assured")));
 		Assert.assertEquals(true, page_spinny_assured.isDisplayed());
@@ -141,7 +141,7 @@ public class PDP_benefitsandaddons {
 		prm.click(driver, cr.valueOnTheKey("car_car_cad"), "xpath");
 		Thread.sleep(2000);
 		{JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0,1500)");}
+		js.executeScript("window.scroll(0,1800)");}
 		Thread.sleep(2000);
 		WebElement benefits_section = driver.findElement(By.xpath(cr.valueOnTheKey("benefits_section")));
 		Assert.assertEquals(true, benefits_section.isDisplayed());
@@ -167,7 +167,7 @@ public class PDP_benefitsandaddons {
 		WebElement roadside_assistance = driver.findElement(By.xpath(cr.valueOnTheKey("roadside_assistance")));
 		Assert.assertEquals(true, roadside_assistance.isDisplayed());
 		Thread.sleep(2000);
-		prm.click(driver, cr.valueOnTheKey("learnn_more"), "xpath");
+		prm.click(driver, cr.valueOnTheKey("budget_tag"), "xpath");
 		Thread.sleep(2000);
 		WebElement page_spinny_assured = driver.findElement(By.xpath(cr.valueOnTheKey("budget_page_confirm")));
 		Assert.assertEquals(true, page_spinny_assured.isDisplayed());
