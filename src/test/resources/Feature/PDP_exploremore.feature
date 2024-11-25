@@ -8,7 +8,7 @@ Feature: Verify user is able to view explore more car section PDP
      @regression 
      Scenario: User should be able use view explore more car section PDP
      Then user click on view all cars
-     And user selects a car_card
+     Then user selects first car card
      And user views explore more section
      And user selects first filter
      And user selects second filter
