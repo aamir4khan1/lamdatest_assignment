@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import Utility.ConfigReader;
 import Utility.Wait;
 import Utility.preMethods;
@@ -12,7 +11,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 public class Bottom_Navigation {
-
     static ConfigReader cr = new ConfigReader();
     WebDriver driver = Hooks.driver;  // Ensuring driver is fetched from Hooks
     Wait wait = new Wait();
@@ -50,16 +48,6 @@ public class Bottom_Navigation {
     public void user_click_on_sell_car_icon() {
         prm.click(driver, cr.valueOnTheKey("botnav_sellCar"), "xpath");
         Wait.implicitWait(4, driver);
-
-        // Uncomment assertions if needed
-        // WebElement SpinnySellBanner = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_spinnySellBanner")));
-        // Assert.assertTrue(SpinnySellBanner.isDisplayed(), "Spinny Sell Banner is not visible");
-
-        // WebElement buyACar = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_buyACar")));
-        // Assert.assertTrue(buyACar.isDisplayed(), "Buy A Car button is not visible");
-
-        // WebElement needHelpCTA = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_needHelpButton")));
-        // Assert.assertTrue(needHelpCTA.isDisplayed(), "Need Help CTA is not visible");
     }
 
     @And("user click on account icon")
