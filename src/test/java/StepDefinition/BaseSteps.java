@@ -1,17 +1,10 @@
 package StepDefinition;
 
-
 import org.openqa.selenium.WebDriver;
-
-import java.util.Optional;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v134.network.Network;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.Optional;
 
 import Utility.ConfigReader;
 import Utility.Wait;
@@ -22,34 +15,27 @@ import io.cucumber.java.en.When;
 
 public class BaseSteps {
     static ConfigReader cr = new ConfigReader();
-
-    WebDriver driver = StepDefinition.Hooks.driver;
-
-    
+    WebDriver driver;
     DevTools devTools;
-
     Wait wait = new Wait();
     static preMethods prm = new preMethods();
 
+    public BaseSteps() {
+        this.driver = Hooks.driver;  // Ensures driver is initialized from Hooks
+    }
+
     @Given("user land on spinny website")
     public void user_land_on_spinny_website() throws Exception {
-
-        driver.get(cr.valueOnTheKey(("URL")));
-        driver.manage().window().maximize();
-
-        if (System.getProperty("URL") != null) {
-            driver.get(cr.valueOnTheKey(System.getProperty("URL")));
-        } else {
-            driver.get(cr.valueOnTheKey("URL"));
+        if (driver == null) {
+            throw new IllegalStateException("WebDriver is not initialized! Check Hooks.java setup.");
         }
 
-        // Use WebDriverManager to manage ChromeDriver
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
+        String url = System.getProperty("URL") != null ? cr.valueOnTheKey(System.getProperty("URL")) : cr.valueOnTheKey("URL");
+        driver.get(url);
+        driver.manage().window().maximize();
 
         // Initialize DevTools
-        devTools = ((ChromeDriver) driver).getDevTools();
+        devTools = ((org.openqa.selenium.chrome.ChromeDriver) driver).getDevTools();
         devTools.createSession();
         devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 
@@ -67,12 +53,6 @@ public class BaseSteps {
             System.out.println("Response Status: " + response.getResponse().getStatus());
             System.out.println("Response Status Text: " + response.getResponse().getStatusText());
         });
-
-        // Open the URL
-        String url = System.getProperty("URL") != null ? cr.valueOnTheKey(System.getProperty("URL")) : cr.valueOnTheKey("URL");
-        driver.get(url);
-        driver.manage().window().maximize();
-
     }
 
     @When("^Wait for the application page to load completely$")
