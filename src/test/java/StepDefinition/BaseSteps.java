@@ -1,5 +1,8 @@
 package StepDefinition;
 
+
+import org.openqa.selenium.WebDriver;
+
 import java.util.Optional;
 
 import org.openqa.selenium.WebDriver;
@@ -9,6 +12,7 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v134.network.Network;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 import Utility.ConfigReader;
 import Utility.Wait;
 import Utility.preMethods;
@@ -18,13 +22,27 @@ import io.cucumber.java.en.When;
 
 public class BaseSteps {
     static ConfigReader cr = new ConfigReader();
-    WebDriver driver;
+
+    WebDriver driver = StepDefinition.Hooks.driver;
+
+    
     DevTools devTools;
+
     Wait wait = new Wait();
     static preMethods prm = new preMethods();
 
     @Given("user land on spinny website")
     public void user_land_on_spinny_website() throws Exception {
+
+        driver.get(cr.valueOnTheKey(("URL")));
+        driver.manage().window().maximize();
+
+        if (System.getProperty("URL") != null) {
+            driver.get(cr.valueOnTheKey(System.getProperty("URL")));
+        } else {
+            driver.get(cr.valueOnTheKey("URL"));
+        }
+
         // Use WebDriverManager to manage ChromeDriver
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
@@ -54,6 +72,7 @@ public class BaseSteps {
         String url = System.getProperty("URL") != null ? cr.valueOnTheKey(System.getProperty("URL")) : cr.valueOnTheKey("URL");
         driver.get(url);
         driver.manage().window().maximize();
+
     }
 
     @When("^Wait for the application page to load completely$")
