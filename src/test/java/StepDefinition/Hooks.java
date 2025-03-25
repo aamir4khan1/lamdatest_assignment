@@ -1,19 +1,16 @@
 package StepDefinition;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.cucumber.java.Before;
-import io.cucumber.java.After;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import Utility.ConfigReader;
+import cucumber.api.Scenario;
 
-import java.io.File;
-import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,32 +20,35 @@ public class Hooks {
 
     @Before
     public void beforeScenario() {
-        WebDriverManager.chromedriver().setup();
+        if (driver == null) {  // Ensuring driver is initialized only once
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-dev-shm-usage", "--no-sandbox", "--disable-extensions");
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage"); 
-        options.addArguments("--no-sandbox"); 
-        options.addArguments("--disable-extensions"); 
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chrome-profile-" + System.currentTimeMillis());
+            if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {
+                options.addArguments("--headless=new");
+            }
 
-        if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {
-            options.addArguments("--headless=new");
+            if (cr.valueOnTheKey("Env").equals("PROD") || cr.valueOnTheKey("Mode").equals("Desktop")) {
+                options.addArguments("--start-maximized");
+            } else {
+                Map<String, String> mobileEmulation = new HashMap<>();
+                mobileEmulation.put("deviceName", cr.valueOnTheKey("DeviceName"));
+                options.setExperimentalOption("mobileEmulation", mobileEmulation);
+            }
+
+            driver = new ChromeDriver(options);
+            driver.manage().window().maximize();
+            System.out.println("✅ WebDriver initialized successfully.");
         }
-
-        // Check if mobile emulation is needed
-        if (!cr.valueOnTheKey("Mode").equalsIgnoreCase("Desktop")) {
-            Map<String, String> mobileEmulation = new HashMap<>();
-            mobileEmulation.put("deviceName", cr.valueOnTheKey("DeviceName"));
-            options.setExperimentalOption("mobileEmulation", mobileEmulation);
-        }
-
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
     }
 
-    
-
-    public static LocalDateTime getCurrentDateAndTime() {
-        return LocalDateTime.now();
+    @After
+    public void afterScenario(Scenario scenario) {
+        if (driver != null) {
+            driver.quit();
+            System.out.println("✅ WebDriver closed successfully.");
+            driver = null;  // Reset driver for the next scenario
+        }
     }
 }
