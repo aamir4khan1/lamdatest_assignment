@@ -6,7 +6,9 @@ import java.util.Optional;
 //import cucumberIntegrationTests.screens.iOS.IOSLoginScreen;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v123.network.Network;
+import org.openqa.selenium.devtools.v134.network.Network;  
+
+
 
 import Utility.ConfigReader;
 import Utility.Wait;
