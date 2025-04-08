@@ -40,7 +40,7 @@ public class Bottom_Navigation {
         Wait.implicitWait(4, driver);
         prm.click(driver, cr.valueOnTheKey("botnav_shortlist"), "xpath");
         Wait.implicitWait(4, driver);
-        prm.takeSceenshot(driver);
+        //prm.takeSceenshot(driver);
         WebElement loginModalText = driver.findElement(By.xpath(cr.valueOnTheKey("shortlists_loginModalText")));
         Assert.assertTrue(loginModalText.isDisplayed(), "Login Modal is not visible");
         prm.click(driver, cr.valueOnTheKey("shortlists_backIcon"), "xpath");
