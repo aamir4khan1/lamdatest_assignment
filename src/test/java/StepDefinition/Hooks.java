@@ -1,125 +1,91 @@
 package StepDefinition;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.cucumber.core.api.Scenario;
-
 import org.apache.commons.io.FileUtils;
-import org.junit.Before;
-import org.openqa.selenium.*;
+import io.cucumber.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import Utility.ConfigReader;
-import Utility.ConfigReader.*;
-import cucumber.api.java.After;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Hooks {
-    static WebDriver driver;
+    public static WebDriver driver;
     static ConfigReader cr = new ConfigReader();
 
+    // Getter to access driver in other classes
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
     @Before
-    public WebDriver beforeScenario() {
+    public void beforeScenario() {  // Changed return type to void
+        String env = cr.valueOnTheKey("Env");
+        String mode = cr.valueOnTheKey("Mode");
 
-        WebDriverManager.chromedriver().setup(); // Ensure the correct ChromeDriver version
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage"); // Prevents Chrome crashes in Docker
-        options.addArguments("--no-sandbox"); // Avoids sandboxing issues
-        options.addArguments("--disable-extensions"); // Ensures stability
-
-        // Use a unique user-data directory to avoid session conflicts
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chrome-profile-" + System.currentTimeMillis());
-
-        // Support headless mode if required
-        if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {
-            options.addArguments("--headless=new");
-        }
-
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-
-        
-
-        // Use WebDriverManager to setup ChromeDriver
-        WebDriverManager.chromedriver().setup();
-
-        if (cr.valueOnTheKey("Env").equals("PROD")) {
-            options.addArguments("--start-maximized"); // Maximize for PROD
+        if ("PROD".equalsIgnoreCase(env)) {
+            ChromeOptions options = new ChromeOptions();
             driver = new ChromeDriver(options);
-        } else if (cr.valueOnTheKey("Mode").equals("Desktop")) {
-            options.addArguments("--start-maximized"); // Maximize for Desktop mode
-            driver = new ChromeDriver(options);
+            driver.manage().window().maximize();
+        } else if ("Desktop".equalsIgnoreCase(mode)) {
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
         } else {
-            // Mobile Emulation Setup
             Map<String, String> mobileEmulation = new HashMap<>();
             mobileEmulation.put("deviceName", cr.valueOnTheKey("DeviceName"));
-            options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
-            // Additional options for better performance
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--ignore-certificate-errors");
-            options.addArguments("--disable-extensions");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--no-sandbox");
+            ChromeOptions chromeOptions = new ChromeOptions();
+            //chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--disable-dev-shm-usage");
+            chromeOptions.addArguments("--ignore-certificate-errors");
+            chromeOptions.addArguments("--disable-extensions");
+            chromeOptions.addArguments("--disable-gpu");
+            chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
-            driver = new ChromeDriver(options);
+            driver = new ChromeDriver(chromeOptions);
         }
-
-        return driver;
     }
 
     @After
     public void afterScenario(Scenario scenario) {
-
-        // Capture Screenshot for Failed Test Cases
-        if (scenario.isFailed() || !scenario.isFailed()) {
-            File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        if (driver != null) {
             try {
-                FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "/Screenshot/" + System.currentTimeMillis() + ".png"));
-                scenario.embed(screenshot, "image/png");
+                // Capture screenshot
+                File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+
+                // Prepare folder and filename
+                String dirPath = System.getProperty("user.dir") + "/Screenshot/";
+                File screenshotDir = new File(dirPath);
+                if (!screenshotDir.exists()) {
+                    screenshotDir.mkdir();
+                }
+
+                String status = scenario.isFailed() ? "Failed" : "Passed";
+                String scenarioName = scenario.getName().replaceAll("[^a-zA-Z0-9]", "_");
+                String fileName = dirPath + scenarioName + "_" + status + "_" + System.currentTimeMillis() + ".png";
+
+                // Save screenshot to file system
+                FileUtils.copyFile(screenshotFile, new File(fileName));
+
+                // Attach screenshot to report
+                scenario.attach(screenshotBytes, "image/png", status + " Screenshot");
+
             } catch (IOException e) {
                 e.printStackTrace();
+            } finally {
+                driver.quit(); // Ensures clean shutdown
             }
-
-        // Capture screenshot for failed test cases
-        if (scenario.isFailed()) {
-            takeScreenshot(scenario, "FailedTest");
-        } else {
-            takeScreenshot(scenario, "PassedTest");
-
         }
-        driver.quit();}
-    }
-
-
-    private void takeScreenshot(Scenario scenario, String testStatus) {
-        try {
-            File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "/Screenshot/" + testStatus + "_" + System.currentTimeMillis() + ".png"));
-            scenario.embed(screenshot, "image/png");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public static LocalDateTime getCurrentDateAndTime() {
-        return LocalDateTime.now();
     }
 }

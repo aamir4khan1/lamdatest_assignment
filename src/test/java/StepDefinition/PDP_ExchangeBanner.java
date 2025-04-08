@@ -9,7 +9,6 @@ import org.junit.Assert;
 import Utility.ConfigReader;
 import Utility.Wait;
 import Utility.preMethods;
-import cucumber.api.java.en.Then;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
