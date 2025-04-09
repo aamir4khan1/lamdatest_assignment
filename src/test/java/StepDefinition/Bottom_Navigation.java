@@ -1,9 +1,10 @@
 package StepDefinition;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+
 
 import Utility.ConfigReader;
 import Utility.Wait;
@@ -23,7 +24,8 @@ public class Bottom_Navigation {
         prm.click(driver, cr.valueOnTheKey("botnav_home"), "xpath");
         prm.takeSceenshot(driver);
         WebElement bottomNavigationBar = driver.findElement(By.xpath(cr.valueOnTheKey("botnav_bottomNavBar")));
-        Assert.assertTrue(bottomNavigationBar.isDisplayed(), "Bottom Navigation Bar is not visible");
+        Assert.assertTrue("Bottom Navigation Bar is not visible", bottomNavigationBar.isDisplayed());
+
     }
 
     @And("user click on bottom navigation buy car icon")
@@ -31,7 +33,7 @@ public class Bottom_Navigation {
         prm.click(driver, cr.valueOnTheKey("botnav_buyCar"), "xpath");
         prm.takeSceenshot(driver);
         WebElement quickfilters = driver.findElement(By.xpath(cr.valueOnTheKey("plp_quickfilters")));
-        Assert.assertTrue(quickfilters.isDisplayed(), "Quick filters are not visible");
+        Assert.assertTrue("Quick filters are not visible", quickfilters.isDisplayed());
     }
 
     @And("user click on shortlists icon")
@@ -42,7 +44,7 @@ public class Bottom_Navigation {
         Wait.implicitWait(4, driver);
         //prm.takeSceenshot(driver);
         WebElement loginModalText = driver.findElement(By.xpath(cr.valueOnTheKey("shortlists_loginModalText")));
-        Assert.assertTrue(loginModalText.isDisplayed(), "Login Modal is not visible");
+        Assert.assertTrue("Login Modal is not visible", loginModalText.isDisplayed());
         prm.click(driver, cr.valueOnTheKey("shortlists_backIcon"), "xpath");
     }
 
@@ -68,6 +70,6 @@ public class Bottom_Navigation {
         Wait.implicitWait(2, driver);
         prm.takeSceenshot(driver);
         WebElement AccountLoginModalContainer = driver.findElement(By.xpath(cr.valueOnTheKey("account_loginModalContainer")));
-        Assert.assertTrue(AccountLoginModalContainer.isDisplayed(), "Account Login Modal is not visible");
+        Assert.assertTrue("Account Login Modal is not visible", AccountLoginModalContainer.isDisplayed() );
     }
 }
