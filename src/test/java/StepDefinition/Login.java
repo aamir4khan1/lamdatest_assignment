@@ -1,12 +1,13 @@
 package StepDefinition;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 
 import Utility.ConfigReader;
 import Utility.Wait;
@@ -115,6 +116,6 @@ public class Login {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement logoutButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(cr.valueOnTheKey("account_logout"))));
 
-        Assert.assertTrue(logoutButton.isDisplayed(), "Logout button should be visible");
+        Assert.assertTrue("Logout button should be visible", logoutButton.isDisplayed());
     }
 }
