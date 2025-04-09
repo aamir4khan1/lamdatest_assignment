@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"src/test/resources/Feature"},
-        glue = {"StepDefinition"},
+        glue = {"StepDefinition"}, 
         		plugin = {
         			    "pretty",
         			    "html:target/cucumber-html-reports", // HTML report path
