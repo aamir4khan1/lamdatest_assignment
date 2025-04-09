@@ -94,11 +94,11 @@
                     <includes>
                         <include>**/TestRunner.java</include>
                     </includes>
-                    <testFailureIgnore>false</testFailureIgnore> <!-- Set to false to catch test failures -->
+                    <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
             </plugin>
 
-            <!-- Maven Cucumber Reporting Plugin -->
+            <!-- ✅ Maven Cucumber Reporting Plugin (Updated paths) -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -106,16 +106,16 @@
                 <executions>
                     <execution>
                         <id>execution</id>
-                        <phase>verify</phase> <!-- Moved to verify phase -->
+                        <phase>verify</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
                             <projectName>SpinnyWebAutomation</projectName>
-                            <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+                            <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
                             <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
                             <jsonFiles>
-                                <jsonFile>CucumberTestReport.json</jsonFile> <!-- Exact match with TestRunner -->
+                                <jsonFile>${project.build.directory}/cucumber-reports/CucumberTestReport.json</jsonFile>
                             </jsonFiles>
                             <skip>false</skip>
                         </configuration>
