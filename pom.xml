@@ -98,7 +98,7 @@
                 </configuration>
             </plugin>
 
-            <!-- ✅ Maven Cucumber Reporting Plugin (Updated paths) -->
+            <!-- Maven Cucumber Reporting Plugin -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -115,7 +115,7 @@
                             <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
                             <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
                             <jsonFiles>
-                                <jsonFile>${project.build.directory}/cucumber-reports/CucumberTestReport.json</jsonFile>
+                                <jsonFile>CucumberTestReport.json</jsonFile> <!-- Relative to inputDirectory -->
                             </jsonFiles>
                             <skip>false</skip>
                         </configuration>
