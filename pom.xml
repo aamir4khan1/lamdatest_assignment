@@ -106,18 +106,18 @@
                 <executions>
                     <execution>
                         <id>execution</id>
-                        <phase>test</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
                             <projectName>SpinnyWebAutomation</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <inputDirectory>${project.build.directory}</inputDirectory>
+                            <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
+                            <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
                             <jsonFiles>
-                                <jsonFile>**/cucumber*.json</jsonFile>
+                                <jsonFile>${project.build.directory}/cucumber-reports/CucumberTestReport.json</jsonFile>
                             </jsonFiles>
-                           
+                            <skip>false</skip>
                         </configuration>
                     </execution>
                 </executions>
@@ -141,7 +141,7 @@
                             <followSymlinks>false</followSymlinks>
                         </fileset>
                         <fileset>
-                            <directory>${project.build.directory}/reports</directory>
+                            <directory>${project.build.directory}/cucumber-reports</directory>
                             <includes>
                                 <include>**/*</include>
                             </includes>
