@@ -34,6 +34,11 @@
             <artifactId>cucumber-core</artifactId>
             <version>7.14.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-html</artifactId>
+            <version>7.14.0</version>
+        </dependency>
 
         <!-- Selenium Dependencies -->
         <dependency>
@@ -115,7 +120,7 @@
                             <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
                             <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
                             <jsonFiles>
-                                <jsonFile>CucumberTestReport.json</jsonFile> <!-- Relative to inputDirectory -->
+                                <jsonFile>${project.build.directory}/cucumber-reports/CucumberTestReport.json</jsonFile>
                             </jsonFiles>
                             <skip>false</skip>
                         </configuration>
