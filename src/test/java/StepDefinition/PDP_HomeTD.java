@@ -24,6 +24,9 @@ import com.google.common.base.Optional;
 import Utility.ConfigReader;
 import Utility.Wait;
 import Utility.preMethods;
+
+import java.util.List;
+
 import org.junit.Assert;
 
 public class PDP_HomeTD {
@@ -43,49 +46,48 @@ public class PDP_HomeTD {
 	
 	@And("User clicks on the homepage")
 	 public void UserClicksOnTheomepage() throws InterruptedException{
-	
-		Thread.sleep(2000);
+		wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_detect_Loc"));
 		//prm.click(driver, cr.valueOnTheKey("account_homeButton"), "xpath");
 		WebElement Home_detect_Loc = driver.findElement(By.xpath(cr.valueOnTheKey("Home_detect_Loc")));
 		Assert.assertEquals(true,Home_detect_Loc.isDisplayed());
-		Thread.sleep(2000);
+		
 	}
 
     @And("user clicks on the browse car button")
     public void userClicksOnBrowseCarButton() throws InterruptedException{
-    	Thread.sleep(2000);
+    	Wait.implicitWait(3, driver);
     	JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,800)");
+		wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("homepage_browseCars"));
 		prm.click(driver, cr.valueOnTheKey("homepage_browseCars"), "xpath");
-		Thread.sleep(2000);
        
     }
 
     @And("user selects a car card")
     public void userSelectsACarCard() throws InterruptedException{
-    	Thread.sleep(2000);
+    	wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("plp_quickfilters"));
 		WebElement plp_quickfilters = driver.findElement(By.xpath(cr.valueOnTheKey("plp_quickfilters")));
 		Assert.assertEquals(true, plp_quickfilters.isDisplayed());
-		Thread.sleep(2000);
 		{JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,750)");}
-		Thread.sleep(1000);
+		wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("plp_homeTD_CarCard"));
 		prm.click(driver, cr.valueOnTheKey("plp_homeTD_CarCard"), "xpath");
-		Thread.sleep(2000);
+	
+		
         
     }
 
     @And("user clicks on the Free test drive button")
     public void userClicksOnFreeTestDriveButton() throws InterruptedException{
-    	Thread.sleep(2000);
+    	wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("pdp_freeTDButton"));
 		prm.click(driver, cr.valueOnTheKey("pdp_freeTDButton"), "xpath");
-		Thread.sleep(2000);
+		
        
     }
 
     @And("user selects my location")
     public void userSelectsMyLocation() throws InterruptedException{
-    	Thread.sleep(4000);
+    	wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("HomeTDLoactionTab"));
 		prm.click(driver, cr.valueOnTheKey("HomeTDLoactionTab"), "xpath");
 		
        
@@ -93,10 +95,10 @@ public class PDP_HomeTD {
     
     @And("user enters home address")
     public void userEntersHomeAddress() throws InterruptedException{
-    	Thread.sleep(3000);
+    	wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_addlable"));
     	WebElement Home_testdrive_addlable = driver.findElement(By.xpath(cr.valueOnTheKey("Home_testdrive_addlable")));
 		Assert.assertEquals(true, Home_testdrive_addlable.isDisplayed());
-		Thread.sleep(2000);
+		
 		}
     	/*   WebElement HomeTD_EnterAddress = driver.findElement(By.xpath(cr.valueOnTheKey("HomeTD_EnterAddress")));
    	    Assert.assertEquals(true, HomeTD_EnterAddress.isDisplayed());
@@ -150,22 +152,27 @@ public class PDP_HomeTD {
 
 	@And("user select date")
     public void userSelectDate()throws InterruptedException {
-     Thread.sleep(20000);
+		wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_select_Date"));
 		WebElement Home_testdrive_change = driver.findElement(By.xpath(cr.valueOnTheKey("Home_testdrive_select_Date")));
 		Assert.assertEquals(true, Home_testdrive_change.isDisplayed());
-		Thread.sleep(2000);
+		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("document.getElementsByClassName(\"ScheduleTestDrive__container\")[0].scrollTo(0,600)");
 		/*
 		 * Thread.sleep(2000); prm.click(driver,
 		 * cr.valueOnTheKey("Home_testdrive_see_all"), "xpath");
+		 * 
 		 */
-	    Thread.sleep(2000);
-	    prm.click(driver, cr.valueOnTheKey("Home_testdrive_date_selected"), "xpath");
-
-	    
-	   
-	    
+		List<WebElement> availableDates = driver.findElements(By.xpath(cr.valueOnTheKey("Home_testdrive_date_selected")));
+		if (!availableDates.isEmpty() && availableDates.get(0).isDisplayed() && availableDates.get(0).isEnabled()) {
+	        availableDates.get(0).click();
+	    } else {
+	        // If not available, click "See all dates" and pick a date
+	        prm.click(driver, cr.valueOnTheKey("Home_testdrive_see_all"), "xpath");
+	        wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("Home_testdrive_date_selected"));
+	        prm.click(driver, cr.valueOnTheKey("Home_testdrive_date_selected"), "xpath");
+	    }
+			      
 	}
 		/*
 		 * Thread.sleep(2000); prm.click(driver,
@@ -179,21 +186,43 @@ public class PDP_HomeTD {
 	@And("user selects time")
     public void userSelectsTime()throws InterruptedException {
     	
-    		Thread.sleep(2000);
-    		JavascriptExecutor js = (JavascriptExecutor) driver;
+	
+    		/*JavascriptExecutor js = (JavascriptExecutor) driver;
     		js.executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)");
-    		Thread.sleep(2000);
+    		wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_time_slot_v"));
     		WebElement Home_testdrive_time_slot_v = driver.findElement(By.xpath(cr.valueOnTheKey("Home_testdrive_time_slot_v")));
     		Assert.assertEquals(true, Home_testdrive_time_slot_v.isDisplayed());
-		Thread.sleep(2000);
-       // prm.clickByJavaScript(driver, cr.valueOnTheKey("Home_testdrive_timee"),"xpath");
-        prm.click(driver, cr.valueOnTheKey("Home_testdrive_timee"), "xpath");
+    		wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_timee"));       // prm.clickByJavaScript(driver, cr.valueOnTheKey("Home_testdrive_timee"),"xpath");
+        prm.click(driver, cr.valueOnTheKey("Home_testdrive_timee"), "xpath");*/
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		    js.executeScript("document.getElementsByClassName('ScheduleTestDrive__container')[0].scroll(0, 600)");
+
+		    // Wait until "Select time slot" section is visible
+		    wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("Home_testdrive_time_slot_v"));
+		    WebElement timeSlotLabel = driver.findElement(By.xpath(cr.valueOnTheKey("Home_testdrive_time_slot_v")));
+		    Assert.assertTrue(timeSlotLabel.isDisplayed());
+		   
+		    wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("Home_testdrive_timee"));
+		    Thread.sleep(2000);
+		    WebElement firstSlot = driver.findElement(By.xpath(cr.valueOnTheKey("Home_testdrive_timee")));
+		   
+
+		    try {
+		        firstSlot.click();
+		    } catch (Exception e) {
+		        js.executeScript("arguments[0].click();", firstSlot); // fallback
+		    }
+    	    	  
+	}
+
+    	     
+    	    	
    	
-    }
+    
 
     @And("user clicks on the schedule myloc test drive button")
     public void userClicksOnScheduleYloctestDriveButton() throws InterruptedException{
-    	Thread.sleep(2000);
+    	
     	//driver.manage().window().setSize(new Dimension(375, (int)(812 * 0.61)));
 		/*
 		 * DevTools devTools = ((ChromeDriver) driver).getDevTools();
@@ -209,12 +238,29 @@ public class PDP_HomeTD {
 		 * optional screen orientation Optional.ofNullable(null), // optional viewport
 		 * Optional.ofNullable(null) // optional display feature ));
 		 */
-    	Thread.sleep(2000);
+    	wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_schedule")); 
         prm.click(driver, cr.valueOnTheKey("Home_testdrive_schedule"), "xpath");
-        Thread.sleep(6000);
+        wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_TDC_page"));
         WebElement Home_TDC_page = driver.findElement(By.xpath(cr.valueOnTheKey("Home_TDC_page")));
 		Assert.assertEquals(true, Home_TDC_page.isDisplayed());
         
     	
     }
-}
+    
+    @And("user scroll to verify other elements")
+    public void userScrolltoverifyotherelements()throws InterruptedException{
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_booknowCTA")); 
+        prm.click(driver, cr.valueOnTheKey("Home_testdrive_booknowCTA"), "xpath");
+        wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_bookCTABack")); 
+        prm.click(driver, cr.valueOnTheKey("Home_testdrive_bookCTABack"), "xpath");
+        wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_loanlearnmore")); 
+        prm.click(driver, cr.valueOnTheKey("Home_testdrive_loanlearnmore"), "xpath");
+        wait.presenceOfElementLocated(driver,"xpath", cr.valueOnTheKey("Home_testdrive_loanlearnmoreBack")); 
+        prm.click(driver, cr.valueOnTheKey("Home_testdrive_loanlearnmoreBack"), "xpath");
+        
+		
+		}
+    	
+    }

@@ -20,6 +20,7 @@ Background:
     And user select date
     And user selects time
     And user clicks on the schedule myloc test drive button
+    And user scroll to verify other elements
     And user clicks on cancel button
     And user chooses reason for cancellation
     And user selects cancel CTA
