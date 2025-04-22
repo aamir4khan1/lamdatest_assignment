@@ -15,4 +15,4 @@ Feature: Verify EMI Caculator on PDP
    And user clicks on verify number button
    And user enters otp code
    And user view Loan Eligibility page
-   
+  

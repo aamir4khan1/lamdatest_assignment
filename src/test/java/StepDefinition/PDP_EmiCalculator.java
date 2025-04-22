@@ -72,6 +72,7 @@ public class PDP_EmiCalculator {
 	        Thread.sleep(3000);
 	        JavascriptExecutor jss = (JavascriptExecutor) driver;
 	        js.executeScript("window.scroll(0,150)");
+	        wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("SLIDER1_XPATH"));
 	        WebElement SLIDER1_XPATH = driver.findElement(By.xpath(cr.valueOnTheKey("SLIDER1_XPATH")));
 	        Assert.assertEquals(true, SLIDER1_XPATH.isDisplayed());
 	        Thread.sleep(2000);
@@ -85,25 +86,27 @@ public class PDP_EmiCalculator {
 	        moveSlider(driver, SLIDER2_XPATH , 50);
 	        Thread.sleep(4000);
 	        moveSlider(driver, SLIDER2_XPATH , 25);
-	        Thread.sleep(4000);
+	        wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("SLIDER3_XPATH"));
 	        WebElement SLIDER3_XPATH = driver.findElement(By.xpath(cr.valueOnTheKey("SLIDER3_XPATH")));
 	        Assert.assertEquals(true, SLIDER3_XPATH.isDisplayed());
 	        Thread.sleep(2000);
 	        moveSlider(driver, SLIDER3_XPATH , 50);
 	        Thread.sleep(4000);
 	        moveSlider(driver, SLIDER3_XPATH , 25);
-	        Thread.sleep(4000);
+	        wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("PDP_EMI_checkElig"));
 	        prm.click(driver, cr.valueOnTheKey("PDP_EMI_checkElig"), "xpath");
-	        Thread.sleep(3000);
+	        Thread.sleep(2000);
 	        WebElement checkeliglogin = driver.findElement(By.xpath(cr.valueOnTheKey("checkeliglogin")));
 	        Assert.assertEquals(true, checkeliglogin.isDisplayed());  
+	        
 }
 	@And("user view Loan Eligibility page")
 	 public void user_view_Loan_Eligibility_page() throws InterruptedException{
-		Thread.sleep(3000);
+		wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("loaneligpage"));
         WebElement checkeliglogin = driver.findElement(By.xpath(cr.valueOnTheKey("loaneligpage")));
         Assert.assertEquals(true, checkeliglogin.isDisplayed()); 
-        Thread.sleep(2000);
+        
+        
 		
 	}
 	 public static void moveSlider(WebDriver driver, WebElement slider, int percentage) {
