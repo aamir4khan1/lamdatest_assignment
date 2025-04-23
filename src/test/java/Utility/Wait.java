@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Wait {
@@ -16,7 +17,9 @@ public class Wait {
     }
 
     public void presenceOfElementLocated(WebDriver driver, String locatorType, String element) {
-        //wait = new WebDriverWait(driver, 30);
+     
+     wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
         switch (locatorType) {
             case "xpath":
                 wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(element)));
