@@ -10,6 +10,10 @@ Feature: Verify bottom navigation functionality on homepage
    Then botnav is visible and home icon selected
    And user click on bottom navigation buy car icon
    And user click on shortlists icon	
+   And user clicks on mobile number field
+    And user enters mobile number
+    And user clicks on verify number button
+    And user enters otp code
    And user click on sell car icon
    And user click on account icon
 
