@@ -21,8 +21,10 @@ public class Bottom_Navigation {
 
     @Then("botnav is visible and home icon selected")
     public void botnav_is_visible_and_home_icon_selected() {
+    	wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("botnav_home"));
         prm.click(driver, cr.valueOnTheKey("botnav_home"), "xpath");
-        prm.takeSceenshot(driver);
+       // prm.takeSceenshot(driver);
+        wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("botnav_bottomNavBar"));
         WebElement bottomNavigationBar = driver.findElement(By.xpath(cr.valueOnTheKey("botnav_bottomNavBar")));
         Assert.assertTrue("Bottom Navigation Bar is not visible", bottomNavigationBar.isDisplayed());
 
@@ -30,8 +32,10 @@ public class Bottom_Navigation {
 
     @And("user click on bottom navigation buy car icon")
     public void user_click_on_bottom_navigation_buy_car_icon() {
+    	wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("botnav_buyCar"));
         prm.click(driver, cr.valueOnTheKey("botnav_buyCar"), "xpath");
-        prm.takeSceenshot(driver);
+        //prm.takeSceenshot(driver);
+        wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("plp_quickfilters"));
         WebElement quickfilters = driver.findElement(By.xpath(cr.valueOnTheKey("plp_quickfilters")));
         Assert.assertTrue("Quick filters are not visible", quickfilters.isDisplayed());
     }
@@ -43,15 +47,24 @@ public class Bottom_Navigation {
         prm.click(driver, cr.valueOnTheKey("botnav_shortlist"), "xpath");
         Wait.implicitWait(4, driver);
         //prm.takeSceenshot(driver);
-        WebElement loginModalText = driver.findElement(By.xpath(cr.valueOnTheKey("shortlists_loginModalText")));
-        Assert.assertTrue("Login Modal is not visible", loginModalText.isDisplayed());
-        prm.click(driver, cr.valueOnTheKey("shortlists_backIcon"), "xpath");
+       
     }
 
     @And("user click on sell car icon")
-    public void user_click_on_sell_car_icon() {
+    public void user_click_on_sell_car_icon() throws InterruptedException {
+    	
+    	Thread.sleep(2000);
+    	 WebElement loginModalText = driver.findElement(By.xpath(cr.valueOnTheKey("shortlists_loginModalText")));
+         Assert.assertTrue("Login Modal is not visible", loginModalText.isDisplayed());
+         
+         prm.click(driver, cr.valueOnTheKey("homepage_SpinnyLogo"), "xpath");
+         Wait.implicitWait(4, driver);
+    	
         prm.click(driver, cr.valueOnTheKey("botnav_sellCar"), "xpath");
         Wait.implicitWait(4, driver);
+        prm.click(driver, cr.valueOnTheKey("homepage_SpinnyLogo"), "xpath");
+        Wait.implicitWait(4, driver);
+   	
 
         // Uncomment assertions if needed
         // WebElement SpinnySellBanner = driver.findElement(By.xpath(cr.valueOnTheKey("sellpage_spinnySellBanner")));
@@ -69,7 +82,7 @@ public class Bottom_Navigation {
         prm.click(driver, cr.valueOnTheKey("botnav_account"), "xpath");
         Wait.implicitWait(2, driver);
         prm.takeSceenshot(driver);
-        WebElement AccountLoginModalContainer = driver.findElement(By.xpath(cr.valueOnTheKey("account_loginModalContainer")));
+        WebElement AccountLoginModalContainer = driver.findElement(By.xpath(cr.valueOnTheKey("accountpageasseration")));
         Assert.assertTrue("Account Login Modal is not visible", AccountLoginModalContainer.isDisplayed() );
     }
 }
