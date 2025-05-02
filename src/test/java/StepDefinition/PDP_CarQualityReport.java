@@ -48,7 +48,7 @@ public class PDP_CarQualityReport {
 		    JavascriptExecutor js = (JavascriptExecutor) driver;
 	        js.executeScript("window.scroll(0,1100)");
 	       
-			Thread.sleep(2000);
+	        wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("inspectionReportSection"));
 			WebElement inspectionReportSection = driver.findElement(By.xpath(cr.valueOnTheKey("inspectionReportSection")));
 			Assert.assertEquals(true, inspectionReportSection.isDisplayed());
 			Thread.sleep(4000);
@@ -62,7 +62,8 @@ public class PDP_CarQualityReport {
 	   @Then("click on view full report")
 		
 	   public void click_on_view_full_details () throws InterruptedException {
-		   
+		      
+		   Thread.sleep(4000);
 		   WebElement pdp_inspectionReportViewFullReport = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_inspectionReportViewFullReport")));
 			Assert.assertEquals(true, pdp_inspectionReportViewFullReport.isDisplayed());
 		   prm.click(driver, cr.valueOnTheKey("pdp_inspectionReportViewFullReport"), "xpath");
@@ -72,33 +73,41 @@ public class PDP_CarQualityReport {
 	   @And("click on different tabs under car condition section")
 		public void click_on_different_tabs_under_car_condition_section () throws InterruptedException {
 		   
+		   wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("inspectionReportModalBasic"));  
 		   WebElement inspectionReportModalBasic = driver.findElement(By.xpath(cr.valueOnTheKey("inspectionReportModalBasic")));
 			Assert.assertEquals(true, inspectionReportModalBasic.isDisplayed());
-			Thread.sleep(1000);
 			
+			 wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("inspectionReportModalDetail"));  
 			WebElement inspectionReportModalDetail = driver.findElement(By.xpath(cr.valueOnTheKey("inspectionReportModalDetail")));
 			Assert.assertEquals(true, inspectionReportModalDetail.isDisplayed());
-			Thread.sleep(1000);
 			
+			wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("pdp_inspectionReportCarConditionTab"));
 			prm.click(driver, cr.valueOnTheKey("pdp_inspectionReportCarConditionTab"), "xpath");
-			Thread.sleep(1000);
+			
+			wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("pdp_Car_conditionSection"));
+			
 			WebElement pdp_Car_conditionSection = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_Car_conditionSection")));
 			Assert.assertEquals(true, pdp_Car_conditionSection.isDisplayed());
-			Thread.sleep(1000);
-
 			
+			wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("pdp_EngineAndPeripherals"));
 			prm.click(driver, cr.valueOnTheKey("pdp_EngineAndPeripherals"), "xpath");
-			Thread.sleep(1000);
+			
+			wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("pdp_EngineSection"));
 			
 			WebElement pdp_EngineSection = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_EngineSection")));
 			Assert.assertEquals(true, pdp_EngineSection.isDisplayed());
-			Thread.sleep(3000);
+			
+			wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("pdp_CarQualityReportDashboardVideo"));
 			
 			prm.click(driver, cr.valueOnTheKey("pdp_CarQualityReportDashboardVideo"), "xpath");
-			Thread.sleep(5000);
+			
+			wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("pdp_CarQualityReportVideoPlayerSection"));
+			
 			WebElement pdp_CarQualityReportVideoPlayerSection = driver.findElement(By.xpath(cr.valueOnTheKey("pdp_CarQualityReportVideoPlayerSection")));
 			Assert.assertEquals(true, pdp_CarQualityReportVideoPlayerSection.isDisplayed());
-			Thread.sleep(3000);
+			
+			wait.presenceOfElementLocated(driver, "xpath", cr.valueOnTheKey("pdp_CarQualityReportVideoClose"));
+			
 			prm.click(driver, cr.valueOnTheKey("pdp_CarQualityReportVideoClose"), "xpath");
 			Thread.sleep(2000);
 			prm.click(driver, cr.valueOnTheKey("pdp_EngineAndPeripherals"), "xpath");
