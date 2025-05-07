@@ -64,6 +64,14 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        
+        
+       <dependency>
+    <groupId>net.sourceforge.tess4j</groupId>
+    <artifactId>tess4j</artifactId>
+    <version>5.4.0</version>
+</dependency>
+
 
         <!-- Apache Commons IO (for FileUtils in Hooks) -->
         <dependency>
@@ -72,6 +80,8 @@
             <version>2.11.0</version>
         </dependency>
     </dependencies>
+    
+       
 
     <build>
         <plugins>
