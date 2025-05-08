@@ -41,7 +41,7 @@ public class iphonecase {
 	}
 	@And("user selects an iphone")
 	public void user_selects_an_iphone() throws InterruptedException {
-		
+		Thread.sleep(2000);
 		List<WebElement> links = driver.findElements(By.xpath("//a[@class='a-link-normal s-line-clamp-2 s-link-style a-text-normal']"));
 
 		for (WebElement link : links) {
@@ -56,13 +56,15 @@ public class iphonecase {
 	}
 	@And("user adds the iphone in cart")
 	public void user_adds_the_iphone_in_cart() throws InterruptedException {
+		Thread.sleep(2000);
 		prm.click(driver, cr.valueOnTheKey("add_cart_button"), "xpath");
-		
+		Thread.sleep(2000);
 		WebElement added_item = driver.findElement(By.xpath(cr.valueOnTheKey("added_item")));
 		Assert.assertEquals(true, added_item.isDisplayed());
 	}
 	@And("price is shown")
 	public void price_is_shown() throws InterruptedException {
+		Thread.sleep(2000);
 		WebElement priceElement = driver.findElement(By.xpath("//span[@class='a-offscreen']"));
 		String price = priceElement.getText();
 		System.out.println("Item price: " + price);

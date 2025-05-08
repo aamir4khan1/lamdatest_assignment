@@ -35,12 +35,20 @@ public class BaseSteps {
         FileHandler.copy(src, new File(path));
 
         ITesseract image = new Tesseract();
-        try {
-            String imageText = image.doOCR(new File(path));
+        image.setDatapath("C:\\Program Files\\Tesseract-OCR\\tessdata");
+        image.setLanguage("eng");
+
+        
+        
+            String imageText = image.doOCR(new File(path)).replaceAll("[^A-Za-z0-9]", "");
             System.out.println("Extracted Text: " + imageText);
-        } catch (TesseractException e) {
-            e.printStackTrace();
-        }
+            
+            driver.findElement(By.xpath("//input[@id='captchacharacters']")).click();
+            Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id='captchacharacters']")).sendKeys(imageText);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[text()='Continue shopping']")).click();
+
 
 
         if (System.getProperty("URL") != null) {
